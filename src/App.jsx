@@ -1,9 +1,10 @@
+import Button from "./components/Button/Button";
 import "./App.css";
 
 function App() {
   return (
     <div>
-      <h1>MAIN</h1>
+      <Button />
     </div>
   );
 }
