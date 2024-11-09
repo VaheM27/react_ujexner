@@ -4,7 +4,7 @@ const Users = () => {
   return (
     <>
       {users.map((elm) => {
-        return <p key={elm.id}>{elm.firstName}</p>;
+        return <p key={elm.id}>{elm.firstName + elm.age}</p>;
       })}
     </>
   );
