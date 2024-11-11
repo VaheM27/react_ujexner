@@ -1,0 +1,62 @@
+.serviceCard{
+    width: 60%;
+    height: 25vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: #2947A9;
+    cursor: pointer;
+    transition: all ease .4s;
+    img{
+        transition: all ease .4s;
+    }
+}
+.serviceCard:hover{
+    background: #2947A9;
+    img{
+        background: #2947A9;
+    }
+    color: white;
+}
+
+.serviceCard hr{
+    width: 80px;
+}
+.serviceCard:nth-child(2){
+    background: #2947A9;
+    color: #fff;
+}
+.serviceCard:nth-child(4){
+    background: #2947A9;
+    color: #fff;
+}
+.serviceCard:nth-child(6){
+    background: #2947A9;
+    color: #fff;
+}
+
+.serviceCard:nth-child(2):hover{
+    background: white;
+    color: #2947A9;
+    img{
+        background: #2947A9;
+    }
+}
+.serviceCard:nth-child(4):hover{
+    background: white;
+    color: #2947A9;
+    img{
+        background: #2947A9;
+    }
+}
+.serviceCard:nth-child(6):hover{
+    background: white;
+    color: #2947A9;
+    img{
+        background: #2947A9;
+    }
+}

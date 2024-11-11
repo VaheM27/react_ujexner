@@ -1,0 +1,21 @@
+.serviceSection{
+    width: 100%;
+    height: 80vh;
+    background: #F6F8F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.serviceHeading{
+    font-size: 40px;
+}
+.serviceCards{
+    width: 80%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+}

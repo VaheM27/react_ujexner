@@ -1,0 +1,29 @@
+.NavbarDiv{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    position: fixed;
+    background-color: white;
+}
+.NavbarDiv .logoBox{
+    display: flex;
+    width: 165px;
+    justify-content: space-between;
+    color: #2F40A5;
+}
+.NavbarDiv ul{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+.NavbarDiv ul li{
+    cursor: pointer;
+
+}
+.NavbarDiv ul li:nth-last-child(1){
+    color: #FF9C65;
+}
