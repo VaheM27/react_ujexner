@@ -5,7 +5,7 @@ import "./Button.css"
 function Button() {
   return (
     <>
-      <a href="#">Button</a>
+      <a href="#"></a>
     </>
   )
 }
