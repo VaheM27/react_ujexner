@@ -1,12 +1,12 @@
-import Button from "./components/Button/Button";
-import "./App.css";
+// import Button from "./components/Button/Button";
+// import "./App.css";
 
-function App() {
-  return (
-    <div>
-      <Button />
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div>
+//       <Button />
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;

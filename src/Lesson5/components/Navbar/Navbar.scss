@@ -1,0 +1,48 @@
+@import "../../styles/global.scss";
+
+.navBarDiv {
+  @include makeFlex(space-between, center, row, wrap, 20px, 20px);
+  padding: 16px 112px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px #000;
+  .logoBox {
+    cursor: pointer;
+    @include makeFlex(space-between, center, row, wrap, unset, 14px);
+    h1 {
+      @include textParams(30px, 800, sans-serif, #2947a9);
+      i {
+        @include textParams(30px, 850, sans-serif, #2947a9);
+      }
+    }
+  }
+  ul {
+    @include makeFlex(space-between, center, row, wrap, 20px, 50px);
+    @include textParams(18px, unset, sans-serif, #14171f);
+    li {
+      cursor: pointer;
+      &::after {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 1px;
+        transition: all 1s;
+        background-color: #14171f;
+      }
+      &:hover::after {
+        width: 100%;
+        transition: all 1s;
+      }
+    }
+
+    li:last-child {
+      font-weight: 700;
+      color: #f9995d;
+      &::after {
+        background-color: #f9995d;
+      }
+    }
+  }
+}

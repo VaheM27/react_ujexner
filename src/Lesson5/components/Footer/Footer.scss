@@ -1,0 +1,10 @@
+@import "../../styles/global.scss";
+
+.footer {
+  @include makeFlex(flex-start, center, row, wrap, unset, unset);
+  padding: 26px 0 26px 112px;
+  background-color: #2947a9;
+  .footerInfo {
+    @include textParams(16px, normal, unset, #fff);
+  }
+}

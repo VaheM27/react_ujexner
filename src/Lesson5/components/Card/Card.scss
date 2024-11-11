@@ -1,0 +1,27 @@
+@import "../../styles/global.scss";
+
+.card {
+  @include makeFlex(center, flex-start, column, wrap, 18px, unset);
+  max-width: 292px;
+  padding: 20px 20px 40px 20px;
+  border: 1px solid #e0e3eb;
+  border-radius: 4px;
+  transition: all 1s;
+  cursor: pointer;
+  .cardTitle {
+    @include textParams(20px, bold, unset, #3d445c);
+  }
+  .cardDesc {
+    @include textParams(16px, normal, unset, #858ead);
+  }
+  &:hover {
+    transform: scale(1.1);
+    background-color: #2947a9;
+    .cardTitle {
+      color: #eb984e;
+    }
+    .cardDesc {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../styles/global.scss";
+
+.cardSection {
+  padding: 60px 0 120px 0;
+  @include makeFlex(center, center, column, wrap, 50px, unset);
+
+  .sectionName {
+    @include textParams(36px, bold, unset, #292e3d);
+  }
+  .cards {
+    @include makeFlex(center, center, row, wrap, unset, 70px);
+  }
+}

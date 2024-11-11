@@ -1,0 +1,16 @@
+@import "../../styles/global.scss";
+
+.serviceSection {
+  @include makeFlex(center, center, column, wrap, 36px, unset);
+  background-color: #f6f8f7;
+  padding: 44px 0 76px 0;
+
+  .serviceHeading {
+    @include textParams(36px, bold, unset, #292e3d);
+  }
+  .serviceCards {
+    max-width: 1010px;
+    width: 100%;
+    @include makeFlex(center, center, row, wrap, 50px, 98px);
+  }
+}

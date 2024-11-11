@@ -1,39 +1,23 @@
 import React from "react";
-import "./App.css"
+import Navbar from "./components/Navbar/Navbar";
+import CardSection from "./components/CardSection/CardSection";
+import ServiceSection from "./components/ServiceSection/ServiceSection";
+import Form from "./components/Form/Form";
+import Footer from "./components/Footer/Footer";
 
-export default function App() {
+import "./App.scss";
+
+function App() {
   return (
-    <div>
-      <h1>GIT Intro</h1>
-      <code>
-        <ul>
-          <li>git add . --- avelacnel uxarkelu hamar</li>
-          <li>git commit -m "Message" --- uxarkelu namak</li>
-          <li>git push origin "uxxutyuny" --- depi ur enq uxarkum</li>
-          <li>git status --- nerkayis giti vichaky</li>
-          <li>git checkout "anuny branchi" --- texapoxvel tvayl branch</li>
-          <li>
-            git swicth -c "anuny branchi" --- sarqel branch ev texapoxvel tvyal
-            branchi vra
-          </li>
-          <li>git reset "commiti hashCode"</li>
-          <li>git pull --- stanumenq verhcin updatnery</li>
-          <li>
-            git pull origin "branchi anuny" --- stanumenq verhcin updatnery
-            tvyal branchic
-          </li>
-          <li>git log --- bolor popoxutyunery bolor jamanakneri yntacqum </li>
-          <li>
-            git clone "linky repoi" --- clonavorum enq tvyal uxx. projecty{" "}
-          </li>
-          <li>
-            git init --- avelacnuma git gaxapary dzer projecti mech, naev
-            stexcuma ".git" hidden foldery{" "}
-          </li>
-          <li>git config user.name "dzer githubi loginy"</li>
-          <li>git config user.email "dzer githubi email"</li>
-        </ul>
-      </code>
+    <div className="App">
+      <Navbar />
+      <CardSection />
+      <ServiceSection />
+      <Form />
+      <Footer />
     </div>
   );
 }
+
+export default App;
+

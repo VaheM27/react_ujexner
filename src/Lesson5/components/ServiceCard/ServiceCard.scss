@@ -1,0 +1,26 @@
+@import "../../styles/global.scss";
+
+.serviceCard {
+  max-width: 270px;
+  width: 100%;
+  border-radius: 4px;
+  @include textParams(20px, bold, unset, unset);
+  padding: 38px 0;
+  @include makeFlex(center, center, column, wrap, 20px, unset);
+  transition: all 1s;
+  cursor: pointer;
+  hr {
+    width: 60px;
+  }
+  &:nth-child(odd) {
+    background-color: #fff;
+    color: #2947a9;
+  }
+  &:nth-child(even) {
+    background-color: #2947a9;
+    color: #fff;
+  }
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
