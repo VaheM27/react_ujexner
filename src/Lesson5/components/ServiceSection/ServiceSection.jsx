@@ -8,8 +8,8 @@ const ServiceSection = () => {
     <div className="serviceSection">
       <h2 className="serviceHeading">Services</h2>
       <div className="serviceCards">
-        {serviceData.map((element) => {
-          return <ServiceCard icon={element.img} serviceName={element.name} />;
+        {serviceData.map((element, index) => {
+          return <ServiceCard key={index} icon={element.img} serviceName={element.name} />;
         })}
       </div>
     </div>
