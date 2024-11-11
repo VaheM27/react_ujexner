@@ -1,0 +1,42 @@
+@use "../../styles/Variables.scss" as *;
+
+nav {
+  background-color: var(--background-color-main);
+  .navContainer {
+    @include flex-box(_, space-between, center);
+    padding: 16px 12px;
+    .navLogo {
+      @include flex-box(_, space-between, center);
+      gap: 14px;
+      h1 {
+        font-weight: 700;
+        font-size: 30px;
+        color: var(--box-blue);
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .navMenuMax {
+    display: none !important;
+  }
+  .hamburgerMenu {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    width: 50%;
+    button {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(0);
+      right: 0;
+    }
+    // ul {
+    //   visibility: visible;
+    //   opacity: 1;
+    //   box-shadow: -4px 4px 10px var(--background-color-section);
+    //   transform: translate(0);
+    // }
+  }
+}

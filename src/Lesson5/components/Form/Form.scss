@@ -1,0 +1,72 @@
+@use "../../styles/Variables.scss" as *;
+
+form {
+  @include flex-box(row, center, center, wrap);
+  column-gap: 32px;
+  row-gap: 20px;
+  input,
+  textarea {
+    border: 1px solid var(--after);
+    border-radius: 4px;
+    padding: 10px 8px;
+    color: var(--input-placeholder);
+    outline: none;
+    font-size: 18px;
+  }
+  input {
+    width: 280px;
+  }
+  div {
+    @include flex-box(_, center, _, wrap);
+    textarea {
+      min-width: 592px;
+      height: 135px;
+    }
+    div {
+      @include flex-box(_, left, _, _);
+      width: 100%;
+      padding: 8px 0 0 34px;
+      span {
+        color: var(--form-color);
+      }
+    }
+  }
+  .btnDiv {
+    margin-top: 8px;
+    width: 100%;
+    @include flex-box();
+    button {
+      width: 50%;
+      padding: 16px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      border: none;
+      background: var(--box-blue);
+      color: var(--background-color-main);
+      transition: 0.3s;
+      &:hover {
+        background: var(--button-nav-hover);
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  div {
+    padding: 8px 0 0 10px;
+  }
+}
+
+@media (max-width: 631px) {
+  form {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 32px;
+    div {
+      grid-column: 1 / span 1;
+    }
+    textarea {
+      min-width: 280px !important;
+      width: 280px;
+    }
+  }
+}

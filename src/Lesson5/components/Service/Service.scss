@@ -1,0 +1,16 @@
+@use "../../styles/Variables.scss" as *;
+
+.services {
+  background: var(--background-color-section);
+  .sectionContainer {
+    @include flex-box(column, unset);
+    padding: 44px 20px 40px;
+    gap: 50px;
+    .box-section {
+      @include flex-box(row, center, center, wrap);
+      column-gap: 98px;
+      row-gap: 48px;
+      margin-bottom: 36px;
+    }
+  }
+}

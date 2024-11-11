@@ -1,0 +1,46 @@
+@use "../../styles/Variables.scss" as *;
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  color: var(--heading);
+}
+
+.reputationBox {
+  @include flex-box(column, space-between, flex-start);
+  gap: 18px;
+  width: 292px;
+  height: 197px;
+  border: 2px solid var(--after);
+  border-radius: 4px;
+  padding: 20px 20px 40px;
+  h3 {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--box-heading);
+  }
+  p {
+    color: var(--text);
+  }
+}
+
+.serviceBox {
+  @include flex-box(column, space-between, center, unset);
+  gap: 20px;
+  width: 271px;
+  height: 181px;
+  border-radius: 4px;
+  padding: 38px;
+  box-shadow: 0 0 37px -2px var(--shadow);
+  div {
+    width: 60px;
+    height: 2px;
+    background: var(--after);
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+  }
+}

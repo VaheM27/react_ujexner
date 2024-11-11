@@ -1,0 +1,15 @@
+@use "../../styles/Variables.scss" as *;
+
+.navMenuMax {
+  @include flex-box();
+  gap: 50px;
+  a {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--button-nav);
+    transition: 0.3s;
+    &:hover {
+      color: var(--button-nav-hover);
+    }
+  }
+}

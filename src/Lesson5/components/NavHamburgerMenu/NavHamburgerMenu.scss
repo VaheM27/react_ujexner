@@ -1,0 +1,35 @@
+@use "../../styles/Variables.scss" as *;
+
+.hamburgerMenu {
+  display: none;
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 28px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  ul {
+    @include flex-box(column, unset, flex-end);
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    background-color: white;
+    opacity: 0;
+    transform: translate(200%);
+    transition: 0.2s;
+    padding: 20px;
+    a {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--button-nav);
+      transition: 0.3s;
+      padding: 12px 12px 12px 40px;
+      &:hover {
+        color: var(--button-nav-hover);
+      }
+    }
+  }
+}

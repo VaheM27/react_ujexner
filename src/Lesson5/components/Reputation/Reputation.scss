@@ -1,0 +1,15 @@
+@use "../../styles/Variables.scss" as *;
+
+.reputation {
+  background: var(--background-color-main);
+  .sectionContainer {
+    @include flex-box(column, unset);
+    padding: 96px 20px 40px;
+    gap: 50px;
+    .box-section {
+      @include flex-box(row, center, center, wrap);
+      gap: 70px;
+      margin-bottom: 84px;
+    }
+  }
+}
