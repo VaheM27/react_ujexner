@@ -1,5 +1,7 @@
 import { users } from "../../constants/usersData";
-import "./Users.css"
+
+import "./Users.scss"
+
 const Users = () => {
   return (
     <>

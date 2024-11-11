@@ -1,12 +1,11 @@
 import Users from "./components/Users/Users";
-import Button from "./components/Button/Button";
-import "./App.css";
+
+import "./App.scss";
 
 function App() {
   return (
     <div>
       <Users />
-      <Button />
     </div>
   );
 }
