@@ -1,0 +1,10 @@
+.navigation {
+  background-color: pink;
+  padding: 20px;
+  ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 20px;
+  }
+}
