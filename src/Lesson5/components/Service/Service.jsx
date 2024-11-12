@@ -44,6 +44,7 @@ const style2 = {
   backgroundColor: "var(--box-blue)",
   color: "var(--background-color-main)",
 };
+
 const Service = () => {
   return (
     <section className="services">
