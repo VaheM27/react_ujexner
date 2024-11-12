@@ -1,5 +1,5 @@
-import logo from "../../assets/logo/Logo.png";
 import navBarItems from "../../constants/navBarItems";
+import logo from "../../assets/logo/Logo.png";
 
 import "./Navbar.scss";
 
