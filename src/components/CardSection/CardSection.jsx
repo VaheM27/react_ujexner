@@ -1,7 +1,7 @@
-import Card from "../Card/Card"
+import Card from "../Card/Card";
 import { cardData } from "../../constants/cardData";
 
-import "./CardSection.css"
+import "./CardSection.css";
 
 const CardSection = () => {
   return (

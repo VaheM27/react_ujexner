@@ -4,7 +4,7 @@ import ServiceSection from "../components/ServiceSection/ServiceSection";
 import Register from "../components/Register/Register";
 import Footer from "../components/Footer/Footer";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (

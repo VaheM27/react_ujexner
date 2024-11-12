@@ -11,5 +11,5 @@ export const serviceData = [
   { img: icon3, name: "Consultation" },
   { img: icon4, name: "Repair Services" },
   { img: icon5, name: "Architecture" },
-  { img: icon6, name: "Electric" }
+  { img: icon6, name: "Electric" },
 ];

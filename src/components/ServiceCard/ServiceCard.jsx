@@ -7,7 +7,7 @@ const ServiceCard = ({ icon, serviceName }) => {
       <hr />
       <h3 className="serviceName">{serviceName}</h3>
     </div>
-  )
-}
+  );
+};
 
 export default ServiceCard;
