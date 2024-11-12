@@ -4,18 +4,18 @@ const Nav = () => {
   return (
     <div className="navigation">
       <ul>
-        <a href="#">
-          <li>HOME</li>
-        </a>
-        <a href="#">
-          <li>ABOUT</li>
-        </a>
-        <a href="#">
-          <li>USERS</li>
-        </a>
-        <a href="#">
-          <li>FOR?</li>
-        </a>
+        <li>
+          <a href="#">HOME</a>
+        </li>
+        <li>
+          <a href="#">ABOUT</a>
+        </li>
+        <li>
+          <a href="#">USERS</a>
+        </li>
+        <li>
+          <a href="#">FOR?</a>
+        </li>
       </ul>
     </div>
   );

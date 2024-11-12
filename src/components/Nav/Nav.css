@@ -1,7 +1,7 @@
 .navigation {
   background-color: pink;
   padding: 20px;
-  ul{
+  ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
