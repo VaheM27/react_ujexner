@@ -1,7 +1,6 @@
 @import url("../../styles/global.scss");
 @import url("../../styles/variables.scss");
 
-
 .navbar {
   position: sticky;
   top: 0;
@@ -13,7 +12,6 @@
   height: 150px;
   box-shadow: 1px 5px 10px gray;
 }
-
 
 .navbar .nav_container {
   display: flex;
@@ -57,22 +55,22 @@
     font-size: 20px;
     color: var(--color);
     padding: 14px 0;
-    display:block;
-    position:relative
+    display: block;
+    position: relative;
   }
 
   a:after {
-    content:"";
+    content: "";
     position: absolute;
-    bottom:0;
-    left:0;
-    height:2px;
-    width:0;
-    transition:all .4s;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    transition: all 0.4s;
     background-color: #f3b01b;
   }
   a:hover:after {
-    width:100%;
+    width: 100%;
   }
 }
 
