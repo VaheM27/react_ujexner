@@ -1,0 +1,75 @@
+@import url("../../styles/global.scss");
+@import url("../../styles/variables.scss");
+
+
+.wecando {
+    width: 100%;
+    background-color: #F6F8F7;
+    color: var(--color);
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.wecando_container {
+    width: 40%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    h1, p {
+        margin-bottom: 20px;
+    }
+}
+
+.form_div {
+    width: 100%;
+
+    p {
+        text-align: left;
+        font-size: 10px;
+
+        span {
+            color: red;
+        }
+    }
+
+    button {
+        width: 270px;
+        height: 50px;
+        background: #2947A9;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    button:hover {
+        background-color: #E0E3EB;
+        color: #2947A9;
+    }
+}
+
+.input_div {
+    width: 100%;
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    input {
+        padding: 10px;
+        border: 1px solid #E0E3EB;
+        border-radius: 4px;
+        width: 50%;
+        text-align: center;
+    }
+
+    textarea {
+        border: 1px solid #E0E3EB;
+        padding: 10px;
+        border-radius: 4px;
+        width: 100%;
+    }
+}
+

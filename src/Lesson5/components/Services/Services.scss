@@ -1,0 +1,74 @@
+@import url("../../styles/global.scss");
+@import url("../../styles/variables.scss");
+
+.services {
+    width: 100%;
+    background-color: #F6F8F7;
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+        color: var(--color);
+    }
+}
+
+.services_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.service_block {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 180px;
+    width: 270px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+
+    img {
+        height: 40px;
+        width: 40px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    hr {
+        width: 60px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        background: rgb(194, 194, 194);
+        border: none;
+        height: 2px;
+    }
+
+    h1 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #2947A9;
+        padding-top: 20px;
+    }
+}
+
+
+.service_block_second {
+    background-color: #2947A9;
+
+    h1 {
+        color: white;
+    }
+}
+
+.service_block:hover, .service_block_second:hover {
+    background-color: #f3b01b;
+
+    h1 {
+        color: black;
+    }
+}

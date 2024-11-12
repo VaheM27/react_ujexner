@@ -1,0 +1,81 @@
+@import url("../../styles/global.scss");
+@import url("../../styles/variables.scss");
+
+
+.navbar {
+  position: sticky;
+  top: 0;
+  font-family: Montserrat;
+  color: var(--color);
+  z-index: 99;
+  letter-spacing: 1px;
+  background-color: white;
+  height: 150px;
+  box-shadow: 1px 5px 10px gray;
+}
+
+
+.navbar .nav_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 17px;
+  height: 100%;
+  display: inline-block;
+}
+
+.nav_logo {
+  position: relative;
+  max-width: 100%;
+  left: 30px;
+}
+
+.nav_logo img {
+  height: 150px;
+  width: 200px;
+  margin-top: 10px;
+}
+
+.navbar_menu {
+  width: 75%;
+  margin-right: 10px;
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+
+  ul {
+    text-align: right;
+    display: inline-block;
+  }
+
+  a {
+    font-size: 20px;
+    color: var(--color);
+    padding: 14px 0;
+    display:block;
+    position:relative
+  }
+
+  a:after {
+    content:"";
+    position: absolute;
+    bottom:0;
+    left:0;
+    height:2px;
+    width:0;
+    transition:all .4s;
+    background-color: #f3b01b;
+  }
+  a:hover:after {
+    width:100%;
+  }
+}
+
+#contactus a {
+  color: orange;
+}
