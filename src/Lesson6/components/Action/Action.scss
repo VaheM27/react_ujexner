@@ -1,0 +1,13 @@
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  p {
+    font-size: 100px;
+  }
+  .buttons {
+    display: flex;
+    column-gap: 20px;
+  }
+}

@@ -1,0 +1,71 @@
+@mixin flex($justify, $align, $direction, $col-gap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  column-gap: $col-gap;
+}
+
+nav {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  .nav {
+    @include flex(space-between, center, row, 0);
+    padding: 16px 0;
+    .logo {
+      @include flex(space-between, center, row, 6px);
+      cursor: pointer;
+      p {
+        font-size: 30px;
+        font-weight: bold;
+        color: var(--kapuyt);
+        text-shadow: 1px 3px 4px;
+      }
+    }
+    .rightSide {
+      display: flex;
+      ul {
+        @include flex(space-between, center, row, 50px);
+        li {
+          position: relative;
+          padding: 15px;
+          p {
+            cursor: pointer;
+            font-size: 18px;
+            color: #14171f;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 2px;
+              background: var(--kapuyt);
+              width: 0;
+              transition: all 0.5s;
+            }
+            &:hover::after {
+              width: 100%;
+            }
+          }
+        }
+        li:last-child {
+          color: #f9995d;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            background: #f9995d;
+            width: 0;
+            transition: all 0.5s;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@mixin grid($column, $row, $col-gap, $row-gap) {
+  display: grid;
+  grid-template-columns: $column;
+  grid-template-rows: $row;
+  column-gap: $col-gap;
+  row-gap: $row-gap;
+}
+
+.bottom {
+  background-color: #f6f8f7;
+  .section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 44px 80px 76px;
+    cursor: default;
+    user-select: none;
+    row-gap: 36px;
+    h2 {
+      font-size: 36px;
+      color: #292e3d;
+    }
+    .services {
+      @include grid(repeat(3, 270px), repeat(2, 181px), 98px, 48px);
+      cursor: pointer;
+      .serviceBox {
+        img {
+          width: 40px;
+        }
+        p {
+          font-size: 20px;
+        }
+        border-radius: 5px;
+        padding: 38px 65px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 42px;
+      }
+      .serviceBox:nth-child(odd) {
+        background-color: #fff;
+        color: var(--kapuyt);
+        transition: all 0.8s;
+        &:hover {
+          background-color: var(--kapuyt);
+          color: #fff;
+          box-shadow: 0px 0px 10px 1px black;
+        }
+      }
+      .serviceBox:nth-child(even) {
+        background-color: var(--kapuyt);
+        color: #fff;
+        transition: all 0.8s;
+        &:hover {
+          background-color: #fff;
+          color: var(--kapuyt);
+          box-shadow: 0px 0px 10px 1px;
+        }
+      }
+    }
+  }
+}

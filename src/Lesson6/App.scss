@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+button {
+  display: inline-block;
+  color: #fff;
+  background-color: orangered;
+  padding: 20px 40px;
+  border: 1px solid orangered;
+  border-radius: 30px;
+  cursor: pointer;
+}
