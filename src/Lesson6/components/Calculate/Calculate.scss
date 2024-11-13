@@ -1,0 +1,40 @@
+.calcSection {
+  background: #000;
+  width: 100%;
+  height: 200px;
+  padding: 40px;
+  color: #fff;
+  .flexContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    div {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+      align-items: center;
+    }
+    button {
+      background: rgb(0, 204, 255);
+      border: 1px solid rgb(9, 0, 58);
+      padding: 8px 32px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background: rgb(0, 23, 44);
+        border-color: rgb(0, 204, 255);
+        color: #fff;
+      }
+    }
+    input {
+      border: 1px solid transparent;
+      background: #141414;
+      padding: 8px 32px 8px 8px;
+      border-radius: 4px;
+      outline: none;
+      color: #fff;
+    }
+  }
+}

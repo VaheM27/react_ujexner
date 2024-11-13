@@ -1,28 +1,28 @@
-:root {
-  --after: rgba(224, 227, 235, 1);
-  --background-color-main: rgba(255, 255, 255, 1);
-  --background-color-section: rgba(246, 248, 247, 1);
-  --box-blue: rgba(41, 71, 169, 1);
-  --button-nav: rgba(20, 23, 31, 1);
-  --button-nav-hover: rgba(249, 153, 93, 1);
-  --heading: rgba(41, 46, 61, 1);
-  --box-heading: rgba(61, 68, 92, 1);
-  --text: rgba(133, 142, 173, 1);
-  --input-placeholder: rgba(163, 170, 194, 1);
-  --shadow: rgba(17, 24, 39, 0.05);
-  --form-color: rgba(102, 114, 153, 1);
-  --font: Work Sans;
-}
+// :root {
+//   --after: rgba(224, 227, 235, 1);
+//   --background-color-main: rgba(255, 255, 255, 1);
+//   --background-color-section: rgba(246, 248, 247, 1);
+//   --box-blue: rgba(41, 71, 169, 1);
+//   --button-nav: rgba(20, 23, 31, 1);
+//   --button-nav-hover: rgba(249, 153, 93, 1);
+//   --heading: rgba(41, 46, 61, 1);
+//   --box-heading: rgba(61, 68, 92, 1);
+//   --text: rgba(133, 142, 173, 1);
+//   --input-placeholder: rgba(163, 170, 194, 1);
+//   --shadow: rgba(17, 24, 39, 0.05);
+//   --form-color: rgba(102, 114, 153, 1);
+//   --font: Work Sans;
+// }
 
-@mixin flex-box(
-  $direction: row,
-  $justify: center,
-  $align: center,
-  $wrap: nowrap
-) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-  flex-wrap: $wrap;
-}
+// @mixin flex-box(
+//   $direction: row,
+//   $justify: center,
+//   $align: center,
+//   $wrap: nowrap
+// ) {
+//   display: flex;
+//   flex-direction: $direction;
+//   justify-content: $justify;
+//   align-items: $align;
+//   flex-wrap: $wrap;
+// }

@@ -1,0 +1,35 @@
+section {
+  background: #141414;
+  padding: 40px 0;
+}
+table {
+  border-radius: 4px;
+  overflow: hidden;
+  border-collapse: collapse;
+  margin: auto;
+  width: 100%;
+  color: rgb(131, 131, 131);
+  tr {
+    border: 1px solid rgb(22, 22, 22);
+    td,
+    th {
+      border: none;
+      padding: 4px 10px;
+      text-align: left;
+    }
+    img {
+      width: 20px;
+    }
+  }
+  button,
+  a {
+    background: none;
+    border: none;
+    color: rgb(131, 131, 131);
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
