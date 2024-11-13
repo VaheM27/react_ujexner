@@ -1,0 +1,40 @@
+@import "../../styles/global.scss";
+
+.number {
+  background-color: #f4d03f;
+  padding: 20px 0;
+  font-family: "Courier New", Courier, monospace;
+
+  @include makeFlex(center, center, column, unset, unset, unset);
+  .mainNum {
+    font-size: 48px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    transition: all 1s;
+    cursor: pointer;
+    &:hover {
+      font-size: 60px;
+      color: #4d5656;
+      border-color: #4d5656;
+    }
+  }
+
+  .btnDiv {
+    @include makeFlex(center, center, row, unset, unset, 10px);
+
+    .btn {
+      border-radius: 9999px;
+      border: none;
+      padding: 16px 30px;
+      cursor: pointer;
+      width: 150px;
+      background-color: #d35400;
+      transition: all 1s;
+      @include textParams(20px, 500, unset, #fff);
+      &:hover {
+        background-color: #d98880;
+        box-shadow: 2px 2px 10px #000;
+      }
+    }
+  }
+}

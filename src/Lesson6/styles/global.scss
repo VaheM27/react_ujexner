@@ -1,0 +1,16 @@
+@mixin makeFlex($justify, $align, $dir, $wrap, $rgap, $cgap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    row-gap: $rgap;
+    column-gap: $cgap;
+  }
+  
+  @mixin textParams($size, $weight, $family, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family;
+    color: $color;
+  }
