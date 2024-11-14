@@ -5,7 +5,7 @@ import "./Users.scss";
 
 const Users = () => {
   const [show, setShow] = useState(true);
-  const [items, setItems] = useState([...data]);
+  const [items, setItems] = useState(data);
 
   function showHide() {
     setShow(!show);
