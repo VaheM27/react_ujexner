@@ -21,7 +21,7 @@ img {
 }
 /* float-ի զրոյացում */
 .clear::after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }

@@ -1,0 +1,89 @@
+/* Ընդհանուր զրոյացումններ */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /*պլավնի scroll*/
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1340px;
+  margin: auto;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+/* float-ի զրոյացում */
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*after, befor-ի զրոյացում */
+::after,
+::before {
+  box-sizing: border-box;
+}
+/* ************************************** */
+
+.button_increment,
+.button_decrement {
+  width: 100px;
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+}
+
+.fain {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.div-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: #a50404;
+  margin: 10px;
+}
+.userdivs {
+  div {
+    min-width: 100px;
+    min-height: 100px;
+    border: 2px solid red;
+    display: flex;
+    gap: 20px;
+  }
+}
+.mapdiv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
