@@ -50,9 +50,8 @@
 
 
 .close_btn {
-    background-color: white;
     border: none;
-    padding: 10px;
+    background: none;
     border-radius: 100%;
     position: absolute;
     top: -20px;
@@ -64,6 +63,6 @@
     };
 }
 
-.close_btn:hover {
-    box-shadow: 2px 2px 20px red;
+.close_btn img:hover {
+    filter:drop-shadow(1px 1px 3px red)
 }
