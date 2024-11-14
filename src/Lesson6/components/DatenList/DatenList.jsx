@@ -3,9 +3,12 @@ import { useState } from "react";
 import "./DatenList.scss";
 
 const DatenList = () => {
-  const [displayMap, setDisplayMap] = useState(
-    users.reduce((acc, user) => ({ ...acc, [user.id]: "table-row" }), {})
-  );
+  const [displayMap, setDisplayMap] = useState(users);
+
+  const handleDelete = (userId) => {
+    const newData = displayMap.filter((user) => userId !== user.id);
+    setDisplayMap(newData);
+  };
 
   return (
     <section>
@@ -23,13 +26,14 @@ const DatenList = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
+          {displayMap.map((user) => (
             <tr
               key={user.id}
               style={{
                 display: displayMap[user.id],
                 backgroundColor: user.id % 2 === 0 ? "#141414" : "#000",
-              }}>
+              }}
+            >
               <td>{user.id}</td>
               <td>
                 <img src={user.image} alt={user.firstName} />
@@ -47,12 +51,7 @@ const DatenList = () => {
                 <a href={`mailto:${user.email}`}>{user.email}</a>
               </td>
               <td>
-                <button
-                  onClick={() =>
-                    setDisplayMap((prev) => ({ ...prev, [user.id]: "none" }))
-                  }>
-                  Delete
-                </button>
+                <button onClick={() => handleDelete(user.id)}>Delete</button>
               </td>
             </tr>
           ))}
