@@ -1,7 +1,4 @@
-import {
-  UseStateButton1,
-  UseStateButton2,
-} from "./components/Event";
+import { UseStateButton1, UseStateButton2 } from "./components/Event";
 
 import "./App.css";
 

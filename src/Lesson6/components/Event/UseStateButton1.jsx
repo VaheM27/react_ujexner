@@ -9,10 +9,10 @@ export const UseStateButton1 = () => {
     setNumber(number - 1);
   };
   return (
-    <div className="div" >
+    <div className="div">
       <div className="center">
-      <button onClick={minus}>Click Me</button>
-      <button onClick={plyus}>Click Me</button>
+        <button onClick={minus}>Click Me</button>
+        <button onClick={plyus}>Click Me</button>
       </div>
       <p> {number} </p>
     </div>
