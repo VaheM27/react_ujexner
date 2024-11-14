@@ -1,0 +1,49 @@
+
+
+.math_operations {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #FFC196;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+  
+  p {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+  }
+
+  button {
+    display: inline-block;
+    color: #fff;
+    background-color: orangered;
+    padding: 15px 30px;
+    border: 1px solid orangered;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  .reset_button {
+    background-color: gray;
+  }
+  
+  button:hover {
+    box-shadow: 2px 2px 20px orangered;
+  }
+
+}
+
+.math_operations_buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
