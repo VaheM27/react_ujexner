@@ -1,9 +1,38 @@
+.us {
+  p {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 50px;
+  }
+}
 .show {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  background-color: grey;
-  border-radius: 15px;
+  width: 100%;
+  border: none;
+  tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    td {
+      height: 40px;
+      padding: 10px;
+      width: 100%;
+      cursor: default;
+      &:nth-child(odd) {
+        background-color: aquamarine;
+      }
+      &:nth-child(even) {
+        background-color: aqua;
+      }
+    }
+    td:last-child {
+      text-align: right;
+      button {
+        font-size: 35px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        transform: translateY(-10px);
+      }
+    }
+  }
 }

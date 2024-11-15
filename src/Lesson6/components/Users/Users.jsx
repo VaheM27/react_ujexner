@@ -1,21 +1,42 @@
+import user from "./userData";
 import { nanoid } from "nanoid";
 import { useState } from "react";
 
 import "./Users.scss";
 
 const Users = () => {
-  const [showUsers, setShowUsers] = useState([]);
+  const [showUsers, setShowUsers] = useState(user);
 
-  function show() {
-    setShowUsers([...showUsers], { id: nanoid(2), name: nanoid() });
-  }
+  const newData = (id) => {
+    const remover = showUsers.filter((element) => element.id !== id);
+    setShowUsers(remover);
+  };
+
   return (
-    <div>
-      <button onClick={show}>Add Users</button>
+    <div className="us">
+      <p>{showUsers.length} users</p>
       {showUsers.map((elm) => {
         return (
-          <div className="show" key={elm.id}>
-            <p>{elm.name}</p>
+          <div key={nanoid(2)}>
+            <table className="show">
+              <tr>
+                <td>{elm.id}.</td>
+                <td>{elm.name}</td>
+                <td>{elm.phone}</td>
+                <td>{elm.email}</td>
+                <td>{elm.username}</td>
+                <td>{elm.website}</td>
+                <td>
+                  <button
+                    onClick={() => {
+                      newData(elm.id);
+                    }}
+                  >
+                    X
+                  </button>
+                </td>
+              </tr>
+            </table>
           </div>
         );
       })}

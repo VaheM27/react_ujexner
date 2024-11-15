@@ -9,5 +9,31 @@
   .buttons {
     display: flex;
     column-gap: 20px;
+    button {
+      display: inline-flex;
+      color: #fff;
+      background-color: orangered;
+      padding: 20px 40px;
+      border: 1px solid orangered;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 1s;
+      position: relative;
+      span {
+        color: transparent;
+        font-size: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.8s;
+      }
+      &:hover {
+        color: transparent;
+        span {
+          color: #fff;
+        }
+      }
+    }
   }
 }
