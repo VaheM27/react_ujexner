@@ -37,6 +37,6 @@
     color: #14171F;
 
 }
-.logoMain ul :nth-child(5){
+.logoMain ul :nth-child(5) a{
     color:#F9995D ;
 }

@@ -5,7 +5,7 @@ import Footer from "./components/Footer/Footer";
 
 import "./App.css";
 
-const Lesson5 = () => {
+const App = () => {
     return (
         <div className="box">
             <Navbar/>
@@ -16,5 +16,5 @@ const Lesson5 = () => {
     )
 };
 
-export default Lesson5;
+export default App;
 
