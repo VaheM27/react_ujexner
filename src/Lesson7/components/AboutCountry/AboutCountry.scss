@@ -1,0 +1,43 @@
+.aboutCountry {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+  width: 50%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 52px;
+      font-weight: 200;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 18px;
+
+      span {
+        font-size: 22px;
+      }
+    }
+
+    a {
+      font-weight: 200;
+      font-size: 20px;
+      color: #fff;
+      transition: 0.3s;
+
+      &:hover {
+        text-decoration: underline;
+        color: #bbb;
+      }
+    }
+
+    img {
+      width: 200px;
+      object-fit: contain;
+      margin-top: 30px;
+    }
+  }
+}
