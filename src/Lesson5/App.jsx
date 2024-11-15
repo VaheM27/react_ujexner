@@ -1,4 +1,4 @@
-import Button from "./components/Button/Button";
+import Button from "./Lesson5/Button/Button";
 import "./App.css";
 
 function App() {
