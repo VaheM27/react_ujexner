@@ -1,0 +1,28 @@
+.usersFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  background-color: burlywood;
+  padding: 20px;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  p {
+    font-size: 16px;
+    width: 250px;
+    height: 16px;
+    background: linear-gradient(150deg, orange 60%, cyan);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  img {
+    background: linear-gradient(135deg, orange 60%, cyan);
+    width: 30px;
+  }
+  
+}
+.pi{
+    background: linear-gradient(135deg, orange 60%, cyan);
+
+}

@@ -1,4 +1,5 @@
 import { UseStateButton1, UseStateButton2 } from "./components/Event";
+import Users from "./components/Users/Users";
 
 import "./App.css";
 
@@ -7,6 +8,7 @@ function App() {
     <div>
       <UseStateButton1 />
       <UseStateButton2 />
+      <Users />
     </div>
   );
 }

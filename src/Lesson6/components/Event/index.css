@@ -15,11 +15,11 @@ button {
 
 .div {
   padding: 20px;
-  background-color: green;
+  background: linear-gradient(135deg, orange 30%, cyan);
 }
 .div1 {
   padding: 20px;
-  background-color: green;
+  background: linear-gradient(135deg, cyan 5%, orange);
 }
 
 .center {
