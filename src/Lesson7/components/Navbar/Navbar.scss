@@ -1,0 +1,31 @@
+@import "../../styles/global.scss";
+
+.navBarMain {
+  @include makeFlex(flex-end, center, unset, unset, unset, unset);
+  padding-right: 20px;
+  .navList {
+    @include makeFlex(center, center, unset, unset, unset, 20px);
+    list-style-type: none;
+    .navLi {
+      padding: 10px 0;
+      .navBtn {
+        @include textParams(16px, 900, unset, #fff);
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        border-radius: 8px;
+        background-color: #b77fff;
+        border: 1px solid transparent;
+        padding: 10px 20px;
+        width: 160px;
+        border-radius: 5px;
+        transition: all 1s;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.05);
+          background-color: #6f00ff;
+          border-color: #fff;
+          box-shadow: 0 0 10px #6f00ff;
+        }
+      }
+    }
+  }
+}
