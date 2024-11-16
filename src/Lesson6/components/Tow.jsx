@@ -10,15 +10,17 @@ export const Tow = () => {
     }
     return (
         <div className="users">
-            <button className="show" onClick={ShowHide}>Show/Hide</button>
-            {show && Data.map((el) => {
-                return(
-                    <div className="box">
-                        <h2>{el.name}</h2>
-                        <p>{el.year}</p>
-                    </div>
-                )
-            })}
+            <button  onClick={ShowHide}>Show/Hide</button>
+            <div className="boxes">
+                {show && Data.map((el) => {
+                    return(
+                        <div className="box">
+                            <h2>{el.name}</h2>
+                            <p>{el.year}</p>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     );
 };

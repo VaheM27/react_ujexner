@@ -10,11 +10,13 @@
 } */
 .decr{
     text-align: center;
+    background: #41b0e8;
+    padding: 100px;
 }
 .decr p{
     width: 350px;
-    padding: 50px 0;
     margin: 50px auto;
+    padding: 50px 0;
     background: #000;
     color: white;
     border-radius: 5px;
@@ -29,3 +31,32 @@ button{
     cursor: pointer;
     border: none;
 }
+.users{
+    display: flex;
+    justify-content: center;
+    padding:100px 0;
+    flex-direction: column;
+    background: #555555;
+}
+.users button{
+    margin: 50px auto;
+    padding: 20px 40px;
+}
+.users .boxes{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.users .box{
+    width: 150px;
+    height: 200px;
+    background: #41b0e8;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
