@@ -12,13 +12,13 @@ export const One = () => {
   const Multiply = () => {
     setNumber(number * 2);
   };
-
   const Divide = () => {
     setNumber(number / 2);
   };
+  
   return (
-    <div>
-      <div>
+    <div className="incr">
+      <div className="decr">
         <p>{number}</p>
         <button onClick={Increment}>increment</button>
         <button onClick={Decrement}> decrement</button>
