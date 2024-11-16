@@ -10,23 +10,22 @@ import {
 import "./Navbar.scss";
 
 const Navbar = () => {
-  const [productType, setProductType] = useState("");
-
+  const [productType, setProductType] = useState([]);
   const navItems = ["Men Clothes", "Women Clothes", "Electronics", "Jewelery"];
 
   function getData(value) {
     switch (value) {
       case "Men Clothes":
-        setProductType("Men Clothes");
+        setProductType([...mensClothes]);
         break;
       case "Women Clothes":
-        setProductType("Women Clothes");
+        setProductType([...womensClothes]);
         break;
       case "Electronics":
-        setProductType("Electronics");
+        setProductType([...electronics]);
         break;
       case "Jewelery":
-        setProductType("Jewelery");
+        setProductType([...jewelery]);
         break;
       default:
         break;
@@ -46,6 +45,9 @@ const Navbar = () => {
           );
         })}
       </ul>
+      <div className="dashboardContent">
+        <Dashboard arr={productType} />
+      </div>
     </div>
   );
 };

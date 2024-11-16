@@ -1,36 +1,61 @@
+import { useState } from "react";
+
 import "./Dashboard.scss";
 
-const Dashboard = ({ id, src, name, text, price }) => {
+const Dashboard = ({ arr }) => {
+  const [order, setOrder] = useState([]);
+
+  function changeOrder() {
+    setOrder([...arr]);
+    const sortedArr = order.sort((a, b) =>
+      a.title > b.title ? 1 : a.title < b.title ? -1 : 0
+    );
+    setOrder(sortedArr);
+  }
+
   return (
     <div className="board">
       <table>
-        <thead>
-          <tr>
-            <th>Product ID</th>
-            <th>Image</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Price</th>
-          </tr>
-        </thead>
+        {arr[0] && (
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Image</th>
+              <th className="filter">
+                Title
+                <span onClick={changeOrder}>&#11167;</span>
+              </th>
+              <th>Description</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+        )}
         <tbody>
-          <tr>
-            <td>
-              <p className="productInfo">{id}</p>
-            </td>
-            <td>
-              <img src={src} alt="Product Image" className="productImg" />
-            </td>
-            <td>
-              <p className="productInfo">{name}</p>
-            </td>
-            <td>
-              <p className="productInfo">{text}</p>
-            </td>
-            <td>
-              <p className="productInfo">{price}</p>
-            </td>
-          </tr>
+          {arr.map((element) => {
+            return (
+              <tr key={element.id}>
+                <td className="productIdTd">
+                  <p className="productInfo productID">{element.id}</p>
+                </td>
+                <td>
+                  <img
+                    src={element.image}
+                    alt="Product Image"
+                    className="productImg"
+                  />
+                </td>
+                <td className="infoTd">
+                  <p className="productInfo name">{element.title}</p>
+                </td>
+                <td className="infoTd">
+                  <p className="productInfo descPar">{element.description}</p>
+                </td>
+                <td className="infoTd">
+                  <p className="productInfo">${element.price}</p>
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

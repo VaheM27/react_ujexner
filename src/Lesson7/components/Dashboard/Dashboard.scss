@@ -1,2 +1,85 @@
 @import "../../styles/global.scss";
 
+.board {
+  table {
+    margin: 50px 0;
+    max-width: 1200px;
+    width: 100%;
+    user-select: none;
+    thead {
+      tr {
+        th {
+          background-color: #6f00ff;
+          @include textParams(20px, 700, unset, #fff);
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          padding: 5px 20px;
+          span {
+            cursor: pointer;
+            transition: all 0.5s;
+            &:hover {
+              color: #000;
+            }
+          }
+        }
+      }
+      .filter {
+        @include makeFlex(center, center, unset, unset, unset, 5px);
+      }
+    }
+    tbody {
+      tr {
+        background-color: #fff;
+        td {
+          transition: all 0.5s;
+          padding: 10px 20px;
+          overflow: hidden;
+          .productInfo {
+            @include textParams(18px, 700, unset, #000);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            overflow: scroll;
+            max-height: 50px;
+          }
+
+          .name {
+            cursor: pointer;
+            justify-content: flex-start;
+          }
+
+          .productImg {
+            cursor: pointer;
+            transition: all 1s;
+            width: 60px;
+            height: 60px;
+            &:hover {
+              transform: scale(2) translateY(20px);
+            }
+          }
+
+          .productID {
+            color: #fff;
+          }
+          .descPar {
+            font-size: 12px;
+            color: #7b8488;
+            @include makeFlex(
+              flex-start,
+              flex-start,
+              unset,
+              unset,
+              unset,
+              unset
+            );
+          }
+        }
+        .productIdTd {
+          background-color: #6f00ff;
+        }
+        &:hover .infoTd {
+          background-color: #cacdcf;
+        }
+      }
+    }
+  }
+}

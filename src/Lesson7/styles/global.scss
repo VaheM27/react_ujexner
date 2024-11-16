@@ -21,6 +21,10 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background: rgb(238, 174, 202);
   background: radial-gradient(
