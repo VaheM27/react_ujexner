@@ -15,7 +15,7 @@ export const One = () => {
   const Divide = () => {
     setNumber(number / 2);
   };
-  
+
   return (
     <div className="incr">
       <div className="decr">
