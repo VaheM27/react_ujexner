@@ -1,0 +1,49 @@
+nav {
+  background-color: rgb(134, 223, 245);
+  box-shadow: 5px 5px 15px rgb(143, 181, 27);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  font-size: 30px;
+  font-style: oblique;
+  cursor: pointer;
+}
+a {
+  position: relative;
+  padding: 10px 20px;
+  color: rgb(143, 181, 27);
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: rgb(143, 181, 27);
+    transition: 1s;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+.logo {
+  width: 80px;
+}
+
+.gif {
+  background-image: url(../assets/gifs.gif);
+}
+footer {
+  background-image: url(../assets/gifs.gif);
+}
