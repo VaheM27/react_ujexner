@@ -1,0 +1,44 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  td {
+    text-align: center;
+  }
+
+  th {
+    background: #ccc;
+    height: 40px;
+    font-weight: 400;
+
+    button {
+      background: #fff;
+      padding: 4px 10px;
+      border: 1px solid #888;
+      cursor: pointer;
+    }
+  }
+
+  .delete {
+    border: 1px solid #000;
+    background-color: #fff;
+    padding: 4px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .show {
+    background: #fff;
+    border: none;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  input {
+    height: 30px;
+    outline: none;
+    border: none;
+    padding: 0 0 0 10px;
+  }
+}
