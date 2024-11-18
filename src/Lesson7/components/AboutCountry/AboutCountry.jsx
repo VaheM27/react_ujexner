@@ -21,53 +21,35 @@ const AboutCountry = ({
 }) => {
   const languageList = languages ? Object.values(languages).join(", ") : "N/A";
 
+  const countryInfo = [
+    { label: "Capital", value: capital },
+    { label: "Region", value: `${region}, ${continent}` },
+    { label: "Languages", value: languageList },
+    { label: "Nationality", value: nationality },
+    { label: "Population", value: population },
+    { label: "Area", value: `${area} km²` },
+    { label: "Population per km²", value: popkm },
+    { label: "Currencies", value: `${symbol}, ${currency}` },
+    { label: "Timezones", value: timezones },
+    { label: "Border countries", value: border },
+  ];
+
   return (
     <div className="aboutCountry">
+      <div className="countryFlag">
+        <img src={flag} alt={alt} />
+        <img src={coatOfArms} alt={name} />
+      </div>
       <div>
         <h3>{name}</h3>
-        <p>
-          Capital: <span>{capital}</span>
-        </p>
-        <p>
-          Region:{" "}
-          <span>
-            {region}, {continent}
-          </span>
-        </p>
-        <p>
-          Languages: <span>{languageList}</span>
-        </p>
-        <p>
-          Nationality: <span>{nationality}</span>
-        </p>
-        <p>
-          Population: <span>{population}</span>
-        </p>
-        <p>
-          Area: <span>{area} km²</span>
-        </p>
-        <p>
-          Population per km²: <span>{popkm}</span>
-        </p>
-        <p>
-          Currencies:{" "}
-          <span>
-            {symbol}, {currency}
-          </span>
-        </p>
-        <p>
-          Timezones: <span>{timezones}</span>
-        </p>{" "}
-        <p>
-          Border countries: <span>{border}</span>
-        </p>
+        {countryInfo.map(({ label, value }) => (
+          <p key={label}>
+            {label}: <span>{value}</span>
+          </p>
+        ))}
         <a href={maps} target="_blank" rel="noreferrer">
           Google Maps
         </a>
-      </div>
-      <div>
-        <img src={flag} alt={alt} />
-        <img src={coatOfArms} alt={name} />
       </div>
     </div>
   );

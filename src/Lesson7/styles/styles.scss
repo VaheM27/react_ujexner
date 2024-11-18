@@ -1,12 +1,22 @@
+:root {
+  --primary-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --max-width: 1340px;
+  --bg-color: rgb(40, 40, 40);
+  --scrollbar-width: 6px;
+  --scrollbar-radius: 8px;
+  --scrollbar-color: transparent;
+  --scrollbar-border: 3px solid transparent;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--primary-font);
 }
 
 .container {
-  max-width: 1340px;
+  max-width: var(--max-width);
   margin: auto;
 }
 
@@ -25,29 +35,29 @@ img {
 }
 
 body {
-  background: rgb(40, 40, 40);
-}
-
-html::-webkit-scrollbar {
-  width: 6px;
-}
-
-html::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 8px;
-}
-
-html::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: 3px solid transparent;
-  border-radius: 10px;
-}
-
-html::-webkit-scrollbar-thumb:hover {
-  background: transparent;
+  background: var(--bg-color);
 }
 
 html {
-  scrollbar-width: 4px;
-  scrollbar-color: transparent transparent;
+  scrollbar-width: var(--scrollbar-width);
+  scrollbar-color: var(--scrollbar-color) var(--scrollbar-color);
+
+  &::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--scrollbar-color);
+    border-radius: var(--scrollbar-radius);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border: var(--scrollbar-border);
+    border-radius: calc(var(--scrollbar-radius) + 2px);
+
+    &:hover {
+      background: var(--scrollbar-color);
+    }
+  }
 }

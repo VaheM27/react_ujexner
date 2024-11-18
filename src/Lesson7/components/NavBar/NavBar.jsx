@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import NavMenu from "../NavMenu/NavMenu";
 import { regions } from "../../constants/data";
 
@@ -8,10 +7,11 @@ import "./NavBar.scss";
 const NavBar = ({ onRegionSelect }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
-  function handleToggle(index, region) {
-    setOpenIndex(openIndex === index ? null : index);
-    openIndex !== index ? onRegionSelect(region) : onRegionSelect(null);
-  }
+  const handleToggle = (index, region) => {
+    const newIndex = openIndex === index ? null : index;
+    setOpenIndex(newIndex);
+    onRegionSelect(newIndex === null ? null : region);
+  };
 
   return (
     <nav>
