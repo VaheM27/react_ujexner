@@ -7,7 +7,8 @@ const Users = () => {
   const [data, setData] = useState([]);
   const [fromLowToHigh, setfromLowToHigh] = useState(0);
   const [show, setShow] = useState(false);
-
+  console.log("sadsa");
+  
   useEffect(() => {
     fetch("https://6739f0baa3a36b5a62f02793.mockapi.io/usersData")
       .then((res) => res.json())
