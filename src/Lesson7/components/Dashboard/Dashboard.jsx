@@ -2,17 +2,7 @@ import { useState } from "react";
 
 import "./Dashboard.scss";
 
-const Dashboard = ({ arr }) => {
-  const [order, setOrder] = useState([]);
-
-  function changeOrder() {
-    setOrder([...arr]);
-    const sortedArr = order.sort((a, b) =>
-      a.title > b.title ? 1 : a.title < b.title ? -1 : 0
-    );
-    setOrder(sortedArr);
-  }
-
+const Dashboard = ({ arr, changeOrder }) => {
   return (
     <div className="board">
       <table>
