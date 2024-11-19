@@ -20,10 +20,8 @@ const Navbar = () => {
         </ul>
       </nav>
       <div className="gif">
-        <img src={gifs} alt="" />
       </div>
       <footer>
-        <img src={gifs} alt="" />
       </footer>
     </>
   );

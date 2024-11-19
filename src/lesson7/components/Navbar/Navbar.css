@@ -42,7 +42,10 @@ a {
 }
 
 .gif {
+  padding: 400px 0;
   background-image: url(../assets/gifs.gif);
+  background-size: cover;
+  background-position: center;
 }
 footer {
   background-image: url(../assets/gifs.gif);
