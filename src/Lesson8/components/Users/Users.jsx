@@ -7,8 +7,7 @@ const Users = () => {
   const [data, setData] = useState([]);
   const [fromLowToHigh, setfromLowToHigh] = useState(0);
   const [show, setShow] = useState(false);
-  console.log("sadsa");
-  
+
   useEffect(() => {
     fetch("https://6739f0baa3a36b5a62f02793.mockapi.io/usersData")
       .then((res) => res.json())
@@ -17,12 +16,6 @@ const Users = () => {
 
   const sortByName = () => {
     let sortedByName = [];
-
-    // fromLowToHigh === 0 || fromLowToHigh === -1
-    //   ? ((sortedByName = data.toSorted((a, b) => a.name.localeCompare(b.name))),
-    //     setfromLowToHigh(1))
-    //   : ((sortedByName = data.toSorted((a, b) => b.name.localeCompare(a.name))),
-    //     setfromLowToHigh(-1));
 
     if (fromLowToHigh === 0 || fromLowToHigh === -1) {
       sortedByName = data.toSorted((a, b) => a.name.localeCompare(b.name));
