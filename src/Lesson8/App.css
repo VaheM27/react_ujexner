@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.userBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  font-size: 20px;
+  padding: 20px;
+}
+
+
+.show_password {
+  width: 80%;
+  display: inline-block;
+  text-align: center;
+  input {
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  img {
+    position: relative;
+    top: 5px;
+    right: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+
+
+.delete_button {
+  padding: 5px;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.delete_button:hover {
+  padding: 5px;
+  background-color: green;
+  border-radius: 10px;
+}
+
+.buttons {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  button {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #6B5B95;
+  }
+
+  button:hover {
+    background-color: #88B04B;
+  }
+
+  img {
+    height: 30px;
+    margin-left: 10px;
+  }
+}
