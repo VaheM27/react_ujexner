@@ -1,0 +1,55 @@
+header {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+header nav {
+    width: 100%;
+    height: 10vh;
+    background-color: #FFE799;
+    color: #FF52B0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 24px;
+    font-family: monospace;
+}
+
+header nav img {
+    height: 100px;
+}
+
+header nav ul {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul.open {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFE799;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 100;
+}
+
+header nav ul li {
+    padding: 10px;
+    text-align: center;
+    transition: .5s;
+}
+
+header nav ul li:hover{
+    transform: scale(1.2);
+}
+
+.menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}

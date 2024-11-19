@@ -1,0 +1,34 @@
+@media screen and (max-width: 1000px) {
+    header nav ul {
+        display: none;
+    }
+
+    header nav ul.open {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        flex-direction: column;
+        background-color: #FFE799;
+        width: 100%;
+        position: absolute;
+        top: 82.1px;
+        left: 0;
+        z-index: 100;
+    }
+
+    .menu {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    header nav ul {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        display: none;
+    }
+}

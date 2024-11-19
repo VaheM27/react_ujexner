@@ -1,0 +1,22 @@
+@media screen and (max-width: 1300px) {
+    main{
+        display: flex;
+        row-gap: 200px;
+        height: auto;
+        padding-top: 20px;
+    }
+    .itemBox{
+        height: auto;
+    }
+    .contBox{
+        display: flex;
+        height: auto;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 550px){
+    .itemBox img{
+        width: 200px;
+        height: 100px;
+    }
+}

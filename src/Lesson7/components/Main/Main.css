@@ -1,0 +1,46 @@
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background: gainsboro;
+}
+.contBox{
+    width: 90%;
+    min-height: 100vh;
+    display: grid;
+    margin: 30px;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-items: center;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    padding: 30px;
+    row-gap: 50px;
+}
+.itemBox{
+    width: 80%;
+    min-height: 300px;
+    border: 6px double black;
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 20px;
+    background: rgba(215, 183, 122, 0.635);
+    cursor: pointer;
+}
+.itemBox img{
+    width: 300px;
+    height: 150px;
+}
+.itemBox:hover{
+    transform: scale(1.1);
+}
+.itemBox button{
+    background: rgb(221, 221, 46);
+    width: 200px;
+    border-radius: 20px 20px 0px 0px;
+    color: white;
+}
