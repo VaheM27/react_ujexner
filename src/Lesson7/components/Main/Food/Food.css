@@ -1,0 +1,19 @@
+.foods{
+    width: 90%;
+    translate: 5%;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.food{
+    text-align: center;
+    width: 250px;
+    background: #969696;
+    margin-bottom: 20px;
+}
+img{
+    width: 100%;
+    height: 150px;
+}
