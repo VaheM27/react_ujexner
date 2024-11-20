@@ -1,0 +1,95 @@
+@mixin flex($justify, $align, $direction, $gap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+body {
+  background-color: bisque;
+  .main {
+    @include flex(center, flex-end, column, _);
+    .nav {
+      @include flex(_, _, row, 0 20px);
+      padding: 20px;
+      li {
+        font-size: 40px;
+        cursor: default;
+        user-select: none;
+        color: burlywood;
+        padding: 20px;
+        position: relative;
+      }
+      button {
+        font-size: 40px;
+        cursor: pointer;
+        user-select: none;
+        border: none;
+        background-color: transparent;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 4px;
+          background-color: brown;
+          transition: all 0.8s;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+    .usersBox {
+      @include flex(_, _, column, 0 0);
+      width: 100%;
+      border-radius: 50px;
+      overflow: hidden;
+      .box {
+        @include flex(center, center, column, 15px 0);
+        padding: 20px;
+        cursor: default;
+        p {
+          user-select: none;
+          input {
+            background-color: transparent;
+            cursor: pointer;
+            padding: 3px;
+            text-align: center;
+            outline: none;
+          }
+        }
+        .infoBox {
+          @include flex(_, _, row, 0 30px);
+          border-radius: 50px;
+          overflow: hidden;
+          user-select: none;
+          border: 1px solid black;
+          padding-right: 20px;
+          overflow: hidden;
+          .info {
+            @include flex(center, _, column, 3px 0);
+            font-size: 25px;
+            span {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              cursor: pointer;
+              padding: 10px 15px;
+              border-radius: 15px;
+              border: 2px dashed;
+              transition: all 0.8s;
+              &:hover {
+                color: red !important;
+                background-color: transparent !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
