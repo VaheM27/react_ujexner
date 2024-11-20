@@ -1,8 +1,12 @@
 .main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
+  background-color: rgb(42, 67, 42);
+  p{
+    width: 20px;
+  }
 }
 
 .box {
