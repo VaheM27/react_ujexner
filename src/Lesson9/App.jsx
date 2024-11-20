@@ -7,24 +7,63 @@ import "./App.css";
 
 const App = () => {
   const [todo, setTodo] = useState([]);
-
+  const [active, setActive] = useState(null);
+  const showPassword = (todoId) =>
+    setActive((active) => (active === todoId ? null : todoId));
+  const checked = (todoId) => {
+    setTodo((todo) =>
+      todo.map((item) =>
+        item.id === todoId
+          ? {
+              ...item,
+              isChecked: !item.isChecked,
+              done: !item.isChecked ? "pink" : "",
+            }
+          : item
+      )
+    );
+  };
+  const remove = (todoId) =>
+    setTodo((todo) => todo.filter((item) => item.id !== todoId));
   function todoBox(e) {
     e.preventDefault();
-    const { todoText } = e.target;
+    const { todoText, username, password } = e.target;
     const todoData = {
       id: nanoid(10),
-      Text: todoText.value.trim(),
-      isChected: false,
+      text: todoText.value.trim(),
+      username: username.value.trim(),
+      password: password.value.trim(),
+      isChecked: false,
+      done: "green",
     };
     if (!todoText.value.trim()) return;
     setTodo([...todo, todoData]);
 
-    todoText.value = "";
+    e.target.reset();
   }
   return (
     <div>
       <TodoInput todoBox={todoBox} />
-      <ToDo todo={todo} />
+      <ul>
+        {todo.map((item) => {
+          return (
+            <ToDo
+              key={item.id}
+              todo={todo}
+              showPassword={() => showPassword(item.id)}
+              isActive={active === item.id}
+              text={item.text}
+              username={item.username}
+              password={item.password}
+              id={item.id}
+              remove={() => remove(item.id)}
+              checked={() => checked(item.id)}
+              isChecked={item.isChecked}
+              done={item.done}
+            />
+          );
+        })}
+      </ul>
     </div>
   );
 };

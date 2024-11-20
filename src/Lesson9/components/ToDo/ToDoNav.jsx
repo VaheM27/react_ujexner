@@ -4,14 +4,13 @@ const TodoInput = ({ todoBox }) => {
   return (
     <div>
       <form onSubmit={todoBox}>
-        <input type="checkbox" />
         <input type="text" id="todoText" />
-        <input type="username" id="todoText" />
+        <input type="username" id="username" />
         <input
           type="password"
           placeholder="Password"
           autoComplete="password"
-          id="todoText"
+          id="password"
         />
         <input type="submit" />
       </form>
