@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Form from "./components/Form/Form";
 import TaskList from "./components/TaskList/TaskList";
 import { v4 as uuidv4 } from "uuid";
@@ -8,6 +8,14 @@ import "./App.scss";
 const App = () => {
   const [todos, setTodos] = useState([]);
   const [active, setActive] = useState(null);
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   const formValue = (e) => {
     e.preventDefault();
@@ -17,9 +25,11 @@ const App = () => {
       surname: surname.value.trim(),
       username: username.value.trim(),
       password: password.value.trim(),
+      date: currentTime.toLocaleString(),
+      status: "bi bi-square",
+      isDone: "active",
       isChecked: false,
       id: uuidv4(),
-      isDone: "active",
     };
 
     if (
@@ -45,6 +55,7 @@ const App = () => {
               ...todo,
               isChecked: !todo.isChecked,
               isDone: !todo.isChecked ? "done" : "active",
+              status: !todo.isChecked ? "bi bi-check-square" : "bi bi-square",
             }
           : todo
       )
@@ -60,6 +71,18 @@ const App = () => {
       <div className="flexBox">
         <Form submit={formValue} />
         <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Created at</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
           <tbody>
             {todos.map((todo) => {
               return (

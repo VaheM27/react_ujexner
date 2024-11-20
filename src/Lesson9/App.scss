@@ -34,4 +34,11 @@ img {
 table {
   width: 80%;
   border-collapse: collapse;
+
+  th{
+    background: #eee;
+    padding: 10px;
+    font-weight: 400;
+    text-align: left;
+  }
 }

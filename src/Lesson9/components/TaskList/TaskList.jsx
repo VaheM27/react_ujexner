@@ -12,6 +12,8 @@ const TaskList = ({
   check,
   remove,
   isDone,
+  date,
+  status,
 }) => {
   return (
     <tr className={isDone} id={id}>
@@ -20,6 +22,7 @@ const TaskList = ({
       </td>
       <td>{name}</td>
       <td>{surname}</td>
+      <td>{date}</td>
       <td>{username}</td>
       <td>
         <input
@@ -30,7 +33,14 @@ const TaskList = ({
         <button onClick={onShowPassword} className="show">
           <i className={`bi bi-eye${!isActive ? "-slash" : ""}`}></i>
         </button>
-        <button onClick={remove}>Delete</button>
+      </td>
+      <td>
+        <i className={status}></i>
+      </td>
+      <td>
+        <button onClick={remove} className="delete">
+          Delete
+        </button>
       </td>
     </tr>
   );
