@@ -1,0 +1,67 @@
+@import "../../styles/global.scss";
+
+.card {
+  @include makeFlex(center, center, row, wrap, 50px, 50px);
+  margin: 10px 0;
+  .cardBox {
+    padding: 20px;
+    @include makeFlex(space-between, flex-start, row, unset, unset, 20px);
+    background-color: #543f88;
+    box-shadow: 1px 1px 10px #543f88;
+    max-width: 300px;
+    border-radius: 10px;
+    width: 100%;
+    transition: all 0.5s;
+    overflow-x: scroll;
+    .checkDiv {
+      @include makeFlex(center, center, unset, unset, unset, unset);
+      padding: 3px;
+      transition: all 0.5s;
+      border-radius: 50%;
+      background-color: #fff;
+      input[type="checkbox"] {
+        width: 12px;
+        height: 12px;
+        accent-color: #fffdb6;
+        cursor: pointer;
+        transition: all 0.5s;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:hover input[type="checkbox"] {
+        transform: scale(1.1);
+      }
+    }
+    .inputData {
+      transition: all 0.5s;
+      @include makeFlex(center, center, column, unset, 10px, unset);
+      .inputPar {
+        @include textParams(14px, 500, monospace, #fff);
+        .passwordBox {
+          cursor: pointer;
+          transition: transform 0.6s;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    button {
+      border: none;
+      color: #fff;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all 0.5s;
+      i {
+        font-size: 18px;
+      }
+      &:hover {
+        color: #000;
+      }
+    }
+    &:hover {
+      box-shadow: 1px 1px 30px #543f88;
+    }
+  }
+}

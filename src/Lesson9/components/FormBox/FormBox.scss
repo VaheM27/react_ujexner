@@ -1,0 +1,35 @@
+@import "../../styles/global.scss";
+
+.formBox {
+  padding: 20px;
+  form {
+    @include makeFlex(center, center, column, unset, 10px, unset);
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      max-width: 400px;
+      width: 100%;
+      padding: 10px 20px;
+      outline: none;
+      border: none;
+      border-radius: 9999px;
+    }
+    input[type="submit"] {
+      border: none;
+      padding: 10px 20px;
+      background-color: #543f88;
+      cursor: pointer;
+      border-radius: 9999px;
+      max-width: 200px;
+      width: 100%;
+      color: #fff;
+      transition: all 1s;
+      border: 1px solid transparent;
+      &:hover {
+        background-color: #fff;
+        color: #543f88;
+        border-color: #543f88;
+      }
+    }
+  }
+}
