@@ -1,0 +1,23 @@
+form {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+
+  input {
+    border: 1px solid #888;
+    border-radius: 20px;
+    padding: 10px 20px;
+    outline: none;
+  }
+
+  .button {
+    background: rgb(26, 196, 26);
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(15, 146, 15);
+    }
+  }
+}
