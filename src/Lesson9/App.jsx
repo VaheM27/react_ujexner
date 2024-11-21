@@ -58,7 +58,7 @@ function App() {
       if (item.id === elementId) {
         return { ...item, isOpen: !item.isOpen };
       }
-      return item;
+      return { ...item, isOpen: false };
     });
     setData(openPasswordData);
   };
