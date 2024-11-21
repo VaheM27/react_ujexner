@@ -10,6 +10,7 @@ const App = () => {
   const [active, setActive] = useState(null);
   const showPassword = (todoId) =>
     setActive((active) => (active === todoId ? null : todoId));
+
   const checked = (todoId) => {
     setTodo((todo) =>
       todo.map((item) =>
@@ -23,8 +24,10 @@ const App = () => {
       )
     );
   };
+
   const remove = (todoId) =>
     setTodo((todo) => todo.filter((item) => item.id !== todoId));
+
   function todoBox(e) {
     e.preventDefault();
     const { todoText, username, password } = e.target;
@@ -45,21 +48,19 @@ const App = () => {
     <div>
       <TodoInput todoBox={todoBox} />
       <ul>
-        {todo.map((item) => {
+        {todo.map(({ id, text, username, password, isChecked }) => {
           return (
             <ToDo
-              key={item.id}
-              todo={todo}
-              showPassword={() => showPassword(item.id)}
-              isActive={active === item.id}
-              text={item.text}
-              username={item.username}
-              password={item.password}
-              id={item.id}
-              remove={() => remove(item.id)}
-              checked={() => checked(item.id)}
-              isChecked={item.isChecked}
-              done={item.done}
+              key={id}
+              showPassword={() => showPassword(id)}
+              isActive={active === id}
+              text={text}
+              username={username}
+              password={password}
+              id={id}
+              remove={() => remove(id)}
+              checked={() => checked(id)}
+              isChecked={isChecked}
             />
           );
         })}

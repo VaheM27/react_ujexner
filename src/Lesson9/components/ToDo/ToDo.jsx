@@ -1,7 +1,6 @@
 import "./ToDo.css";
 
 const ToDo = ({
-  done,
   remove,
   id,
   showPassword,
