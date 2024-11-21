@@ -87,6 +87,7 @@ const App = () => {
             {todos.map((todo) => {
               return (
                 <TaskList
+                  key={todo.id}
                   {...todo}
                   isActive={active === todo.id}
                   onShowPassword={() => handleShowPassword(todo.id)}
