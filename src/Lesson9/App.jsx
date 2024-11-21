@@ -45,7 +45,7 @@ const App = () => {
     e.target.reset();
   }
   return (
-    <div>
+    <div className="formBody">
       <TodoInput todoBox={todoBox} />
       <ul>
         {todo.map(({ id, text, username, password, isChecked }) => {
