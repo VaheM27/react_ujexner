@@ -1,0 +1,80 @@
+.TodoList {
+    width: 100%;
+    min-height: 40vh;
+    background: linear-gradient(135deg, #d1c4b8, #f5f5f5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.TodoList .todoBox {
+    width: 90%;
+    min-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+    background: white;
+    border: 3px solid #d7d0c8;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Arial", sans-serif;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.TodoList .todoBox:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.TodoList .todoBox input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #6c757d;
+    transform: scale(1.2);
+}
+
+.TodoList .todoBox p {
+    margin: 0 5px;
+    color: #444;
+    font-size: 16px;
+    flex: 1;
+    text-align: center;
+}
+
+.TodoList .todoBox button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.TodoList .todoBox button:hover {
+    background: #e55b5b;
+    transform: translateY(-2px);
+}
+
+.TodoList .todoBox button:active {
+    transform: translateY(1px);
+}
+
+.TodoList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.TodoList::-webkit-scrollbar-thumb {
+    background: #c1a5a5;
+    border-radius: 4px;
+}

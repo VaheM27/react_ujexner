@@ -1,0 +1,49 @@
+.inputBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.inputs {
+    width: 540px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.inputs form {
+    width: 100%;
+    display: contents;
+}
+
+.inputs input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.inputs button {
+    width: 50%;
+    padding: 10px;
+    grid-column: span 2;
+    justify-self: center;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.inputs button:hover {
+    background-color: #0056b3;
+}
