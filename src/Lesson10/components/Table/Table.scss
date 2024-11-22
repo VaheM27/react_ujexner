@@ -1,0 +1,35 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgb(15, 15, 15);
+  color: #fff;
+  margin-top: 20px;
+
+  th {
+    font-size: 14px;
+    font-weight: 200;
+    text-align: left;
+    padding: 10px 16px;
+
+    button {
+      background: transparent;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  .done {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 3%;
+      width: 94%;
+      height: 1px;
+      background: #bbb;
+    }
+  }
+}

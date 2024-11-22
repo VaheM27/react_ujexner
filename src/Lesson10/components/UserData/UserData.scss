@@ -1,0 +1,43 @@
+.odd {
+  background: rgb(15, 15, 15);
+}
+
+.even {
+  background: rgb(30, 30, 30);
+}
+
+td {
+  padding: 10px 16px;
+  font-weight: 200;
+  font-size: 14px;
+
+  img {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+
+  button {
+    padding: 6px 20px;
+    cursor: pointer;
+    color: #fff;
+    background: rgb(40, 40, 40);
+    transition: 0.3s;
+    border-radius: 20px;
+    border: 1px solid black;
+
+    &:hover {
+      background: rgb(50, 50, 50);
+    }
+  }
+
+  i {
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
