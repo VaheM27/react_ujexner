@@ -1,0 +1,18 @@
+body {
+  background-color: azure;
+  .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px 0;
+    padding-top: 50px;
+    .login{
+        width: 100px;
+    }
+    input {
+      padding: 5px;
+      border-radius: 15px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+table {
+  margin-top: 50px;
+  width: 100%;
+  tr {
+    display: flex;
+    justify-content: space-between;
+    text-align-last: left;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .short {
+    width: 150px;
+  }
+
+  th {
+    cursor: pointer;
+    user-select: none;
+    img {
+      width: 25px;
+    }
+  }
+  th,
+  td {
+    display: flex;
+    align-items: center;
+    gap: 0px 10px;
+    max-width: 300px;
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px;
+    &:nth-child(odd) {
+      background-color: aquamarine;
+    }
+    &:nth-child(even) {
+      background-color: aqua;
+    }
+  }
+}
