@@ -1,18 +1,34 @@
 import Navbar from "./components/Navbar/Navbar";
-import Car from "./components/Main/Cars/Cars";
-import Clothes from "./components/Main/Clothes/Clothes";
-import Food from "./components/Main/Food/Food";
+import Main from "./components/Main/Main";
+import {car,clothes,food} from "./constants/Data"
+import { useState } from "react";
 
 import "./App.css";
 
-const App = () => {
-  return (
-    <div>
-      <Navbar />
-      <Car/>
-      <Clothes/>
-      <Food/>
-    </div>
-  );
-};
+  function App() {
+    const [product, setProduct] = useState([]);
+    const nav = ["Car", "Clothes", "Food"];
+  
+    function Data(val) {
+      switch (val) {
+        case "Car":
+          setProduct([...car]);
+          break;
+        case "Clothes":
+          setProduct([...clothes]);
+          break;
+        case "Food":
+          setProduct([...food]);
+          break;
+        default:
+          break;
+      };
+    };
+    return (
+      <div className="appMain">
+        <Navbar nav={nav} Data={Data} />
+          <Main arr={product} />
+      </div>
+    );
+  };
 export default App;
