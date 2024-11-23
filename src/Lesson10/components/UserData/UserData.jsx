@@ -16,6 +16,7 @@ export const UserData = ({
   id,
   link,
   index,
+  date,
 }) => {
   return (
     <tr className={`${isDone} ${index % 2 ? "odd" : "even"}`}>
@@ -29,6 +30,7 @@ export const UserData = ({
       <td>{name}</td>
       <td>{surname}</td>
       <td>{username}</td>
+      <td>{date}</td>
       <td>{active ? password : "*************"}</td>
       <td>
         <i

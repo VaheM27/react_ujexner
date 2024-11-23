@@ -29,6 +29,7 @@ const App = () => {
 
     const nameRegex = /^[a-zA-Z]+$/;
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z0-9]{8,16}$/;
+    const usernameRegex = /^(?=.*[a-zA-Z])[a-zA-Z0-9.\-_]{8,20}$/;
     const linkRegex = /^(https?:\/\/|\.\/|\.\.\/)/;
     const errors = [];
 
@@ -42,7 +43,12 @@ const App = () => {
       : !nameRegex.test(fields.surname) &&
         errors.push("Surname must contain only letters!");
 
-    !fields.username && errors.push("Username is required!");
+    !fields.username
+      ? errors.push("Username is required!")
+      : !usernameRegex.test(fields.username) &&
+        errors.push(
+          "Username must be 8–20 characters long, contain at least one letter, and may only include letters, numbers, or the symbols ., -, and _."
+        );
     users.some((user) => user.username === fields.username) &&
       errors.push("Username already exists");
 

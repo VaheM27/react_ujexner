@@ -7,9 +7,9 @@ const Table = ({ users, onShowPassword, toggleChecked, remove }) => {
   const [sortType, setSortType] = useState("original");
   const [sort, setSort] = useState("");
 
-  const handleSort = (userId) => {
+  const handleSort = (type) => {
     setSortType(
-      sort === userId
+      sort === type
         ? sortType === "asc"
           ? "desc"
           : sortType === "desc"
@@ -17,7 +17,7 @@ const Table = ({ users, onShowPassword, toggleChecked, remove }) => {
           : "asc"
         : "asc"
     );
-    setSort(userId);
+    setSort(type);
   };
 
   const sortedUsers = () => {
@@ -37,8 +37,8 @@ const Table = ({ users, onShowPassword, toggleChecked, remove }) => {
     });
   };
 
-  const getSortIcon = (userId) => {
-    if (sort !== userId) return null;
+  const getSortIcon = (sorting) => {
+    if (sort !== sorting) return null;
 
     const icons = {
       asc: <i className="bi bi-chevron-up"></i>,
@@ -71,6 +71,7 @@ const Table = ({ users, onShowPassword, toggleChecked, remove }) => {
               Username {getSortIcon("username")}
             </button>
           </th>
+          <th>Registered at</th>
           <th>Password</th>
           <th>Show</th>
           <th>Action</th>
