@@ -16,19 +16,18 @@ const Main = ({ arr }) => {
           </thead>
         )}
         <tbody>
-          {arr.map((e) => {
+          {arr.map((e, index) => {
             return (
-              <tr  key={e.id}>
+              <tr key={index}>
                 <td scope="row">
                   <img src={e.image} />
                 </td>
-                <td scope="row">{e.title}
+                <td scope="row">{e.title}</td>
+                <td scope="row">
+                  <p>{e.price ? `${e.price}$` : e.start_production}</p>
                 </td>
                 <td scope="row">
-                  { <p>{(!true) ?  e.price : e.start_production }</p> /*???? */}
-                </td>
-                <td scope="row">
-                  <p>{(true) ? e.description : e.class}</p>
+                  <p>{e.description ? e.description : e.class}</p>
                 </td>
               </tr>
             );
