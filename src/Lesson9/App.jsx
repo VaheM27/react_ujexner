@@ -9,6 +9,7 @@ function App() {
 
   const addCard = (e) => {
     e.preventDefault();
+    const formData = e.target;
     const { fname, lname, email, pass } = e.target;
     const boxData = {
       id: new Date().getTime(),
@@ -30,10 +31,7 @@ function App() {
     }
 
     setData([...data, boxData]);
-    fname.value = "";
-    lname.value = "";
-    email.value = "";
-    pass.value = "";
+    formData.reset();
   };
 
   const hideCard = (userId) => {
