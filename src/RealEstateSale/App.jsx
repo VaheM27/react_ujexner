@@ -85,7 +85,7 @@ const App = () => {
         SortByCompany={SortByCompany}
         SortByHelper={SortByHelper}
       />
-      <DivBody Todo={todo} />
+      <DivBody todo={todo} />
     </div>
   );
 };

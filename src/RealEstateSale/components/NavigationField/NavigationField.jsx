@@ -7,15 +7,16 @@ const NavigationField = ({ AddDiv }) => {
   return (
     <div className="navigation-container">
       <form onChange={AddDiv}>
-        {Array.from({ length: NavigationDatas.length }, (_, index) => (
+        {NavigationDatas.map((item, index) => (
           <input
-            name={ForSortButtons[index]}
+            name={item}
             key={index}
-            placeholder={index}
+            placeholder={item}
             type="text"
             required
           />
         ))}
+
         <input type="submit" />
       </form>
       {NavigationDatas.map((data, index) => (
