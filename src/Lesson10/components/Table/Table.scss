@@ -1,0 +1,76 @@
+@import "../../styles/global.scss";
+
+.tableDiv {
+  max-width: 800px;
+  width: 100%;
+  margin: 40px auto;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 5px #364e1e;
+  transition: all 0.6s;
+  &:hover {
+    box-shadow: 0 0 30px #364e1e;
+  }
+  table {
+    user-select: none;
+    @include makeFlex(center, center, column, unset, unset, unset);
+    thead {
+      width: 100%;
+      tr {
+        @include makeFlex(space-between, center, row, unset, unset, unset);
+        background-color: #e1efdc;
+        th {
+          max-width: 250px;
+          width: 100%;
+          padding: 15px;
+          @include textParams(18px, 600, monospace, #364e1e);
+        }
+        .sortTh {
+          cursor: pointer;
+          @include makeFlex(center, center, unset, unset, unset, 10px);
+          .sortIcon {
+            color: #ec0c39;
+            transition: all 0.6s;
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      width: 100%;
+      tr {
+        @include makeFlex(space-between, center, row, unset, unset, unset);
+        background-color: #f0f7ed;
+        transition: all 0.3s;
+        td {
+          max-width: 250px;
+          width: 100%;
+          padding: 0 15px;
+          overflow-x: scroll;
+          @include textParams(14px, 550, monospace, #364e1e);
+          .passDiv {
+            margin-left: 40px;
+            @include makeFlex(flex-start, center, unset, unset, unset, 10px);
+            .icons {
+              color: #ec0c39;
+              cursor: pointer;
+              transition: all 0.6s;
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+        td:first-child {
+          padding: 20px 15px;
+        }
+        &:hover {
+          background-color: #e1efdc;
+        }
+      }
+    }
+  }
+}
