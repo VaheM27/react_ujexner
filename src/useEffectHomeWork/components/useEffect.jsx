@@ -13,9 +13,14 @@ export const UseEffectHomeWork = () => {
     setData(data.filter((elm) => elm.id !== id));
   };
 
+  const sortData = () => {
+    setData(data.toSorted((a, b) => (a.name > b.name ? 1 : -1)));
+  };
+
   return (
     <div className="main_div">
       <h1>Datas</h1>
+      <button onClick={sortData}>Sort A-Z </button>
       {data?.map((elm) => {
         return (
           <div
