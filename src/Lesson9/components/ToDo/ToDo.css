@@ -35,3 +35,13 @@ body {
   background-color: #101c3b;
   padding: 10px 20px;
 }
+
+li {
+  display: flex;
+  max-width: 500px;
+  background-color: orangered;
+  padding: 20px;
+  border-radius: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
