@@ -1,0 +1,26 @@
+.li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(166, 180, 166);
+  padding: 15px 30px;
+  font-size: 30px;
+  cursor: pointer;
+  color: rgb(124, 106, 106);
+
+  li::after {
+    content: "";
+    display: block;
+    width: 0%;
+    transition: all 0.8s linear;
+    height: 2px;
+    background-color: darkcyan;
+  }
+  li:hover::after {
+    width: 100%;
+  }
+}
+body {
+  background-image: url(../../assets/image/its-friday-dancing.gif);
+  background-size: contain;
+}

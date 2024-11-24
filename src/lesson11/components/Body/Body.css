@@ -1,0 +1,19 @@
+.body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 20px;
+  color: wheat;
+  background-image: url(../../assets/image/images.jpeg);
+  p {
+    margin-top: 20px;
+    width: 400px;
+    background-color: rgb(20, 55, 55);
+  }
+  img {
+    margin-top: 20px;
+    background-color: rgb(20, 55, 55);
+  }
+}
