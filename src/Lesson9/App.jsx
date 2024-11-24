@@ -10,7 +10,6 @@ const App = () => {
   const [active, setActive] = useState(null);
   const showPassword = (todoId) =>
     setActive((active) => (active === todoId ? null : todoId));
-
   const checked = (todoId) => {
     setTodo((todo) =>
       todo.map((item) =>
@@ -23,10 +22,8 @@ const App = () => {
       )
     );
   };
-
   const remove = (todoId) =>
     setTodo((todo) => todo.filter((item) => item.id !== todoId));
-
   function todoBox(e) {
     e.preventDefault();
     const { todoText, username, password } = e.target;
@@ -43,10 +40,9 @@ const App = () => {
     e.target.reset();
   }
   return (
-<<<<<<< HEAD
-    <div >
+    <div>
       <TodoInput todoBox={todoBox} />
-      <ul >
+      <ul>
         {todo.map((item) => {
           return (
             <ToDo
@@ -61,24 +57,7 @@ const App = () => {
               remove={() => remove(item.id)}
               checked={() => checked(item.id)}
               isChecked={item.isChecked}
-=======
-    <div className="formBody">
-      <TodoInput todoBox={todoBox} />
-      <ul>
-        {todo.map(({ id, text, username, password, isChecked }) => {
-          return (
-            <ToDo
-              key={id}
-              showPassword={() => showPassword(id)}
-              isActive={active === id}
-              text={text}
-              username={username}
-              password={password}
-              id={id}
-              remove={() => remove(id)}
-              checked={() => checked(id)}
-              isChecked={isChecked}
->>>>>>> 1ad3ba3bf29c9f1d655ac90a70da67192d2a66ac
+              done={item.done}
             />
           );
         })}
