@@ -38,7 +38,6 @@ body {
 
 li {
   display: flex;
-  max-width: 500px;
   background-color: orangered;
   padding: 20px;
   border-radius: 30px;

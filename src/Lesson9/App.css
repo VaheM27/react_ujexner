@@ -17,18 +17,11 @@ ol {
   color-scheme: light dark;
 }
 
-body {
-  background-color: light-dark(green, black);
-  color: light-dark(black, green);
-}
+
 
 .container {
   max-width: 1280px;
   margin: auto;
-}
-
-input[type="submit"] {
-  color: inherit;
 }
 
 .formBody {
