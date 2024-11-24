@@ -2,17 +2,17 @@ import "./ToDoNav.css";
 
 const TodoInput = ({ todoBox }) => {
   return (
-    <div>
-      <form onSubmit={todoBox}>
-        <input type="text" id="todoText" />
-        <input type="username" id="username" />
+    <div className="back">
+      <form className="hei" onSubmit={todoBox}>
+        <input type="text" id="todoText" placeholder="Name" />
+        <input type="username" placeholder="Username" id="username" />
         <input
           type="password"
           placeholder="Password"
           autoComplete="password"
           id="password"
         />
-        <input type="submit" />
+        <input  className="btn2" type="submit" />
       </form>
     </div>
   );

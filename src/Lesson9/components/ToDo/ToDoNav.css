@@ -1,0 +1,15 @@
+.hei {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(79, 79, 22);
+  padding: 15px 30px;
+}
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+input {
+  border-radius: 17px;
+  padding: 10px;
+}

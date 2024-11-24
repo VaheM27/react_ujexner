@@ -17,7 +17,6 @@ const App = () => {
           ? {
               ...item,
               isChecked: !item.isChecked,
-              done: !item.isChecked ? "pink" : "",
             }
           : item
       )
@@ -34,7 +33,6 @@ const App = () => {
       username: username.value.trim(),
       password: password.value.trim(),
       isChecked: false,
-      done: "green",
     };
     if (!todoText.value.trim()) return;
     setTodo([...todo, todoData]);
@@ -42,9 +40,9 @@ const App = () => {
     e.target.reset();
   }
   return (
-    <div>
+    <div >
       <TodoInput todoBox={todoBox} />
-      <ul>
+      <ul >
         {todo.map((item) => {
           return (
             <ToDo
@@ -59,7 +57,6 @@ const App = () => {
               remove={() => remove(item.id)}
               checked={() => checked(item.id)}
               isChecked={item.isChecked}
-              done={item.done}
             />
           );
         })}

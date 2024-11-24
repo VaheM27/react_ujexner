@@ -1,6 +1,37 @@
-.green {
-  background-color: green;
+.btn {
+  display: inline-block;
+  color: #fff;
+  background-color: orangered;
+  padding: 15px 30px;
+  border: 1px solid orangered;
+  border-radius: 30px;
+  cursor: pointer;
 }
-.red {
-  background-color: pink;
+.btn1 {
+  display: inline-block;
+  color: #fff;
+  background-color: orangered;
+  padding: 15px 30px;
+  border: 1px solid orangered;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.btn2 {
+  display: inline-block;
+  color: #fff;
+  background-color: orangered;
+  padding: 15px 30px;
+  border: 1px solid orangered;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: darkcyan;
+}
+body {
+  background-color: #101c3b;
+  padding: 10px 20px;
 }
