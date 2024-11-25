@@ -1,6 +1,11 @@
-import { useState } from "react";
-import "./Main.css";
+// import { useState } from "react";
+
+import * as Icon from 'react-bootstrap-icons';
 import "bootstrap/dist/css/bootstrap.css";
+import "./Main.css";
+
+const icon = <Icon.SortAlphaDown size={20} id="icon"/> 
+
 const Main = ({ arr }) => {
   return (
     <div className="main">
@@ -9,7 +14,10 @@ const Main = ({ arr }) => {
           <thead className="">
             <tr>
               <th scope="col">Image</th>
-              <th scope="col">Title</th>
+              <th scope="col" >
+                Title 
+                {icon}
+              </th>
               <th scope="col">Price</th>
               <th scope="col">Description</th>
             </tr>
