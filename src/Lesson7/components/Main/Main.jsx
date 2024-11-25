@@ -24,7 +24,7 @@ const Main = ({ arr }) => {
                 </td>
                 <td scope="row">{e.title}</td>
                 <td scope="row">
-                  <p>{e.price ? `${e.price}$` : e.start_production}</p>
+                  <p>{e.price ? `$${e.price}` : e.start_production}</p>
                 </td>
                 <td scope="row">
                   <p>{e.description ? e.description : e.class}</p>
