@@ -1,0 +1,23 @@
+@import "../../styles/global.scss";
+
+.body {
+  @include makeFlex(flex-start, flex-start, row, wrap, 15px, 15px);
+  width: 100%;
+  .card {
+    border-radius: 4px;
+    @include textParams(16px, 600, Courier, #000);
+    @include makeFlex(center, center, column, unset, unset, unset);
+    background-color: #dfff00;
+    width: 30%;
+    height: 200px;
+    overflow-y: scroll;
+    padding: 20px;
+    user-select: none;
+    transition: all 1s;
+    &:hover {
+      transform: translateY(-5px);
+      background-color: #f4d03f;
+      cursor: pointer;
+    }
+  }
+}

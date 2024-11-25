@@ -1,0 +1,6 @@
+@import "./styles/global.scss";
+
+.app {
+  @include makeFlex(flex-start, flex-start, row, unset, unset, 30px);
+  margin: 10px;
+}
