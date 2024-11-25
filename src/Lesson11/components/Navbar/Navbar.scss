@@ -1,0 +1,39 @@
+nav {
+  background: rgb(2, 149, 160);
+
+  .navcontainer {
+    display: flex;
+    justify-content: flex-end;
+
+    ul {
+      display: flex;
+
+      button {
+        position: relative;
+        border: none;
+        background: none;
+        color: #fff;
+        padding: 20px 30px;
+        text-transform: capitalize;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 0;
+          bottom: 0;
+          left: 0;
+          background: #fff;
+          transition: 0.3s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
