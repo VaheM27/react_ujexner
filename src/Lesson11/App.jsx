@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
+import Body from "./components/Body/Body";
 
 import "./App.scss";
-import Body from "./components/Body/Body";
+
 const App = () => {
   const [url, setUrl] = useState("");
   const [data, setData] = useState([]);

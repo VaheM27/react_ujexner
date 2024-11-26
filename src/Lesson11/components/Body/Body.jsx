@@ -1,4 +1,5 @@
 import { v4 } from "uuid";
+
 import "./Body.scss";
 
 const Body = ({ dataName, data }) => {
