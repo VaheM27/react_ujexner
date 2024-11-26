@@ -21,12 +21,12 @@ const App = () => {
     setDataName(newName);
   };
 
-  console.log(data);
-
   return (
     <div>
       <Navbar changeUrl={changeUrl} />
-      <Body dataName={dataName} data={data} />
+      <div className="container">
+        <Body dataName={dataName} data={data} />
+      </div>
     </div>
   );
 };

@@ -1,91 +1,192 @@
+import { v4 } from "uuid";
+import "./Body.scss";
+
 const Body = ({ dataName, data }) => {
-  const boxes = (dataName, obj) => {
+  const boxes = (dataName, data) => {
     switch (dataName) {
       case "users":
         return (
-          <tr key={obj.id} className="box">
-            <td>{obj.firstName}</td>
-            <td>{obj.lastName}</td>
-            <td>{obj.birthdate}</td>
-            <td>{obj.age}</td>
-            <td>
-              {obj.address?.address}, {obj.address?.postalCode},{" "}
-              {obj.address?.city}
-            </td>
-            <td>{obj.gender}</td>
-            <td>{obj.phone}</td>
-            <td>Email: {obj.email}</td>
-          </tr>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Birthdate</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Sex</th>
+                <th>Phone</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((obj, i) => {
+                return (
+                  <tr key={v4()} className={i % 2 ? "light" : "dark"}>
+                    <td>{obj.firstName}</td>
+                    <td>{obj.lastName}</td>
+                    <td>{obj.birthDate}</td>
+                    <td>{obj.age}</td>
+                    <td>
+                      {obj.address?.address}, {obj.address?.postalCode},{" "}
+                      {obj.address?.city}
+                    </td>
+                    <td>{obj.gender}</td>
+                    <td>{obj.phone}</td>
+                    <td>Email: {obj.email}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         );
+
       case "posts":
         return (
-          <tr key={obj.id} className="box">
-            <td>{obj.title}</td>
-            <td>{obj.body}</td>
-            <td>{obj.reactions?.likes}</td>
-            <td>{obj.reactions?.dislikes}</td>
-            <td>{obj.views}</td>
-          </tr>
+          <div className="posts">
+            {data.map((obj) => {
+              return (
+                <div key={v4()} className="postBox">
+                  <h2>{obj.title}</h2>
+                  <p>{obj.body}</p>
+                  <div>
+                    <span>
+                      <i class="bi bi-hand-thumbs-up"></i>{" "}
+                      {obj.reactions?.likes}
+                    </span>
+                    <span>
+                      <i class="bi bi-hand-thumbs-down"></i>{" "}
+                      {obj.reactions?.dislikes}
+                    </span>
+                    <span>
+                      <i class="bi bi-eye"></i> {obj.views}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         );
+
       case "comments":
         return (
-          <tr key={obj.id} className="box">
-            <td>{obj.body}</td>
-            <td>By: {obj.user?.username}</td>
-            <td>{obj.likes}</td>
-          </tr>
+          <div className="comments">
+            {data.map((obj) => {
+              const likes = Math.min(obj?.likes || 0, 10);
+              const dislikes = Math.max(0, likes > 5 ? 10 - likes : 5 - likes);
+              return (
+                <div key={v4()} className="commentBox">
+                  <div className="header">
+                    <h3>
+                      <i class="bi bi-person"></i> {obj.user?.username}
+                    </h3>
+                    <div>
+                      {Array(likes)
+                        .fill()
+                        .map((_, i) => (
+                          <i
+                            key={`filled-${obj.id}-${i}`}
+                            className="bi bi-star-fill"></i>
+                        ))}
+
+                      {Array(dislikes)
+                        .fill()
+                        .map((_, i) => (
+                          <i
+                            key={`empty-${obj.id}-${i}`}
+                            className="bi bi-star"></i>
+                        ))}
+                    </div>
+                  </div>
+                  <p>{obj.body}</p>
+                </div>
+              );
+            })}
+          </div>
         );
+
       case "todos":
         return (
-          <tr key={obj.id} className="box">
-            <td>
-              <input
-                type="checkbox"
-                checked={obj.completed}
-                disabled={obj.completed}
-              />
-            </td>
-            <td>{obj.todo}</td>
-            <td>{obj.userId}</td>
-          </tr>
+          <div className="todos">
+            {data.map((obj) => (
+              <div key={v4()} className="todoBox">
+                <span>{obj.userId}</span>
+                <input
+                  type="checkbox"
+                  checked={obj.completed}
+                  disabled={obj.completed}
+                />
+                <p>{obj.todo}</p>
+              </div>
+            ))}
+          </div>
         );
+
       case "recipes":
         return (
-          <tr key={obj.id} className="box">
-            <td>{obj.name}</td>
-            <td>
-              <img src={obj.image} alt={obj.name} />
-            </td>
-            <td>{obj.ingredients?.join(", ")}</td>
-            <td>{obj.instructions?.join(" ")}</td>
-          </tr>
+          <div className="recipes">
+            {data.map((obj) => (
+              <div key={v4()} className="recipeBox">
+                <div className="textBox">
+                  <h2>{obj.name}</h2>
+                  <h4>Ingredients</h4>
+                  <p>{obj.ingredients?.join(", ")}</p>
+                  <h4>Preparation</h4>
+                  <p>{obj.instructions?.join(" ")}</p>
+                  <ul>
+                    <li>Preparation time: {obj.prepTimeMinutes}m</li>
+                    <li>Cooking time: {obj.cookTimeMinutes}m</li>
+                    <li>Difficulty: {obj.difficulty}</li>
+                    <li>Cuisine: {obj.cuisine}</li>
+                    <li>Calories: {obj.caloriesPerServing}kcal</li>
+                  </ul>
+                </div>
+
+                <img src={obj.image} alt={obj.name} />
+              </div>
+            ))}
+          </div>
         );
+
       case "carts":
-        return obj.products?.map((product) => {
-          return (
-            <tr key={product.id} className="box">
-              <td>{product.title}</td>
-              <td>
-                <img src={product.thumbnail} alt={product.title} />
-              </td>
-              <td>Price: {product.price}</td>
-            </tr>
-          );
-        });
-      default:
         return (
-          <tr key={obj.id} className="box">
-            <td>Data not recognized</td>
-          </tr>
+          <div className="carts">
+            {data.map((cart) => (
+              <div key={v4()} className="cart">
+                <h2>Cart ID: {cart.id}</h2>
+                <p>Total products: {cart.totalProducts}</p>
+                <p>Total quantity: {cart.totalQuantity}</p>
+                <p>Total price: ${cart.total?.toFixed(2)}</p>
+                <p>Discounted price: ${cart.discountedTotal?.toFixed(2)}</p>
+                <div className="products">
+                  {cart.products?.map((product) => (
+                    <div key={v4()} className="product">
+                      <img src={product.thumbnail} alt={product.title} />
+                      <div className="product-body">
+                        <h3>{product.title}</h3>
+                        <p>Price: ${product.price.toFixed(2)}</p>
+                        <p>Quantity: {product.quantity}</p>
+                        <p>Total: ${product.total.toFixed(2)}</p>
+                        <p>Discount: {product.discountPercentage}%</p>
+                        <p>
+                          Discounted Price: $
+                          {product.discountedTotal.toFixed(2)}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         );
+
+      default:
+        return;
     }
   };
 
-  return (
-    <table className="body">
-      <tbody>{data.map((obj) => boxes(dataName, obj))}</tbody>
-    </table>
-  );
+  return <>{boxes(dataName, data)}</>;
 };
 
 export default Body;

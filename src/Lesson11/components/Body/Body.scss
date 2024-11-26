@@ -1,0 +1,165 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .light td {
+    background: rgb(243, 241, 252);
+  }
+
+  .dark td {
+    background: rgb(229, 223, 255);
+  }
+
+  th {
+    background: rgb(243, 241, 252);
+    text-align: left;
+    padding: 4px 8px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  td {
+    padding: 4px 8px;
+  }
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px 0;
+
+  .postBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgb(210, 234, 253);
+    padding: 1rem;
+    border-radius: 8px;
+    gap: 10px;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.comments {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  flex-direction: column;
+  padding: 30px 0;
+
+  .commentBox {
+    border: 2px solid rgb(0, 247, 255);
+    background: rgb(232, 252, 255);
+    padding: 30px;
+    border-radius: 20px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      align-items: center;
+
+      .bi-star-fill {
+        color: rgb(223, 223, 3);
+      }
+
+      h3 {
+        color: rgb(2, 95, 102);
+      }
+    }
+
+    p {
+      color: rgb(2, 95, 102);
+    }
+  }
+}
+
+.todos {
+  display: grid;
+  gap: 5px;
+  margin: 30px auto;
+  padding: 30px;
+  width: 60%;
+  background: #dfedf8;
+  border-radius: 20px;
+
+  .todoBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 20fr;
+    gap: 20px;
+
+    input {
+      width: 16px;
+    }
+  }
+}
+
+.recipes {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  gap: 20px;
+
+  .recipeBox {
+    background: #fff;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    gap: 30px;
+
+    .textBox {
+      padding: 30px;
+    }
+
+    h2,
+    h4 {
+      font-style: italic;
+      margin: 10px 0;
+      color: rgb(1, 66, 77);
+      font-weight: 400;
+    }
+  }
+
+  img {
+    width: 400px;
+  }
+}
+
+.carts {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .cart {
+    border: 1px solid #fff;
+    background: rgb(202, 234, 247);
+    padding: 40px;
+    border-radius: 16px;
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 60px;
+
+      .product {
+        border: 2px solid rgb(185, 185, 185);
+        border-radius: 10px;
+        overflow: hidden;
+
+        .product-body {
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
