@@ -1,0 +1,16 @@
+.item{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px gray solid;
+
+}
+p{
+    border: 2px gray solid;
+    width: 20%;
+}
+
+.item>:nth-child(2){
+    width: 40%;
+}

@@ -1,0 +1,13 @@
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orchid;
+    padding: 20px;
+}
+
+li{
+    list-style: none;
+    font-size: 30px;
+    cursor: pointer;
+}
