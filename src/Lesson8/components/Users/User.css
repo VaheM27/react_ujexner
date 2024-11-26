@@ -1,0 +1,59 @@
+.box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.bt{
+    width: 150px;
+    height: 80px;
+    background: #6d6d6d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    margin: 20px auto;
+    
+}
+svg{
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    border: 2px solid gray;
+    cursor: pointer;
+}
+
+svg:hover{
+    background: #55adff;
+}
+.userBox{
+    width: 50%;
+    /* height: 150vh; */
+    background: #b5b5b5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+    translate: 50%;
+    border-radius: 50%;
+    margin: 15px 0;
+}
+
+img{
+    width: 200px;
+    padding: 10px 0;
+}
+input{
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input:hover{
+    background: #b3b3b3;
+}
+

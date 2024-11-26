@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.Users{
+    width: 100%;
+    background-color: rgb(174, 232, 255);
+    text-align: center;
+}
