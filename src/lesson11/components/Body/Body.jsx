@@ -6,8 +6,8 @@ const Body = ({ data }) => {
       {data.map((item) => {
         return (
           <div className="stayl" key={item.id}>
-            <p>{item.firstname || item.title}</p>
-            <p>{item.lastName || item.price + "$"}</p>
+            <p>{item.firstname || item.title || item.total}</p>
+            <p>{item.lastName || item.price || item.discountedTotal}</p>
             <p>{item.maidenName || item.total || item.email}</p>
             <img src={item.image} alt="" />
           </div>
