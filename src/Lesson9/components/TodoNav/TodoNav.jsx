@@ -1,11 +1,13 @@
 import React from "react";
 
+
+import "./TodoNav.css";
 const TodoNav = ({ createTodoBox }) => {
   return (
-    <div>
+    <div className="boxOne">
       <form onSubmit={createTodoBox}>
-        <input type="text" id="todoText" />
-        <input type="password" id="todoPassword" />
+        <input placeholder="name" type="text" id="todoText" />
+        <input placeholder="password" type="password" id="todoPassword"/>
         <input type="submit" />
       </form>
     </div>

@@ -1,13 +1,36 @@
-.todoBox {
+  .boxTow {
+    width: 500px;
+  }
+
+  .todoBox {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
-    padding: 20px;
+    background: #e7e7e7;
+    padding: 5px;
   }
-  
-  p::after {
+  .todoBox :nth-child(3){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .todoBox p {
+    background: #ffffff;
+    /* padding: 5px;   */
+  }
+
+  svg {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #acacac;
+    padding: 0 8px;
+  }
+
+ /* p::after {
     content: "";
     display: block;
     width: 0%;
@@ -19,4 +42,4 @@
   
   p:hover::after {
     width: 100%;
-  }
+  } */

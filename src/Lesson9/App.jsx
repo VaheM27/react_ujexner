@@ -32,7 +32,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="main">
       <TodoNav createTodoBox={createTodoBox} />
       <TodoBody todo={todo} deleteTodo={deleteTodo} setTodo={setTodo} />
     </div>

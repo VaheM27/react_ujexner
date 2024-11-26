@@ -1,0 +1,25 @@
+
+
+
+
+.boxOne {
+    width: 500px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxOne form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    padding: 3px 2px;
+    height: 30px;
+    border: 1px solid gray;
+
+}
