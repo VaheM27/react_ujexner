@@ -5,7 +5,7 @@ import "./User.css";
 
 const Users = () => {
   const [data, setData] = useState([]);
-  const [sortName, setSortName] = useState(true);
+  const [sortName, setSortName] = useState([]);
 
   const sorted = () => {
     const sortedData = data.toSorted((a, b) => {
@@ -18,7 +18,10 @@ const Users = () => {
     setData(sortedData);
     setSortName(!sortName);
   };
-
+  function deleteData(id) {
+    const filterData = data.filter((box) => box.id !== id);
+    setData(filterData);
+  }
   useEffect(() => {
     function getData() {
       fetch("https://67450eedb4e2e04abea48cf0.mockapi.io/Users")
@@ -47,7 +50,7 @@ const Users = () => {
                 City <br /> <img src={city} alt="city" />
               </span>
               <p> createAt {createdAt} </p>
-              <button className="del">Delete</button>
+              <button onClick={() => deleteData(id)} className="del">Delete</button>
             </div>
           );
         }

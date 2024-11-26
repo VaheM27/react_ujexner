@@ -1,0 +1,22 @@
+.todoBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  p::after {
+    content: "";
+    display: block;
+    width: 0%;
+    cursor: pointer;
+    transition: all 0.8s;
+    height: 2px;
+    background-color: blueviolet;
+  }
+  
+  p:hover::after {
+    width: 100%;
+  }
