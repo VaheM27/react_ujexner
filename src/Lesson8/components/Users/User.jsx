@@ -44,7 +44,7 @@ const Users = () => {
               <p>Age-{age}</p>
               <img src={avatar} alt="avatar" />
               <span>
-                City <br /> <img src={city} alt="city" />{" "}
+                City <br /> <img src={city} alt="city" />
               </span>
               <p> createAt {createdAt} </p>
               <button className="del">Delete</button>
