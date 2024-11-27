@@ -1,0 +1,33 @@
+@import "../../styles/global.scss";
+
+.home {
+  padding: 150px 0;
+  background-color: #2d1283;
+  text-align: center;
+  @include makeFlex(center, center, column, unset, 50px, unset);
+  h1 {
+    @include textParams(40px, 900, Georgia, #fff);
+  }
+  h3 {
+    @include textParams(20px, 600, Georgia, #fff);
+  }
+  h4 {
+    @include textParams(18px, 400, Georgia, #fff);
+  }
+  button {
+    @include textParams(20px, 600, Georgia, #000);
+    padding: 16px 32px;
+    border: none;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all 1s;
+    border: 3px solid transparent;
+    cursor: pointer;
+    &:hover {
+      background-color: #2d1283;
+      color: #fff;
+      transform: scale(1.1);
+      border-color: #fff;
+    }
+  }
+}

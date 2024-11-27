@@ -1,0 +1,18 @@
+@import "../../styles/global.scss";
+
+.footer {
+  background-color: #5d76d7;
+  @include textParams(16px, 500, monospace, #fff);
+  @include makeFlex(space-between, flex-end, unset, unset, unset, 50px);
+  user-select: none;
+  padding: 40px;
+  .footerUl {
+    list-style: none;
+    li {
+      transition: all 1s;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

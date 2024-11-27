@@ -1,0 +1,30 @@
+@import "../../styles/global.scss";
+
+.tableHead {
+  @include makeFlex(center, center, unset, unset, unset, 50px);
+  @include textParams(24px, 500, calibri, #fff);
+  background-color: #535252;
+  max-width: 1400px;
+  user-select: none;
+  padding: 10px;
+  width: 100%;
+  transition: all 1s;
+  border-radius: 20px;
+  .thead {
+    max-width: 200px;
+    width: 100%;
+    padding: 10px;
+    transition: all 0.8s;
+    &:hover {
+      color: #000;
+    }
+  }
+  .thead:first-child {
+    max-width: 50px;
+    width: 100%;
+  }
+  &:hover {
+    transform: scale(1.02);
+    background-color: #a09ba7;
+  }
+}
