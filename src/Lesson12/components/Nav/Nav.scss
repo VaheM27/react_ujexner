@@ -21,10 +21,10 @@
         @include makeFlex(center, center, unset, unset, unset, unset);
         transition: all 1s;
         &:hover {
-           scale: 1.1;
-           box-shadow: 0px 0px 10px #000;
+          scale: 1.1;
+          box-shadow: 0px 0px 10px #000;
         }
-    }
+      }
       .active {
         background-color: #58fb52;
         color: #ccfdcb;

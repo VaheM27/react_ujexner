@@ -7,17 +7,25 @@ const Nav = () => {
   return (
     <div className="nav">
       <ul>
-      <li>
-          <NavLink className="navLink" to={ROUTES.HOME}>Home</NavLink>
+        <li>
+          <NavLink className="navLink" to={ROUTES.HOME}>
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink className="navLink" to={ROUTES.USERS}>Users</NavLink>
+          <NavLink className="navLink" to={ROUTES.USERS}>
+            Users
+          </NavLink>
         </li>
         <li>
-          <NavLink className="navLink" to={ROUTES.PRODUCTS}>Products</NavLink>
+          <NavLink className="navLink" to={ROUTES.PRODUCTS}>
+            Products
+          </NavLink>
         </li>
         <li>
-          <NavLink className="navLink" to={ROUTES.RECIPES}>Recipes</NavLink>
+          <NavLink className="navLink" to={ROUTES.RECIPES}>
+            Recipes
+          </NavLink>
         </li>
       </ul>
     </div>

@@ -1,13 +1,13 @@
 @import "../../styles/global.scss";
 
 .data {
-    background-color: #f4f2f5;
-    padding: 50px 0;
-    .header {
-        @include makeFlex(unset, center, column, unset, 10px, unset);
-        margin-bottom: 30px;
-    }
-    .dashboard {
-        @include makeFlex(unset, center, column, unset, 10px, unset);
-    }
+  background-color: #f4f2f5;
+  padding: 50px 0;
+  .header {
+    @include makeFlex(unset, center, column, unset, 10px, unset);
+    margin-bottom: 30px;
+  }
+  .dashboard {
+    @include makeFlex(unset, center, column, unset, 10px, unset);
+  }
 }
