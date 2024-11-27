@@ -1,0 +1,19 @@
+.bgsilver {
+  background: var(--bgsilver);
+}
+
+.staffSection {
+  display: flex;
+  flex-direction: column;
+
+  .trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+  }
+}
