@@ -1,0 +1,15 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(9, 53, 9);
+  padding: 20px;
+  font-size: 40px;
+}
+.active {
+  color: black;
+}
+
+a {
+  color: white;
+}

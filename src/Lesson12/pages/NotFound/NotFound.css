@@ -1,0 +1,8 @@
+p {
+  padding: 200px;
+  text-align: center;
+  font-size: 60px;
+  background-image: url(../../assets/images/Bob\ Marley.jpeg);
+  background-repeat: repeat;
+  color: darkgoldenrod;
+}
