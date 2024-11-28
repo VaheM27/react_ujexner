@@ -1,0 +1,7 @@
+.user{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}

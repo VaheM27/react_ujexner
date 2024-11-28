@@ -1,0 +1,30 @@
+.nav{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(129, 129, 129);
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 50px;
+  background-color: rgb(129, 129, 129);
+}
+
+li {
+  color: #fff;
+  font-size: 26px;
+}
+
+.links {
+  color: rgb(58, 233, 0);
+}
+
+.active {
+  color: #fff;
+  text-decoration: underline;
+  font-style: italic;
+}
