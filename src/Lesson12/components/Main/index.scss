@@ -22,10 +22,10 @@
   }
 }
 
-.sectionHeader {
+.sectionHeader,
+.sectionHeaderL {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-bottom: 80px;
 
   p {
@@ -35,7 +35,6 @@
   .line {
     position: relative;
     line-height: 24px;
-    text-align: center;
     margin-top: 10px;
     padding-bottom: 18px;
 
@@ -45,10 +44,28 @@
       height: 2px;
       width: 50px;
       bottom: 0;
-      left: 50%;
-      transform: translate(-50%);
       background: var(--main);
     }
+  }
+}
+
+.sectionHeader {
+  align-items: center;
+  text-align: center;
+
+  .line::after {
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.sectionHeaderL {
+  align-items: flex-start;
+  text-align: left;
+
+  .line::after {
+    left: 0;
+    transform: translate(0);
   }
 }
 
@@ -153,6 +170,67 @@
     img {
       background-color: transparent;
       transform: scale(1.05) translateY(-8px);
+    }
+  }
+}
+
+.courseBox {
+  background-color: #fff;
+  width: 250px;
+  padding: 35px 17px 55px;
+  text-align: center;
+  box-shadow: 1.5px 1.5px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+
+  .c-b-bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-top: 1px solid var(--bordergrey);
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    color: var(--main);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+
+  img {
+    height: 68px;
+  }
+
+  p {
+    text-transform: uppercase;
+  }
+
+  button {
+    display: inline-block;
+    padding: 5px 17px;
+    border: 1px solid #767676;
+    font-weight: 200;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    border-radius: 20px;
+    transition: all 0.4s;
+    background: var(--white);
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid var(--main);
+      background: var(--main);
+      color: var(--white);
     }
   }
 }

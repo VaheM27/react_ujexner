@@ -1,5 +1,5 @@
+import CourseSection from "../../components/CourseSection/CourseSection";
 import { PageHeader } from "../../components/Main";
-import "./Courses.scss";
 
 export const Courses = () => {
   return (
@@ -9,6 +9,7 @@ export const Courses = () => {
         page="Դասընթացներ"
         path="/courses"
       />
+      <CourseSection courseSec="courseContainer" />
     </div>
   );
 };

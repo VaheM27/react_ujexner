@@ -4,7 +4,7 @@ const ROUTES = {
   FEATURES: "features",
   STAFF: "staff",
   ABOUT: "about-us",
-  NOTFOUNT: "*",
+  NOTFOUND: "*",
 };
 
 export default ROUTES;

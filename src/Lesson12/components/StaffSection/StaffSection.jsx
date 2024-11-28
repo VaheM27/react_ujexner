@@ -10,6 +10,7 @@ const StaffSection = ({ className }) => {
           heading2="Դասընթաց"
           bold="ավարներ"
           text="Մեր փորձառու մասնագետները կմատուցեն Ձեզ բարդ թվացող ինֆորմացիան բավականին պարզեցված տեսքով:"
+          className="sectionHeader"
         />
         <div className="trainer-grid">
           {trainers.map((trainer) => (
@@ -35,7 +36,5 @@ const StaffSection = ({ className }) => {
     </section>
   );
 };
-
-// src, alt, name, course, pos
 
 export default StaffSection;

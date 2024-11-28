@@ -10,6 +10,7 @@ const AboutSection = () => {
           heading2="Մեր"
           bold=" մասին"
           text="Ընկերության գործունեության մասին"
+          className="sectionHeader"
         />
         <div className="about-container">
           <p>

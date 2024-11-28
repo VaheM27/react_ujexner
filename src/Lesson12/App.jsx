@@ -1,9 +1,10 @@
-import "./App.scss";
-import Nav from "./components/Nav/Nav";
 import { Route, Routes } from "react-router-dom";
 import { Home, Courses, Features, Staff, About, NotFound } from "./pages";
 import ROUTES from "./Routes";
+import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
+
+import "./App.scss";
 
 const App = () => {
   return (

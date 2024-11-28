@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { SectionHeader } from "../Main";
-import { Dropdown } from "../Main/Dropdown";
+import { SectionHeader, Button, Dropdown } from "../Main";
 import { featureData } from "../../constants/data";
-import { Button } from "../Main";
+
 import "./FeatureSection.scss";
 
 const FeatureSection = () => {
@@ -18,6 +17,7 @@ const FeatureSection = () => {
           heading2="Ինչո՞ւ սովորել"
           bold=" մեզ մոտ"
           text="Մեզ մոտ ծրագրավորում սովորելը ձեռնտու է"
+          className="sectionHeader"
         />
         <div className="featureSection">
           <img
