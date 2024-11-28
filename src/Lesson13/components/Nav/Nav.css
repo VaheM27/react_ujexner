@@ -1,0 +1,22 @@
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: orangered;
+}
+
+li {
+  color: #fff;
+  font-size: 26px;
+}
+
+.links {
+  color: rgb(58, 233, 0);
+}
+
+.active {
+  color: #fff;
+  text-decoration: underline;
+  font-style: italic;
+}
