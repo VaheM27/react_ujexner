@@ -1,10 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
-import Body from "./components/Body/Body";
-import { About, ContactUs, Home } from "./pages";
 import Footer from "./components/Footer/Footer";
 import NotFound from "./pages/NotFound/NotFound";
+import { About, ContactUs, Home } from "./pages";
 
 import "./App.css";
 
@@ -18,7 +17,6 @@ const App = () => {
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Body />
       <Footer />
     </div>
   );
