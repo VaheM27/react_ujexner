@@ -1,0 +1,34 @@
+.nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  background-color: white;
+  border-bottom: 2px solid gray;
+}
+
+li {
+  font-size: 26px;
+}
+
+.links {
+  color: #0F4C81;
+}
+
+.active {
+  color: gray;
+  text-decoration: underline;
+  font-style: italic;
+}

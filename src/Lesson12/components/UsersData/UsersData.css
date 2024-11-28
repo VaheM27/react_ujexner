@@ -1,0 +1,21 @@
+
+
+.user_item {
+    border: 2px solid #0F4C81;
+    padding: 10px;
+    border-radius: 10px;
+    user-select: none;
+
+    h2 {
+        color: black;
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+.user_item:hover {
+    border: 2px solid #88B04B;
+}

@@ -1,0 +1,26 @@
+
+
+.sorting_buttons {
+    width: 90%;
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    button {
+        padding: 5px;
+        background-color: #92A8D1;
+        border: 2px solid #0F4C81;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0F4C81;
+        border: 2px solid black;
+        color: white;
+    }
+}
