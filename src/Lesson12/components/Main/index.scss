@@ -82,7 +82,7 @@
   flex-direction: column;
   overflow: hidden;
   cursor: pointer;
-  transition: height 1s ease;
+  transition: all 0.9s;
 
   .top {
     display: flex;
@@ -120,7 +120,8 @@
 }
 
 .actived {
-  height: max-content !important;
+  height: 150px;
+  transition: all 0.9s;
 }
 
 .trainer {
