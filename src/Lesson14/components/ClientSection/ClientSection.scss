@@ -1,0 +1,98 @@
+.clientSection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  width: 367px;
+  padding-right: 2px;
+  border-radius: 1rem;
+  background: #fff;
+  height: 1054px;
+  overflow: hidden;
+
+  .cl-sec-h {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 0 20px;
+
+    .inputField {
+      position: relative;
+
+      input {
+        height: 24px;
+        border: none;
+        outline: none;
+      }
+
+      img {
+        position: absolute;
+        right: 0;
+        top: 4px;
+      }
+    }
+  }
+
+  .clientList {
+    max-height: 90%;
+    overflow-y: scroll;
+    padding-right: 2px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        color: var(--main);
+        font-size: 14px;
+        padding: 20px 14px 20px 20px;
+        cursor: pointer;
+
+        p {
+          font-weight: 800;
+        }
+
+        .cl-data {
+          display: flex;
+          align-items: center;
+          column-gap: 12px;
+
+          img {
+            height: 48px;
+          }
+        }
+
+        button {
+          display: inline-flex;
+          align-items: center;
+          border: none;
+          background: none;
+
+          img {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .selected {
+        background: var(--user-selected-color);
+      }
+    }
+  }
+
+  .clientList::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .clientList::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  .clientList::-webkit-scrollbar-thumb {
+    background-color: var(--main);
+    border-radius: 6px;
+  }
+}

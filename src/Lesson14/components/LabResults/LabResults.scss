@@ -1,0 +1,46 @@
+.labResults {
+  padding: 20px;
+  background: #fff;
+  border-radius: 1rem;
+  max-height: 100%;
+  overflow: hidden;
+
+  h3 {
+    font-size: 1.5rem;
+    color: var(--main);
+    margin-bottom: 1rem;
+  }
+
+  .resultBox {
+    max-height: 200px;
+    overflow: auto;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 11px 16px;
+      font-size: 14px;
+
+      button {
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .resultBox::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .resultBox::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  .resultBox::-webkit-scrollbar-thumb {
+    background-color: var(--main);
+    border-radius: 6px;
+  }
+}

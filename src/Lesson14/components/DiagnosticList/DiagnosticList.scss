@@ -1,0 +1,82 @@
+.diagnosticList {
+  height: 349px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 1rem;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .tableBox {
+    height: 230px;
+    width: 760px;
+    overflow-y: scroll;
+    font-size: 14px;
+  }
+
+  .tableBox::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .tableBox::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  .tableBox::-webkit-scrollbar-thumb {
+    background-color: var(--main);
+    border-radius: 6px;
+  }
+
+  table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+
+    tr {
+        border-bottom: 1px solid #f6f7f8;
+    }
+
+    th {
+      background: #f6f7f8;
+    }
+
+    th:first-child {
+      border-top-left-radius: 20px;
+    }
+
+    th:first-child {
+      border-bottom-left-radius: 20px;
+    }
+
+    th:last-child {
+      border-top-right-radius: 20px;
+    }
+
+    th:last-child {
+      border-bottom-right-radius: 20px;
+    }
+
+    th,
+    td {
+      padding: 11px 16px;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+      width: 30%;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 40%;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3) {
+      width: 30%;
+    }
+  }
+}

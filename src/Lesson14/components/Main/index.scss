@@ -1,0 +1,41 @@
+.diagnosBox {
+  padding: 16px;
+  width: 100%;
+  flex-grow: 1;
+  border-radius: 16px;
+  margin-top: 16px;
+  height: 100%;
+
+  img {
+    width: 96px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+  }
+
+  h5 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  p {
+    font-size: 30px !important;
+    font-weight: 600;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}
+
+.heart-box {
+    background: var(--heart-box);
+}
+
+.resp-box {
+    background: var(--resp-box);
+}
+
+.temp-box {
+    background: var(--temp-box);
+}

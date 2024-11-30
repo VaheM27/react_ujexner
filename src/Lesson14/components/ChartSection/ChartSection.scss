@@ -1,0 +1,15 @@
+.chartSection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 800px;
+  height: 673px;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 20px;
+  
+  .boxes {
+    display: flex;
+    gap: 16px;
+  }
+}

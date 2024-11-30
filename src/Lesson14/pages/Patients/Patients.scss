@@ -1,0 +1,23 @@
+main {
+  height: 1100´6px;
+  padding: 18px 0;
+
+  .patientsContainer {
+    display: flex;
+    column-gap: 33px;
+    color: var(--main);
+
+    .patients-main {
+      display: flex;
+      column-gap: 33px;
+      padding-top: 14px;
+    }
+
+    .pat-con{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+    }
+  }
+}
