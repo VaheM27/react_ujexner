@@ -5,6 +5,7 @@ import { Home, NotFound, Patients } from "./pages";
 import Nav from "./components/Nav/Nav";
 
 import "./App.scss";
+import Layout from "./Layout/Layout";
 
 function App() {
   const [data, setData] = useState([]);
@@ -12,12 +13,15 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://fedskillstest.coalitiontechnologies.workers.dev/", {
-          method: "GET",
-          headers: {
-            Authorization: "Basic " + btoa("coalition:skills-test"),
-          },
-        });
+        const response = await fetch(
+          "https://fedskillstest.coalitiontechnologies.workers.dev/",
+          {
+            method: "GET",
+            headers: {
+              Authorization: "Basic " + btoa("coalition:skills-test"),
+            },
+          }
+        );
         const data = await response.json();
         setData(data);
       } catch (error) {
@@ -34,13 +38,12 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
-      <Routes path={ROUTES.HOME}>
-        <Route index element={<Home />}></Route>
-        <Route
-          path={ROUTES.PATIENTS}
-          element={<Patients data={data} />}></Route>
-        <Route path={ROUTES.NOTFOUND} element={<NotFound />}></Route>
+      <Routes>
+        <Route path={ROUTES.HOME} element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path={ROUTES.PATIENTS} element={<Patients data={data} />} />
+          <Route path={ROUTES.NOTFOUND} element={<NotFound />} />
+        </Route>
       </Routes>
     </div>
   );
