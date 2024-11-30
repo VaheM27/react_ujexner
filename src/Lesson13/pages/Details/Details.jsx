@@ -8,31 +8,27 @@ export const Details = () => {
   const [arr, setArr] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.escuelajs.co/api/v1/products")
+    fetch(`https://api.escuelajs.co/api/v1/products/${id}`)
       .then((res) => res.json())
       .then((res) => setArr(res));
   }, []);
 
   return (
     <div className="cardDetails">
-      {arr
-        .filter((elm) => elm.id === +id)
-        .map((item) => (
-          <div className="item" key={item.id}>
-            <div className="imgDiv">
-              {item.images.map((imgs, i) => {
-                return <img key={i} src={imgs}></img>;
-              })}
-            </div>
-            <h1>Name: {item.title}</h1>
-            <h4>Description: {item.description}</h4>
-            <p>Created At: {item.creationAt}</p>
-            <p>Updated At: {item.updatedAt}</p>
-            <p className="tag">#{item.category.name}</p>
-            <b>Price: ${item.price}</b>
-            <button>Buy Now</button>
-          </div>
-        ))}
+      <div className="item" key={arr.id}>
+        <div className="imgDiv">
+          {arr?.images?.map((imgs, i) => {
+            return <img key={i} src={imgs} alt=""></img>;
+          })}
+        </div>
+        <h1>Name: {arr.title}</h1>
+        <h4>Description: {arr.description}</h4>
+        <p>Created At: {arr.creationAt}</p>
+        <p>Updated At: {arr.updatedAt}</p>
+        <p className="tag">#{arr.category.name}</p>
+        <b>Price: ${arr.price}</b>
+        <button>Buy Now</button>
+      </div>
     </div>
   );
 };
