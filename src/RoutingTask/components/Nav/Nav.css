@@ -1,0 +1,16 @@
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: burlywood;
+}
+li {
+  font-size: 26px;
+  color: black;
+}
+.active {
+  color: seashell;
+  text-decoration: underline;
+  font-style: italic;
+}
