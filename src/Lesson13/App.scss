@@ -1,0 +1,6 @@
+@import "./styles/global.scss";
+
+.app {
+  height: 100vh;
+  @include makeFlex(flex, space-between, unset, column, unset, unset, unset);
+}

@@ -1,0 +1,46 @@
+@import "../../styles/global.scss";
+
+.cardDetails {
+  margin: 50px 0;
+  .item {
+    margin: auto;
+    background-color: #fff;
+    padding: 50px;
+    width: min-content;
+    @include makeFlex(flex, center, flex-start, column, unset, 50px, unset);
+    @include textParams(20px, 900, monospace, #000);
+    border-radius: 10px;
+    .imgDiv {
+      @include makeFlex(flex, center, center, unset, unset, unset, 50px);
+      img {
+        width: 300px;
+        transition: all 1s;
+        border-radius: 10px;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .tag {
+      background-color: #a09999;
+      border-radius: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    b {
+      font-size: 40px;
+    }
+    button {
+      background-color: red;
+      border: none;
+      padding: 20px 40px;
+      border-radius: 9999px;
+      @include textParams(20px, 900, monospace, #fff);
+      cursor: pointer;
+      transition: all 0.7s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

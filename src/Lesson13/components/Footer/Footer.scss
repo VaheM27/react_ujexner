@@ -1,0 +1,22 @@
+@import "../../styles/global.scss";
+
+.footer {
+  background-color: #fff;
+  @include textParams(16px, 500, monospace, #000);
+  @include makeFlex(flex, space-between, flex-end, unset, unset, unset, 50px);
+  user-select: none;
+  padding: 40px;
+  .footerUl {
+    list-style: none;
+    li {
+      transition: all 1s;
+      .footerLinks {
+        text-decoration: none;
+        color: inherit;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

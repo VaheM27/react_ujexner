@@ -1,0 +1,6 @@
+@import "../../styles/global.scss";
+
+.products {
+  @include makeFlex(flex, center, center, row, wrap, unset, unset);
+  margin: 50px 0;
+}

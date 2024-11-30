@@ -1,0 +1,14 @@
+@import "../../styles/global.scss";
+
+.notFound {
+  height: 100vh;
+  @include makeFlex(flex, flex-start, flex-start, unset, unset, unset, unset);
+  padding: 150px 100px;
+  background-color: #afbfd2;
+
+  h2 {
+    @include textParams(50px, 900, monospace, #fff);
+    user-select: none;
+    max-width: 200px;
+  }
+}

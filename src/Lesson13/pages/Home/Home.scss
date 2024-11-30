@@ -1,0 +1,16 @@
+@import "../../styles/global.scss";
+
+.home {
+  background-image: url(https://media.istockphoto.com/id/689911172/photo/abstract-blurred-background-of-department-store.jpg?s=612x612&w=0&k=20&c=qsCnrAAXx5QRhKaOYaiarCghYv97tfk200WWhrVm-hs=);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  h1 {
+    background-color: #000;
+    display: inline-flex;
+    margin: 30px 100px;
+    padding: 20px;
+    box-shadow: 60px 60px 1px #677;
+    @include textParams(85px, 900, monospace, #fff);
+  }
+}

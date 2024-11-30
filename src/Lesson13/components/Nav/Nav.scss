@@ -1,0 +1,45 @@
+@import "../../styles/global.scss";
+
+.nav {
+  position: sticky;
+  z-index: 9999;
+  top: 0;
+  background-color: #000;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #00ff0060;
+  @include makeFlex(flex, space-between, center, unset, unset, unset, unset);
+  .main {
+    max-width: 500px;
+    width: 100%;
+    @include makeFlex(flex, space-between, center, unset, unset, unset, 20px);
+    .flexLink {
+      transition: all 1s;
+      @include makeFlex(flex, center, center, unset, unset, unset, 5px);
+      text-decoration: none;
+      @include textParams(40px, 900, monospace, #fff);
+      &:hover {
+        color: #00ff00;
+        filter: blur(1px);
+      }
+    }
+    .active {
+      filter: drop-shadow(0 0 20px #fff);
+      color: #00ff00;
+    }
+  }
+  ul {
+    @include makeFlex(flex, center, center, unset, unset, unset, 10px);
+    list-style: none;
+    li {
+      text-decoration: none;
+      a {
+        transition: all 1s;
+        color: #fff;
+        &:hover {
+          color: #00ff00;
+          filter: blur(1px);
+        }
+      }
+    }
+  }
+}
