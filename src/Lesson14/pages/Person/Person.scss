@@ -1,0 +1,30 @@
+@import "../../styles/global.scss";
+
+.personDetails {
+  margin: 100px 0;
+  user-select: none;
+  @include makeFlex(flex, center, center, unset, unset, unset, 20px);
+  img {
+    width: 200px;
+    border-radius: 20px;
+  }
+  .details {
+    p {
+      max-width: 300px;
+      @include textParams(16px, 900, monospace, #000);
+    }
+  }
+  button {
+    border: none;
+    font-size: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 1s;
+    &:hover {
+      transform: scale(1.4);
+    }
+  }
+  button:first-child {
+    rotate: 180deg;
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../styles/global.scss";
+
+.notFound {
+  margin: 100px 0;
+  @include makeFlex(flex, center, center, unset, unset, unset, unset);
+  h2 {
+    @include textParams(50px, 900, monospace, #000);
+    user-select: none;
+  }
+}

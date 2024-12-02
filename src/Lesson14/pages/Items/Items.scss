@@ -1,0 +1,6 @@
+@import "../../styles/global.scss";
+
+.itemsBox {
+  padding: 100px;
+  @include makeFlex(flex, center, center, row, wrap, 50px, 50px);
+}

@@ -1,0 +1,39 @@
+@import "../../styles/global.scss";
+
+.footer {
+  padding: 50px 0;
+  background-color: #f8efed;
+  @include textParams(16px, 500, monospace, #000);
+  @include makeFlex(flex, space-evenly, flex-start, unset, unset, unset, unset);
+  ul {
+    list-style: none;
+  }
+  .firstUl {
+    max-width: 150px;
+    @include makeFlex(flex, center, center, unset, wrap, unset, unset);
+    li {
+      cursor: pointer;
+      transition: all 0.4s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .secondUl {
+    li {
+      @include makeFlex(flex, flex-start, center, unset, wrap, unset, 10px);
+      padding: 10px;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .footerStaff {
+    max-width: 200px;
+    @include makeFlex(flex, center, center, row, wrap, 5px, 5px);
+    img {
+      filter: grayscale(1);
+    }
+  }
+}

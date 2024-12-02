@@ -1,0 +1,36 @@
+@import "../../styles/global.scss";
+
+.nav {
+  position: sticky;
+  top: 0;
+  background-color: #efd8d4;
+  z-index: 999;
+  box-shadow: 0px 0px 10px #000;
+  ul {
+    padding: 20px 0;
+    @include makeFlex(flex, center, center, unset, unset, unset, 200px);
+    list-style: none;
+    li {
+      .navLink {
+        text-decoration: none;
+        @include textParams(24px, 500, monospace, #000);
+        @include makeFlex(flex, center, center, unset, unset, unset, 10px);
+      }
+      &::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: #000;
+        display: block;
+        transition: all 1s;
+        margin-top: 5px;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+      .active {
+        font-weight: 900;
+      }
+    }
+  }
+}

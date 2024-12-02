@@ -1,0 +1,60 @@
+@import "../../styles/global.scss";
+
+.itemInfo {
+  margin: 100px auto;
+  max-width: 600px;
+  width: 100%;
+  @include makeFlex(flex, center, center, column, unset, 80px, unset);
+  img {
+    width: 400px;
+  }
+  .details {
+    @include textParams(18px, 700, monospace, #000);
+    @include makeFlex(flex, center, flex-start, column, unset, 10px, unset);
+    .rate {
+      @include makeFlex(
+        flex,
+        flex-start,
+        flex-start,
+        unset,
+        unset,
+        unset,
+        10px
+      );
+      p {
+        border-radius: 999px;
+        background-color: #7036f2;
+        padding: 10px 20px;
+        color: #fff;
+      }
+    }
+    p:nth-child(4) {
+      border-radius: 999px;
+      background-color: #7036f2;
+      padding: 10px 20px;
+      color: #fff;
+    }
+    .price {
+      color: red;
+      font-size: 35px;
+    }
+    .title {
+      font-size: 30px;
+    }
+    .desc {
+      margin: 20px 0;
+    }
+  }
+  .btns {
+    @include makeFlex(flex, center, center, unset, unset, unset, unset);
+    color: #7036f2;
+
+    .icon {
+      cursor: pointer;
+      transition: all 0.8s;
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+}

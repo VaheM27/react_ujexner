@@ -1,0 +1,37 @@
+@import "../../styles/global.scss";
+
+.employees {
+  background-color: #303030;
+  padding: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  justify-content: center;
+  gap: 20px;
+  .employeeCard {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    .staffLink {
+      text-decoration: none;
+      @include makeFlex(flex, center, center, column, unset, 5px, unset);
+      .employeeName {
+        opacity: 0;
+        transition: all 1s;
+        @include textParams(15px, 600, Monospace, #303030);
+        font-family: sans-serif;
+      }
+      .employeeImg {
+        border-radius: 10px;
+        filter: grayscale(1);
+        &:hover {
+          filter: grayscale(0);
+        }
+        &:hover + .employeeName {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

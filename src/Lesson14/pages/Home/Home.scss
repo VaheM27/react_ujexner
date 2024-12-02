@@ -1,0 +1,40 @@
+@import "../../styles/global.scss";
+
+.home {
+  margin: 100px 0;
+  user-select: none;
+  @include makeFlex(flex, center, center, unset, unset, unset, 70px);
+  .main {
+    max-width: 500px;
+    h1 {
+      @include textParams(54px, 900, sans-serif, #fff);
+      background-color: #add8c4;
+      padding: 20px;
+      border-radius: 40px;
+    }
+    p {
+      @include textParams(24px, 500, Georgia, #000);
+      margin: 40px 0;
+      line-height: 1.5;
+    }
+    .btnDiv {
+      margin: auto;
+      @include makeFlex(flex, flex-start, center, unset, unset, unset, 30px);
+      button {
+        background-color: #000;
+        border: none;
+        border-radius: 20px;
+        padding: 15px 30px;
+        cursor: pointer;
+        transition: all 0.5s;
+        .btnLink {
+          text-decoration: none;
+          @include textParams(30px, 900, sans-serif, #fff);
+        }
+        &:hover {
+          background-color: #add8c4;
+        }
+      }
+    }
+  }
+}
