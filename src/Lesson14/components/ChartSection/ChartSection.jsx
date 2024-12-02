@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import LineChart from "../LineChart/LineChart";
-import heartImage from "../../assets/png/HeartBPM.svg";
-import respImage from "../../assets/png/respiratory_rate.svg";
-import tempImage from "../../assets/png/temperature.svg";
+import heartImage from "../../assets/svg/HeartBPM.svg";
+import respImage from "../../assets/svg/respiratory_rate.svg";
+import tempImage from "../../assets/svg/temperature.svg";
 
 import "./ChartSection.scss";
 import { DiagnosBox } from "../Main";

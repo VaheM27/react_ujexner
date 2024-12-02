@@ -1,8 +1,9 @@
-export const Home = () => {
-    return (
-        <div className="Home">
-            <h1>hi</h1>
-        </div>
-    );
-};
+import "./Home.scss"
 
+export const Home = () => {
+  return (
+    <div className="home">
+      <h1>Home</h1>
+    </div>
+  );
+};

@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import ROUTES from "./Routes";
 import { useState, useEffect } from "react";
 import { Home, NotFound, Patients } from "./pages";
-import Nav from "./components/Nav/Nav";
 
 import "./App.scss";
 import Layout from "./Layout/Layout";

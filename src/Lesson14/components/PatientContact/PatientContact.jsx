@@ -1,6 +1,6 @@
 import birthIcon from "../../assets/png/BirthIcon.png";
 import femaleIcon from "../../assets/png/female.png";
-import maleIcon from "../../assets/png/MaleIcon.svg";
+import maleIcon from "../../assets/svg/MaleIcon.svg";
 import phoneIcon from "../../assets/png/PhoneIcon.png";
 import insuranceIcon from "../../assets/png/InsuranceIcon.png";
 import "./PatientContact.scss";
