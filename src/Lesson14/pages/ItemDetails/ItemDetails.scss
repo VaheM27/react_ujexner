@@ -5,8 +5,25 @@
   max-width: 600px;
   width: 100%;
   @include makeFlex(flex, center, center, column, unset, 80px, unset);
-  img {
-    width: 400px;
+  .imgBox {
+    overflow: hidden;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      transition: all 0.9s;
+    }
+    &:hover {
+      width: 100%;
+      height: 500px;
+      img {
+        transform: scale(4);
+      }
+    }
   }
   .details {
     @include textParams(18px, 700, monospace, #000);
@@ -46,9 +63,13 @@
     }
   }
   .btns {
-    @include makeFlex(flex, center, center, unset, unset, unset, unset);
+    width: 100%;
+    @include makeFlex(flex, space-between, center, unset, unset, unset, unset);
     color: #7036f2;
-
+    padding: 0 20px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
     .icon {
       cursor: pointer;
       transition: all 0.8s;

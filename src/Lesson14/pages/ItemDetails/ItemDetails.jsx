@@ -19,7 +19,9 @@ export const ItemDetails = () => {
 
   return (
     <div className="itemInfo">
-      <img src={prod?.image} alt="Item Image" />
+      <div className="imgBox">
+        <img src={prod?.image} alt="Item Image" />
+      </div>
       <div className="details">
         <p className="price">${prod?.price}</p>
         <p className="title">{prod?.title}</p>
