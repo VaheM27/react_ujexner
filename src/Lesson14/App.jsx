@@ -1,51 +1,48 @@
 import { Routes, Route } from "react-router-dom";
-import ROUTES from "./Routes";
 import { useState, useEffect } from "react";
-import { Home, NotFound, Patients } from "./pages";
+import { Home, NotFound, Category } from "./pages/index";
+import Layout from "../Lesson14/Layout/Layout";
+import ROUTES from "./Routes";
 
 import "./App.scss";
-import Layout from "./Layout/Layout";
 
-function App() {
+const App = () => {
   const [data, setData] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          "https://fedskillstest.coalitiontechnologies.workers.dev/",
-          {
-            method: "GET",
-            headers: {
-              Authorization: "Basic " + btoa("coalition:skills-test"),
-            },
-          }
-        );
-        const data = await response.json();
-        setData(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
+    fetch("https://dummyjson.com/products")
+      .then((res) => res.json())
+      .then((res) => {
+        setData(res.products);
+        setCategories([
+          ...new Set(res.products.map((product) => product.category)),
+        ]);
+      });
   }, []);
 
-  useEffect(() => {
-    data.map((user) => (user.id = Math.random()));
-    console.log(data);
-  }, [data]);
+  categories.map((category) => {
+    ROUTES[category.toUpperCase()] = category;
+    ROUTES[`${category.toUpperCase()}ID`] = `${category}/:id`;
+  });
 
   return (
-    <div className="App">
+    <div>
       <Routes>
-        <Route path={ROUTES.HOME} element={<Layout />}>
+        <Route path={ROUTES.HOME} element={<Layout categories={categories} />}>
           <Route index element={<Home />} />
-          <Route path={ROUTES.PATIENTS} element={<Patients data={data} />} />
+          {categories.map((category) => (
+            <Route
+              key={category}
+              path={ROUTES[category.toUpperCase()]}
+              element={<Category categories={categories} data={data} />}
+            />
+          ))}
           <Route path={ROUTES.NOTFOUND} element={<NotFound />} />
         </Route>
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

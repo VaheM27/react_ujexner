@@ -1,5 +1,5 @@
 import { Home } from "./Home/Home";
 import { NotFound } from "./NotFound/NotFound";
-import { Category } from "./Category/Category";
+import { Patients } from "./Patients/Patients";
 
-export { Home, NotFound, Category };
+export { Home, NotFound, Patients };
