@@ -12,6 +12,8 @@
     border-radius: 10px;
     background-color: rgb(222, 219, 219);
     color: rgb(135, 132, 132);
+    transition: all ease .5s;
+    cursor: pointer;
 }
 .card-id{
     color: gray;

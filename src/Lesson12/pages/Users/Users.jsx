@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cards from "../../components/Cards/Cards";
+import Sort from "../../components/Sorting/Sort";
 
 export const Users = () => {
     const [data, setData] = useState([]);
@@ -10,8 +11,18 @@ export const Users = () => {
             .then((res) => setData(res));
     }, []);
 
+    const handleSort = (sortBy) => {
+        const sortedData = [...data].sort((a, b) => {
+            if (a[sortBy] < b[sortBy]) return -1;
+            if (a[sortBy] > b[sortBy]) return 1;
+            return 0;
+        });
+        setData(sortedData); 
+    };
+
     return (
         <div>
+            <Sort onSort={handleSort} />
             {data.map((item) => (
                 <Cards
                     key={item.id}
