@@ -1,0 +1,25 @@
+nav {
+  background: rgb(193, 253, 255);
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    li {
+      flex-basis: 10%;
+      text-align: right;
+      text-transform: capitalize;
+
+      a {
+        display: inline-flex;
+        padding: 20px 0;
+        color: rgb(0, 46, 54);
+      }
+
+      .active {
+        color: #007a99;
+      }
+    }
+  }
+}

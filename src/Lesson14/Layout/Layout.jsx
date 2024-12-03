@@ -1,10 +1,11 @@
 import { Outlet } from "react-router-dom";
-import Nav from "../components/Nav";
-const Layout = ({ categories, data }) => {
+import Nav from "../components/Nav/Nav";
+
+const Layout = ({ categories, selectCategory }) => {
   return (
     <>
-      <Nav categories={categories} />
-      <Outlet data={data} />
+      <Nav categories={categories} selectCategory={selectCategory} />
+      <Outlet />
     </>
   );
 };

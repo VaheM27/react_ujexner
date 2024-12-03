@@ -1,0 +1,22 @@
+.productBox {
+    display: grid;
+    width: 50%;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+
+    img {
+        height: 40px;
+    }
+
+    h2 {
+        color: rgb(0, 31, 51);
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    a {
+        color: rgb(0, 31, 51);
+    }
+}

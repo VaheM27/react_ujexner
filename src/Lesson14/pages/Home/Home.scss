@@ -1,0 +1,11 @@
+.home {
+    height: calc(100vh - 62px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-weight: 200;
+        font-size: 60px;
+    }
+}

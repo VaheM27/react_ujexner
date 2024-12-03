@@ -1,0 +1,11 @@
+.category {
+  background: rgb(173, 241, 253);
+  padding: 60px 0;
+  min-height: calc(100vh - 62px);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
