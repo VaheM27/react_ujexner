@@ -9,10 +9,11 @@ export const Users = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://dummyjson.com/users")
+    fetch("https://dummyjson.com/users?limit=208")
       .then((res) => res.json())
       .then((result) => setData(result.users));
   }, []);
+
   return (
     <div className="div-users">
       <h1 style={{ userSelect: "none" }}>Users</h1>

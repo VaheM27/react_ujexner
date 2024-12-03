@@ -15,13 +15,13 @@ import {
 import Footer from "./components/Footer/Footer";
 
 import "./App.css";
+import Layout from "./Layout/Layout";
 
 const App = () => {
   return (
     <div className="container">
-      <Nav />
       <Routes>
-        <Route path={ROUTES.HOME}>
+        <Route path={ROUTES.HOME} element={<Layout />}>
           <Route index element={<Home />} />
           <Route path={ROUTES.PRODUCTS} element={<Products />} />
           <Route path={ROUTES.USERS} element={<Users />} />
@@ -31,7 +31,6 @@ const App = () => {
           <Route path={ROUTES.PRODUCT} element={<ProductPage />} />
         </Route>
       </Routes>
-      <Footer />
     </div>
   );
 };
