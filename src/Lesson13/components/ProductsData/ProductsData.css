@@ -1,0 +1,27 @@
+.products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(93, 163, 161);
+  padding: 15px 30px;
+
+  p {
+    width: 200px;
+    display: inline-block;
+    color: #fff;
+    background-color: rgb(45, 21, 55);
+    padding: 15px 30px;
+    border: 1px solid rgb(45, 18, 8);
+    border-radius: 30px;
+    cursor: pointer;
+  }
+}
+.proLink {
+  display: inline-block;
+  color: #fff;
+  background-color: rgb(45, 21, 55);
+  padding: 15px 30px;
+  border: 1px solid rgb(45, 18, 8);
+  border-radius: 30px;
+  cursor: pointer;
+}

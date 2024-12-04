@@ -1,0 +1,9 @@
+.vnas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  background-color: bisque;
+  padding: 15px 30px;
+}

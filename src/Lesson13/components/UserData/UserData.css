@@ -1,0 +1,22 @@
+.users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(12, 69, 60);
+  padding: 20px;
+  column-gap: 20px;
+  p {
+    background-color: wheat;
+    width: 300px;
+    display: inline-block;
+    color: #fff;
+    background-color: orangered;
+    padding: 15px 30px;
+    border: 1px solid orangered;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  &:hover {
+    transition: all 0.8s;
+  }
+}
