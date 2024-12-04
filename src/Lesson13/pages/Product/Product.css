@@ -14,3 +14,23 @@
     border: 1px solid #000;
   }
 }
+.btn3 {
+  display: inline-block;
+  color:wheat;
+  background-color: rgb(35, 113, 116);
+  padding: 15px 30px;
+  border: 1px solid rgb(21, 63, 74);
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.btn4 {
+  display: inline-block;
+  color:wheat;
+  background-color: rgb(35, 113, 116);
+  padding: 15px 30px;
+  border: 1px solid rgb(21, 63, 74);
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 20px;
+}

@@ -17,7 +17,7 @@ const UserData = () => {
         return (
           <div className="users" key={item.id}>
             <p>{item.id}</p>
-            <img src={item.image} alt="" />
+            <img className="img" src={item.image} alt="" />
             <p>{item.firstName}</p>
             <p>{item.lastName}</p>
             <p>{item.email}</p>

@@ -20,3 +20,9 @@
     transition: all 0.8s;
   }
 }
+.img:hover{
+  transform: translate(0,-10px);
+}
+.img{
+  transition: all 0.8s;
+}
