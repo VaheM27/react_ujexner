@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+input {
+  width: 300px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: 2px solid rgb(64, 64, 214);
+  outline: none;
+  color: gray;
+  font-weight: 900;
+}
+
+button {
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  transition: all 0.9s;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(64, 64, 214);
+  }
+}
+select {
+  padding: 15px 30px;
+  border-radius: 30px;
+}
+
+option {
+  appearance: none;
+  background-color: red;
+}
+
+.errorMessage {
+  color: red;
+  padding: 15px;
+  border: 1px solid red;
+  border-radius: 30px;
+}
