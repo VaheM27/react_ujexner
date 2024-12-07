@@ -1,0 +1,28 @@
+@media screen and (max-width: 1200px) {
+    .Navbar{
+        z-index: 2;
+        justify-content: space-around;
+    }
+    .Navbar ul{
+        position: absolute;
+        top: 70px;
+        height: 500px;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        height: 0px;
+        overflow: hidden;
+        background: #252525;
+    }
+    .Navbar .barsBtn{
+        display: flex;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        border: none;
+    }
+    .Navbar ul.open {
+        transform: translateY(0);
+        height: 500px; 
+      }
+}
