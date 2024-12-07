@@ -11,7 +11,7 @@ const App = () => {
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState(null);
   const [categoryData, setCategoryData] = useState([]);
-
+  
   const selectCategory = (category) => setCategory(category);
 
   useEffect(() => {
