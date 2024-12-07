@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+h1{
+  text-align: center;
+  font-size: 42px;
+  background: #000;
+  letter-spacing: 5px;
+  color: rgb(255, 255, 255) !important;
+  height: 60px;
+  margin: 0;
+}
+.main{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+  background: #d7d7d7;
+}
+form {
+  padding: 100px 0 20px 0;
+  margin: 0 0 0 20px;
+  background: #d7d7d7;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+  border-radius: 10px;
+}
+
+input {
+  width: 300px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: 2px solid rgb(64, 64, 214);
+  outline: none;
+  color: gray;
+  font-weight: 900;
+}
+
+button {
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  transition: all 0.9s;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(64, 64, 214);
+  }
+}
+select {
+  padding: 15px 30px;
+  border-radius: 30px;
+}
+
+option {
+  appearance: none;
+  background-color: red;
+}
+
+.errorMessage {
+  color: red;
+  padding: 15px;
+  border: 1px solid red;
+  border-radius: 30px;
+}
+.bgimg{
+  width: 50%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bgimg img{
+  width:100%;
+  height: 500px;
+  border-radius: 50%;
+
+}
+
+.table{
+  margin: 30px 0 0 0;
+  width: 50%;
+  translate: 50%;
+}
