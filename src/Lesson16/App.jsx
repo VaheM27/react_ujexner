@@ -13,6 +13,8 @@ const App = () => {
 
   const initialValues = {
     userName: "",
+    userEmail: "",
+    phone: "",
     userPass: "",
     selectRole: "",
   };
@@ -26,6 +28,20 @@ const App = () => {
       .min(8, "Username lenght must be more than 4")
       .max(20, "Username lenght must be less than 13")
       .required("User is a required field"),
+    userEmail: string()
+      .matches(
+        /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+        "Please sdkfc skdfn "
+      )
+      .min(8, "userEmail lenght must be more than 4")
+      .max(20, "userEmail lenght must be less than 13")
+      .required("userEmail is a required field"),
+    phone: string()
+    .matches(
+      /^(?:\+?\d{1,2}\s?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/,
+      "Please enter a valid phone number."
+    )
+    .min(8).max(22).required("Phone is a required field"),
     userPass: string().min(5).max(16).required("Password is a required field"),
     selectRole: string().required("Must be select one of list"),
   });
@@ -34,6 +50,8 @@ const App = () => {
     const userData = {
       userID: nanoid(9),
       userName: values.userName,
+      userEmail: values.userEmail,
+      phone: values.phone,
       userPass: values.userPass,
       selectRole: values.selectRole,
     };
@@ -58,10 +76,22 @@ const App = () => {
               name="userName"
               className="errorMessage"
             />
-            <Field type="password" name="userPass" placeholder="Password" />
+            <Field type="email" name="userEmail" placeholder="userEmail" />
             <ErrorMessage
               component="div"
-              name="userPass"
+              name="userEmail"
+              className="errorMessage"
+            />
+             <Field type="text" name="phone" placeholder="phone" />
+            <ErrorMessage
+              component="div"
+              name="phone"
+              className="errorMessage"
+            />
+            <Field type="password" name="userPass" placeholder="password" />
+            <ErrorMessage
+              component="div"
+              name="password"
               className="errorMessage"
             />
             <Field as="select" name="selectRole">
@@ -88,10 +118,12 @@ const App = () => {
         </div>
       </div>
 
-      <table class="table">
-        <thead class="thead-dark">
+      <table className="table">
+        <thead className="thead-dark">
           <tr>
             <th scope="col">username</th>
+            <th scope="col">email</th>
+            <th scope="col">phone</th>
             <th scope="col">password</th>
             <th scope="col">role</th>
           </tr>
@@ -102,6 +134,8 @@ const App = () => {
               return (
                 <Fragment key={item.userID}>
                   <td>{item.userName}</td>
+                  <td>{item.userEmail}</td>
+                  <td>{item.phone}</td>
                   <td>{item.userPass}</td>
                   <td>{item.selectRole}</td>
                 </Fragment>
