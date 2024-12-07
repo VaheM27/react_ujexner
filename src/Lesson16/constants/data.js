@@ -1,0 +1,58 @@
+export const register = [
+  {
+    type: "text",
+    name: "name",
+    placeholder: "Name",
+    component: "p",
+    className: "error",
+  },
+  {
+    type: "text",
+    name: "surname",
+    placeholder: "Surname",
+    component: "p",
+    className: "error",
+  },
+  {
+    type: "text",
+    name: "address",
+    placeholder: "Address",
+    component: "p",
+    className: "error",
+  },
+  {
+    type: "text",
+    name: "address2",
+    placeholder: "Address 2 (optional)",
+    component: "p",
+    className: "error",
+  },
+  {
+    type: "text",
+    name: "mobile",
+    placeholder: "Mobile",
+    component: "p",
+    className: "error",
+  },
+  {
+    type: "email",
+    name: "email",
+    placeholder: "E-mail",
+    component: "p",
+    className: "error",
+  },
+  {
+    type: "text",
+    name: "userName",
+    placeholder: "Username",
+    component: "p",
+    className: "error",
+  },
+  {
+    type: "password",
+    name: "userPassword",
+    placeholder: "Password",
+    component: "p",
+    className: "error",
+  },
+];

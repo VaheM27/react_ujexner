@@ -1,0 +1,61 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  row-gap: 20px;
+  width: 700px;
+  padding: 60px 30px 30px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 0.25em;
+  background: #fff;
+
+  h1 {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 400;
+    font-size: 28px;
+    color: rgb(0, 0, 51);
+  }
+
+  .field {
+    flex-basis: calc(50% - 10px);
+    position: relative;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5em 1em;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 0.25em;
+    outline: none;
+    background: rgb(250, 250, 250);
+  }
+
+  .submit {
+    padding: 0.5em 1em;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 0.25em;
+    flex-basis: 100%;
+    background: rgb(89, 89, 241);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background: rgb(112, 112, 240);
+    }
+  }
+
+  .error {
+    position: absolute;
+    font-size: 8px;
+    color: red;
+    bottom: -12px;
+    left: 0;
+  }
+}
