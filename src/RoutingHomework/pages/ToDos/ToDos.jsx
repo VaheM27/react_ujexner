@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./ToDos.css";
 
@@ -13,6 +14,8 @@ export const ToDos = () => {
 
   return (
     <div className="todo">
+      <Link to={"/"}>Home</Link>
+
       <h1 style={{ userSelect: "none" }}>ToDos</h1>
       {data.map((elm) => {
         return (

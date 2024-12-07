@@ -14,15 +14,19 @@ export const Products = () => {
   }, []);
 
   return (
-    <div>
+    <div className="products">
       <h1 style={{ userSelect: "none" }}>Products</h1>
-      {data.map((elm) => (
-        <div key={elm.id}>
-          <p>{elm.title}</p>
-          <p>{elm.price}</p>
-          <Link to={`/${ROUTES.PRODUCTS}/${elm.id}`}>Product</Link>
-        </div>
-      ))}
+      <Link to={"/"}>Home</Link>
+      <div className="products">
+        {data.map((elm) => (
+          <div key={elm.id} className="Mainproduct">
+            <img src={elm.thumbnail} alt={elm.title} />
+            <p>{elm.title}</p>
+            <p>{elm.price}</p>
+            <Link to={`/${ROUTES.PRODUCTS}/${elm.id}`}>Product</Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

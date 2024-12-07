@@ -2,7 +2,6 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import ROUTES from "./Routes";
 
-import Nav from "./components/Nav/Nav";
 import {
   Home,
   NotFound,
@@ -12,7 +11,8 @@ import {
   UserPage,
   ProductPage,
 } from "./pages";
-import Footer from "./components/Footer/Footer";
+// import Nav from "./components/Nav/Nav";
+// import Footer from "./components/Footer/Footer";
 
 import "./App.css";
 import Layout from "./Layout/Layout";

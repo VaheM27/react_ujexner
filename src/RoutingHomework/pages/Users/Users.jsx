@@ -16,11 +16,12 @@ export const Users = () => {
 
   return (
     <div className="div-users">
+      <Link to={"/"}>Home</Link>
       <h1 style={{ userSelect: "none" }}>Users</h1>
       {data.map((elm) => {
         return (
           <div key={elm.id} className="userDiv">
-            <img src={elm.image} />
+            <img src={elm.image} alt={elm.firstName} />
             <p>{elm.firstName}</p>
             <p>{elm.lastName}</p>
             <p>{elm.email}</p>

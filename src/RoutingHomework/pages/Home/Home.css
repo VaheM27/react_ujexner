@@ -1,0 +1,19 @@
+.home {
+  width: 100wh;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+}
+.img {
+  margin-top: 20px;
+  width: 60%;
+  height: 80%;
+}
