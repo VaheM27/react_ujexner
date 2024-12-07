@@ -1,0 +1,8 @@
+@import "../../styles/global.scss";
+
+.board {
+  @include makeFlex(flex, flex-start, flex-start, unset, unset, unset, 50px);
+  .boxes {
+    @include makeFlex(flex, flex-start, center, unset, wrap, unset, unset);
+  }
+}

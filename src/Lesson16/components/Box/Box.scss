@@ -1,0 +1,33 @@
+@import "../../styles/global.scss";
+
+.box {
+  @include textParams(20px, 900, monospace, #243658);
+  @include makeFlex(flex, center, flex-start, column, unset, 10px, unset);
+  background-color: #f5eec5;
+  padding: 16px 32px;
+  margin-top: 40px;
+  margin-right: 40px;
+  border-radius: 10px;
+  user-select: none;
+  box-shadow: 4px 4px 10px #000;
+  width: 400px;
+  p {
+    transition: all 1s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  button {
+    border: none;
+    background-color: #5f6a9a;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 1s;
+    cursor: pointer;
+    @include textParams(18px, 900, monospace, #f5eec5);
+    &:hover {
+      background-color: #243658;
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import "../../styles/global.scss";
+
+.form {
+  Form {
+    padding: 20px 40px;
+    height: 100vh;
+    background-color: #f9dabc;
+    box-shadow: 0 0 20px #000;
+    @include makeFlex(flex, space-evenly, center, column, unset, 30px, unset);
+    width: 600px;
+    .parent {
+      width: 100%;
+      position: relative;
+      input {
+        box-shadow: 1px 1px 10px #000;
+        width: 100%;
+        padding: 15px;
+        border-radius: 9px;
+        border: none;
+        outline: none;
+        @include textParams(14px, 900, monospace, #000);
+      }
+      .error {
+        @include textParams(12px, 900, monospace, #f44336);
+        position: absolute;
+        bottom: -20px;
+        left: 20px;
+      }
+    }
+    input[type="submit"] {
+      border: none;
+      background-color: #63574b;
+      padding: 10px 30px;
+      @include textParams(20px, 900, monospace, #fff);
+      cursor: pointer;
+      border-radius: 9px;
+      transition: all 1s;
+      box-shadow: 0 0 10px #000;
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../styles/global.scss";
+
+.details {
+  @include makeFlex(flex, flex-start, flex-start, row, unset, unset, 300px);
+  margin: 50px;
+  .linkBtn {
+    text-decoration: none;
+    button {
+      cursor: pointer;
+      background-color: #47a3b2;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      border: none;
+      @include textParams(40px, 900, unset, #fff);
+      padding: 10px;
+      transition: all 1s;
+      &:hover {
+        background-color: #233033;
+      }
+    }
+  }
+  .info {
+    background-color: #7cabb2;
+    @include makeFlex(flex, flex-start, flex-start, column, unset, 30px, unset);
+
+    padding: 70px;
+    border-radius: 20px;
+    p {
+      @include textParams(30px, 100, monospace, #eaeaea);
+      span {
+        font-weight: 900;
+        color: #233033;
+      }
+    }
+  }
+}
