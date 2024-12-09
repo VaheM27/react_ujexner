@@ -1,0 +1,50 @@
+@import "../../styles/global.scss";
+
+.box {
+  @include makeFlex(
+    flex,
+    center,
+    flex-start,
+    column,
+    Lucida Grande,
+    40px,
+    unset
+  );
+  box-shadow: 0 0 10px #000;
+  width: 300px;
+  border-radius: 6px;
+  background-color: #ebedef;
+  @include textParams(20px, 900, Helvetica, #424949);
+  .top {
+    width: 300px;
+    overflow: hidden;
+    border-radius: 6px;
+    img {
+      transition: all 1s;
+      width: 300px;
+      height: 200px;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .bottom {
+    @include makeFlex(flex, center, flex-start, column, unset, 10px, unset);
+    max-width: 300px;
+    padding: 0 10px;
+  }
+  button {
+    border: none;
+    margin: auto;
+    padding: 15px 32px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    @include textParams(16px, 900, Helvetica, #fff);
+    background-color: #edbb99;
+    cursor: pointer;
+    transition: all 1s;
+    &:hover {
+      background-color: #2c3e50;
+    }
+  }
+}

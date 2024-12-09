@@ -1,0 +1,9 @@
+@import "./styles/global.scss";
+
+.app {
+  @include makeFlex(flex, space-between, flex-start, row, unset, 50px, 50px);
+  padding: 30px;
+  .boxes {
+    @include makeFlex(flex, flex-start, flex-start, row, wrap, 40px, 40px);
+  }
+}

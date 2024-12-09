@@ -1,0 +1,70 @@
+@import "../../styles/global.scss";
+
+.form {
+  position: sticky;
+  top: 30px;
+  Form {
+    border-radius: 10px;
+    @include makeFlex(flex, center, flex-start, column, unset, 30px, unset);
+    background-color: #424949;
+    max-width: 400px;
+    min-width: 400px;
+    width: 100%;
+    padding: 20px 40px;
+    border-left: 40px solid #aeb6bf;
+    box-shadow: 0 0 20px #000;
+    .fieldDetails {
+      height: 100px;
+      width: 100%;
+      position: relative;
+      @include makeFlex(flex, center, flex-start, column, unset, 10px, unset);
+      .title {
+        user-select: none;
+        @include textParams(20px, 900, unset, #fff);
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      input {
+        width: 100%;
+        outline: none;
+        @include textParams(16px, 600, unset, #000);
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+      }
+      .error {
+        @include textParams(14px, 900, unset, #cb4335);
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        position: absolute;
+        top: 100px;
+      }
+    }
+    button {
+      border: none;
+      border-radius: 10px;
+      padding: 10px 32px;
+      margin: 0 auto 20px auto;
+      @include textParams(18px, 900, unset, #fff);
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      background-color: #424949;
+      border: 1px solid #fff;
+      cursor: pointer;
+      transition: all 1s;
+      &:hover {
+        background-color: #fff;
+        color: #424949;
+      }
+    }
+    .errorMessage {
+      @include textParams(14px, 900, unset, #cb4335);
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      position: absolute;
+      bottom: 10px;
+    }
+  }
+}
