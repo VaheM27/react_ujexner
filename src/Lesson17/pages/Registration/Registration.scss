@@ -1,0 +1,69 @@
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 500px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 8px;
+    gap: 20px;
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 40px;
+      flex-basis: 100%;
+      color: rgb(117, 1, 117);
+    }
+
+    .success {
+      position: absolute;
+      top: 95px;
+      font-size: 12px;
+      color: rgb(170, 1, 1);
+    }
+
+    div {
+      flex-basis: calc(50% - 10px);
+      position: relative;
+
+      p {
+        position: absolute;
+        font-size: 10px;
+        bottom: -14px;
+        left: 6px;
+        color: rgb(170, 1, 1);
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 6px;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+      box-shadow: 0 2px 2px rgb(224, 224, 224);
+    }
+
+    button,
+    a {
+      display: inline-block;
+      background: linear-gradient(90deg, rgb(1, 245, 253), rgb(255, 0, 255));
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      color: #ffffff;
+      font-size: 16px;
+      width: 100%;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+}
