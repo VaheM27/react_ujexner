@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { string, number } from "yup";
+import { string, number, object } from "yup";
 
 import "./Users.css";
 
@@ -12,7 +12,7 @@ export const Users = () => {
     })
       .then((res) => res.json())
       .then((user) => setUser(user));
-  });
+  }, []);
 
   const initalValues = {
     firstName: "",
@@ -23,7 +23,7 @@ export const Users = () => {
     adress: "",
   };
 
-  const validationSchema = {
+  const validationSchema = object({
     firstName: string("Write only String")
       .matches(/^[a-zA-Z]+$/, "Must be only letters")
       .min(3, "Too Short")
@@ -43,36 +43,29 @@ export const Users = () => {
       .trim()
       .required("Required"),
     age: number("Write only number")
-      .matches(/^[0-9]+$/, "Must be only numbers")
       .min(18, "Too young")
       .max(100, "Too old")
       .required("Required"),
 
-    phone: number("Write only number")
-      .matches(/^[0-9]+$/, "Must be only numbers")
-      .required("Required"),
+    phone: number("Write only number").required("Required"),
     adress: string("Write only String").required("Required"),
-  };
+  });
 
   return (
     <div className="users">
-      <Formik>
-        <Form
-          className="leftDiv"
-          initalValues={initalValues}
-          validationSchema={validationSchema}
-        >
+      <Formik initialValues={initalValues} validationSchema={validationSchema}>
+        <Form className="leftDiv">
           <Field type="text" name="firstName" placeholder="First Name" />
           <ErrorMessage component={"div"} name="firstName" />
           <Field type="text" name="lastName" placeholder="Last Name" />
           <ErrorMessage component={"div"} name="lastName" />
           <Field type="email" name="email" placeholder="Email" />
-          <ErrorMessage component={"div"} name="age" />
+          <ErrorMessage component={"div"} name="email" />
           <Field type="number" name="age" placeholder="Age" />
-          <ErrorMessage component={"div"} name="phone" />
+          <ErrorMessage component={"div"} name="age" />
           <Field type="number" name="phone" placeholder="Phone" />
-          <ErrorMessage component={"div"} name="adress" />
-          <Field type="text" name="email" placeholder="Adress" />
+          <ErrorMessage component={"div"} name="phone" />
+          <Field type="text" name="adress" placeholder="Adress" />
           <ErrorMessage component={"div"} name="adress" />
         </Form>
       </Formik>
