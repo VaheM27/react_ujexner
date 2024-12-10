@@ -1,0 +1,25 @@
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+li {
+  a {
+    font-size: 26px;
+    color: black;
+    border: 2px solid black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+    &:hover {
+      border-radius: 20px;
+      background-color: aquamarine;
+    }
+  }
+}
+.nav {
+  border-radius: 20px;
+  margin-top: 20px;
+  background: linear-gradient(to right, #676b74, #1e2025);
+}

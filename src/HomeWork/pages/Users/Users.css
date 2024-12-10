@@ -1,0 +1,24 @@
+.users {
+  background: linear-gradient(to right, #352e2e, #b19b9b);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 90vh;
+  .leftDiv {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    input {
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid black;
+      outline: none;
+      width: 80%;
+    }
+  }
+  .rightDiv {
+    width: 70%;
+  }
+}

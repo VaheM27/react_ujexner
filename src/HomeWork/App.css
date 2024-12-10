@@ -31,3 +31,11 @@ img {
   box-sizing: border-box;
 }
 /* ************************************** */
+body {
+  background: linear-gradient(to right, #301414, #863c3c);
+}
+.active {
+  color: seashell;
+  text-decoration: underline;
+  font-style: italic;
+}
