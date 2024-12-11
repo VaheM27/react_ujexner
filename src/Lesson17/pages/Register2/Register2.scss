@@ -1,0 +1,69 @@
+@import "../../styles/variables.scss";
+
+.reg2 {
+  @include flex(center, center, _, _, _);
+  height: 80vh;
+
+  form {
+    @include flex(_, center, column, _, 20px);
+    @include form(_, 100%, 80px 40px 40px, $main-transp);
+    position: relative;
+
+    .form-block {
+      display: flex;
+
+      h2 {
+        @include absolute(-40px, _, 20px, _);
+        @include header(left, 400, 20px);
+        position: absolute;
+      }
+
+      .form-block0,
+      .form-block1 {
+        @include flex(_, _, _, wrap, 20px);
+        position: relative;
+        flex-basis: 40%;
+        padding: 0 20px;
+
+        div {
+          flex-basis: calc(50% - 10px);
+          position: relative;
+
+          input,
+          select {
+            @include input();
+          }
+
+          span {
+            @include error();
+          }
+        }
+      }
+
+      .form-block2 {
+        @include flex(_, _, _, wrap, 20px);
+        flex-basis: 20%;
+        padding: 0 20px;
+        flex-grow: 1;
+        position: relative;
+
+        div {
+          width: 100%;
+          position: relative;
+
+          input,
+          select {
+            @include input();
+          }
+
+          span {
+            @include error();
+          }
+        }
+      }
+    }
+    button {
+      @include button(250px, 20px);
+    }
+  }
+}

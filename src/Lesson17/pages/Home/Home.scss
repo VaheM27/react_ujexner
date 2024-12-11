@@ -1,116 +1,64 @@
+@import "../../styles/variables.scss";
+
 .home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(center, center, unset, unset, unset);
+  background: $main-background;
   position: relative;
-  background: linear-gradient(235deg, rgb(235, 0, 215), rgb(90, 222, 255));
   height: 100vh;
   overflow: hidden;
 
-  .div1,
-  .div2,
-  .div3,
-  .div4 {
-    position: absolute;
-    width: 30vw;
-    aspect-ratio: 1;
-    z-index: 999;
-    border-radius: 4px;
-  }
-
-  .div1 {
-    transform: rotate(60deg) translate(-60%, -30%);
-    background: linear-gradient(rgb(16, 207, 255), rgb(0, 181, 226));
-    left: -20vw;
-    top: 60%;
-  }
-
-  .div2 {
-    transform: rotate(60deg) translate(-40%, 40%);
-    background: linear-gradient(135deg, rgb(56, 137, 230), rgb(235, 0, 215));
-    left: 50vw;
-    top: -40%;
-  }
-
-  .div3 {
-    transform: rotate(60deg) translate(-60%, -50%);
-    background: linear-gradient(rgb(136, 199, 241), rgb(218, 4, 200));
-    right: -20vw;
-    top: 80%;
-  }
-
-  .div4 {
-    transform: rotate(60deg) translate(-40%, 40%);
-    background: linear-gradient(rgb(2, 150, 196), rgb(248, 109, 237));
-    left: 50vw;
-    bottom: -60%;
-  }
-
   form {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 40px;
-    height: 70vh;
-    width: 400px;
-    background: rgba(255, 255, 255, 0.95);
-    z-index: 1000;
-    border-radius: 8px;
-    gap: 30px;
+    @include flex(space-between, unset, column, unset, 30px);
+    @include form(70vh, 400px, 20px 40px, $main-transp);
 
-    div {
-      width: 100%;
-    }
+    .form-footer {
+      @include flex(space-between, unset, column, unset, 20px);
 
-    #pass-div {
-      position: relative;
+      div {
+        width: 100%;
+      }
 
-      i {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translate(0, -50%);
-        cursor: pointer;
-        color: rgb(133, 133, 133);
+      #pass-div {
+        position: relative;
+
+        i {
+          @include absolute(50%, unset, unset, 10px);
+          color: $icon;
+          transform: translate(0, -50%);
+          cursor: pointer;
+        }
+      }
+      input {
+        @include input();
+      }
+
+      button {
+        @include button();
+      }
+
+      .signup {
+        @include flex(space-between, center, unset, unset, unset);
+      }
+
+      p {
+        @include text(center, 400, 16px, $purple);
+        margin: 20px 0;
+      }
+
+      a {
+        color: $purple;
+        transition: 0.2s;
+
+        &:hover {
+          color: $darkcyan;
+        }
       }
     }
 
     h1 {
+      @include header();
       width: 100%;
-      text-align: center;
       margin-bottom: 20px;
-      font-weight: 400;
-      font-size: 36px;
-      color: rgb(102, 2, 122);
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid rgb(172, 236, 255);
-      border-radius: 4px;
-      outline: none;
-      box-shadow: 0 2px 4px rgb(206, 206, 206);
-    }
-
-    button,
-    a {
-      display: inline-block;
-      background: linear-gradient(90deg, rgb(1, 245, 253), rgb(255, 0, 255));
-      padding: 10px;
-      border-radius: 20px;
-      border: none;
-      color: #ffffff;
-      font-size: 16px;
-      width: 100%;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    p {
-      font-size: 18px;
-      margin: 20px 0;
-      text-align: center;
-      color: rgb(102, 2, 122);
     }
   }
 }

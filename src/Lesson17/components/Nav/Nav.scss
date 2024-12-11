@@ -1,24 +1,26 @@
+@import "../../styles/variables.scss";
+
 nav {
-  background: rgba(90, 222, 255, 0.3);
+  background: $nav-bg;
   position: sticky;
   top: 0;
-  box-shadow: 0 0 8px rgb(255, 0, 221);
+  box-shadow: $nav-shadow;
+  z-index: 1000;
 
   .nav {
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-between, _, _, _, _);
     padding: 0 20px;
 
     img {
       height: 40px;
       margin-right: 20px;
-      background: #fff;
       border-radius: 50%;
-      box-shadow: 0 0 8px rgb(255, 0, 221);
+      background: $main-color;
+      box-shadow: $nav-shadow;
     }
 
     p {
-      color: #fff;
+      color: $main-color;
     }
 
     i {
@@ -26,9 +28,7 @@ nav {
     }
 
     ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flex(space-between, center, _, _, _);
 
       button,
       a {
@@ -40,16 +40,14 @@ nav {
         font-size: 16px;
         cursor: pointer;
         transition: 0.2s;
-        color: #fff;
+        color: $main-color;
 
         &::after {
-          position: absolute;
+          @include absolute(_, 0, 0, _);
           content: "";
           height: 2px;
           width: 0;
-          left: 0;
-          bottom: 0;
-          background: rgb(90, 222, 255);
+          background: $cyan;
           transition: 0.3s;
         }
 

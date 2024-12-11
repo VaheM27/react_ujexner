@@ -1,7 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Nav.scss";
 
 const Nav = ({ user }) => {
+  const navigate = useNavigate();
+
+  const redirect = () => {
+    localStorage.removeItem("user");  
+    navigate("/", { replace: true });
+  };
+
   return (
     <nav>
       <div className="container nav">
@@ -21,7 +28,7 @@ const Nav = ({ user }) => {
         )}
         <ul>
           <li>
-            <NavLink to={"/"}>
+            <NavLink to="/" onClick={redirect}>
               <i className="bi bi-box-arrow-in-left"></i>Logout
             </NavLink>
           </li>

@@ -1,5 +1,9 @@
+@import "../../styles/variables.scss";
+
 main {
-  background: linear-gradient(235deg, rgb(235, 0, 215), rgb(90, 222, 255));
+  position: relative;
+  overflow: hidden;
+  background: $main-background;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -7,46 +11,36 @@ main {
   width: 100%;
 
   .main {
-    display: flex;
-    gap: 40px;
+    @include flex(center, stretch, _, wrap, 40px);
     padding: 80px 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
     width: 100%;
   }
 
   .user-left {
     flex-basis: 40%;
-    flex-wrap: wrap;
     flex-grow: 1;
 
     img {
-      background: rgba(240, 240, 240, 0.5);
+      background: $image-bg;
       padding: 10px;
       border-radius: 50%;
       margin-bottom: 20px;
     }
 
     h1 {
-      color: #fff;
-      font-size: 32px;
-      font-weight: 400;
+      @include header(left, 400, 32px, $main-color);
     }
 
     p {
-      color: #fff;
-      font-size: 24px;
-      font-weight: 400;
+      @include text(left, 400, 24px);
       margin-top: 10px;
     }
 
     .user-left-footer {
-      display: flex;
-      gap: 20px;
+      @include flex(_, _, _, _, 20px);
 
       ul {
-        color: #fff;
+        color: $main-color;
         margin-top: 20px;
       }
 
@@ -60,11 +54,15 @@ main {
     }
   }
 
+  @media (max-width: 620px) {
+    .user-left {
+      @include flex(_, center, column, _, _);
+    }
+  }
+
   .user-right {
+    @include flex(_, _, _, wrap, 40px);
     flex-basis: calc(60% - 40px);
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
     flex-grow: 1;
     min-height: 100%;
 
@@ -72,23 +70,21 @@ main {
       flex-grow: 1;
       width: 100%;
       flex-basis: calc(50% - 24px);
-      background: rgba(255, 255, 255, 0.7);
+      background: $main-transp;
       padding: 10px 30px 30px;
       border-radius: 8px;
 
       h2 {
-        color: rgb(85, 1, 78);
-        font-size: 24px;
-        font-weight: 400;
-        text-align: center;
+        @include header(center, 400, 24px);
       }
 
       ul {
         margin-top: 20px;
 
         li {
-          display: flex;
-          justify-content: space-between;
+          @include flex(space-between, _, _, _, _);
+          margin-top: 4px;
+          font-size: 14px;
         }
       }
     }

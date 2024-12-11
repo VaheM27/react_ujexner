@@ -1,0 +1,93 @@
+@mixin flex(
+  $justify: flex-start,
+  $align: stretch,
+  $direction: row,
+  $wrap: nowrap,
+  $gap: 20px
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+@mixin absolute($top: 0, $bottom: 0, $left: 0, $right: 0) {
+  position: absolute;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
+
+@mixin header($align: center, $weight: 400, $size: 36px, $color: $purple) {
+  text-align: $align;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin text($align: center, $weight: 400, $size: 16px, $color: $main-color) {
+  text-align: $align;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin button($width: 100%, $margin-top: 0) {
+  display: inline-block;
+  background: linear-gradient(90deg, rgb(1, 245, 253), rgb(255, 0, 255));
+  padding: 10px 0;
+  border-radius: 20px;
+  border: none;
+  color: $main-color;
+  font-size: 16px;
+  width: $width;
+  text-align: center;
+  cursor: pointer;
+  margin-top: $margin-top;
+}
+
+@mixin input() {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(172, 236, 255);
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 4px rgb(206, 206, 206);
+}
+
+@mixin form($height, $width, $padding, $background) {
+  height: $height;
+  width: $width;
+  padding: $padding;
+  background: $background;
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+@mixin error() {
+  position: absolute;
+  font-size: 10px;
+  bottom: -14px;
+  left: 0;
+  color: $error-msg;
+}
+
+$main-color: #fff;
+$main-transp: #ffffffe5;
+$form-transp-bg: rgba(255, 255, 255, 0.2);
+$icon: rgb(133, 133, 133);
+$image-bg: rgba(240, 240, 240, 0.5);
+$nav-bg: rgba(90, 222, 255, 0.7);
+$cyan: rgb(90, 222, 255);
+$darkcyan: rgb(2, 155, 194);
+$error-msg: rgb(170, 1, 1);
+$nav-shadow: 0 0 8px rgb(255, 0, 221);
+$purple: rgb(102, 2, 122);
+$main-background: linear-gradient(235deg, rgb(235, 0, 215), rgb(90, 222, 255));
+$div1-l-g: linear-gradient(rgb(16, 207, 255), rgb(0, 181, 226));
+$div2-l-g: linear-gradient(135deg, rgb(56, 137, 230), rgb(235, 0, 215));
+$div3-l-g: linear-gradient(rgb(136, 199, 241), rgb(218, 4, 200));
+$div4-l-g: linear-gradient(rgb(2, 150, 196), rgb(248, 109, 237));

@@ -1,3 +1,5 @@
+@import "./styles/variables.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +7,9 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body, html {
-  height: 100%; 
+body,
+html {
+  height: 100%;
 }
 
 .container {
@@ -29,3 +32,36 @@ img {
   object-fit: cover;
 }
 
+.div1 {
+  @include absolute(60%, _, -20vw, _);
+  transform: rotate(60deg) translate(-60%, -30%);
+  background: $div1-l-g;
+}
+
+.div2 {
+  @include absolute(-40%, _, 50vw, _);
+  transform: rotate(60deg) translate(-40%, 40%);
+  background: $div2-l-g;
+}
+
+.div3 {
+  @include absolute(80%, _, _, -20vw);
+  transform: rotate(60deg) translate(-60%, -50%);
+  background: $div3-l-g;
+}
+
+.div4 {
+  @include absolute(_, -60%, 50vw, _);
+  transform: rotate(60deg) translate(-40%, 40%);
+  background: $div4-l-g;
+}
+
+.div1,
+.div2,
+.div3,
+.div4 {
+  width: 30vw;
+  aspect-ratio: 1;
+  z-index: 999;
+  border-radius: 4px;
+}

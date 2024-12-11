@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import Nav from "../../components/Nav/Nav";
 import "./User.scss";
 
-const User = () => {
+export const User = () => {
   const location = useLocation();
   const { user } = location.state || {};
 
@@ -164,5 +164,3 @@ const User = () => {
     </main>
   );
 };
-
-export default User;

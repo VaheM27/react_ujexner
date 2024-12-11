@@ -4,10 +4,10 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { object, string } from "yup";
 import { register } from "../../constants/data";
 import "./Registration.scss";
+import axios from "axios";
 
-const Registration = () => {
+export const Registration = () => {
   const navigate = useNavigate();
-  const [data, setData] = useState([]);
   const [success, setSuccess] = useState("");
 
   const initialValues = register.reduce((acc, input) => {
@@ -44,29 +44,10 @@ const Registration = () => {
         case "country":
         case "city":
           acc[field.name] = string()
-            .matches(
-              /^[a-zA-Z\s\-]{2,50}$/,
-              `${
-                field.name.charAt(0).toUpperCase() + field.name.slice(1)
-              } must be between 2 and 50 characters`
-            )
-            .min(
-              2,
-              `${
-                field.name.charAt(0).toUpperCase() + field.name.slice(1)
-              } must be at least 2 characters`
-            )
-            .max(
-              50,
-              `${
-                field.name.charAt(0).toUpperCase() + field.name.slice(1)
-              } cannot exceed 50 characters`
-            )
-            .required(
-              `${
-                field.name.charAt(0).toUpperCase() + field.name.slice(1)
-              } is a required field`
-            )
+            .matches(/^[\p{L}\p{M}\s\-]{2,50}$/u, `Invalid format`)
+            .min(2, `Invalid format`)
+            .max(50, `Invalid format`)
+            .required(`Required field`)
             .test(
               "capitalize",
               "Cities and countries starting with uppercase",
@@ -136,9 +117,9 @@ const Registration = () => {
       return;
     }
 
-    fetch("http://localhost:3000/users")
-      .then((response) => response.json())
-      .then((existingUsers) => {
+    axios("http://localhost:3000/users")
+      .then((response) => {
+        const existingUsers = response.data;
         const usernameExists = existingUsers.some(
           (user) => user.username === values.username
         );
@@ -174,32 +155,35 @@ const Registration = () => {
           }
         );
 
-        try {
-          fetch("http://localhost:3000/users", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(userData),
+        axios({
+          method: "POST",
+          baseURL: "http://localhost:3000/users",
+          data: userData,
+        })
+          .then(() => {
+            formikEvent.resetForm();
+            setSuccess("User created successfully!");
+            navigate(`/registration/${userData.username}`, {
+              state: { newUser: userData },
+            });
+          })
+          .catch((error) => {
+            setSuccess("An unexpected error occurred.");
+            console.error(error);
           });
-
-          formikEvent.resetForm();
-          setData(userData);
-          setSuccess("User created successfully!");
-          navigate(`/registration/${userData.username}`, {
-            state: { newUser: userData },
-          });
-        } catch (error) {
-          setSuccess("An unexpected error occurred.");
-        }
       })
       .catch((error) => {
         setSuccess("An error occurred while checking the username.");
+        console.error(error);
       });
   }
 
   return (
     <main>
+      <div className="div1"></div>
+      <div className="div2"></div>
+      <div className="div3"></div>
+      <div className="div4"></div>
       <div className="container register">
         <Formik
           initialValues={initialValues}
@@ -234,5 +218,3 @@ const Registration = () => {
     </main>
   );
 };
-
-export default Registration;
