@@ -1,3 +1,22 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": "JIf",
+      "fullName": "Miqo",
+      "name": "miqo",
+      "password": "aaa"
+    },
+    {
+      "id": "FQR",
+      "fullName": "miq",
+      "name": "sdhfsd",
+      "password": "sadkjfsd"
+    },
+    {
+      "id": "O2t",
+      "fullName": "gghh",
+      "name": "ss",
+      "password": "j"
+    }
+  ]
 }
