@@ -2,19 +2,21 @@
 
 .reg2 {
   @include flex(center, center, _, _, _);
-  height: 80vh;
+  min-height: 80vh;
 
   form {
     @include flex(_, center, column, _, 20px);
-    @include form(_, 100%, 80px 40px 40px, $main-transp);
+    @include form(_, 100%, 80px 40px 40px, $div4-l-g);
     position: relative;
+    opacity: 0.9;
 
     .form-block {
       display: flex;
+      flex-wrap: wrap;
 
       h2 {
         @include absolute(-40px, _, 20px, _);
-        @include header(left, 400, 20px);
+        @include header(left, 400, 20px, $main-color);
         position: absolute;
       }
 
@@ -40,6 +42,23 @@
         }
       }
 
+      @media (max-width: 600px) {
+        .form-block0,
+        .form-block1 {
+          flex-basis: 100%;
+          padding: 0;
+          gap: 16px;
+
+          div {
+            flex-basis: 100%;
+
+            input {
+              width: 100%;
+            }
+          }
+        }
+      }
+
       .form-block2 {
         @include flex(_, _, _, wrap, 20px);
         flex-basis: 20%;
@@ -61,9 +80,43 @@
           }
         }
       }
+
+      @media (max-width: 600px) {
+        .form-block2 {
+          flex-basis: 100%;
+          padding: 0;
+          gap: 16px;
+
+          div {
+            flex-basis: 100%;
+
+            input {
+              width: 100%;
+            }
+          }
+        }
+      }
     }
     button {
       @include button(250px, 20px);
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .form-block {
+      flex-direction: column;
+      gap: 80px;
+      align-items: stretch;
+    }
+  }
+
+  @media (max-width: 600px) {
+    form {
+      padding: 80px 20px 40px;
+
+      button {
+        width: 100%;
+      }
     }
   }
 }

@@ -2,15 +2,21 @@
 
 .register {
   @include flex(center, center, unset, unset, unset);
-  height: 100vh;
+  min-height: 100vh;
 
   form {
-    @include flex(unset, unset, unset, wrap, 20px);
-    @include form(unset, 500px, 40px, $main-transp);
+    @include flex(unset, stretch, unset, wrap, 20px);
+    @include form(
+      100%,
+      500px,
+      40px,
+      url("https://media.istockphoto.com/id/958693744/vector/abstract-red-light-trail-on-blue-background.jpg?s=612x612&w=0&k=20&c=zaklCkqKZFiZFGcOjasGZLopy_cgp7fyA1yXltxQGDc=")
+    );
+    background-size: cover;
     position: relative;
 
     h1 {
-      @include header(center, 400, 28px);
+      @include header(center, 400, 28px, $main-color);
       margin-bottom: 40px;
       flex-basis: 100%;
     }
@@ -37,6 +43,20 @@
     button,
     a {
       @include button();
+    }
+  }
+  @media (max-width: 850px) {
+    form {
+      gap: 14px;
+
+      .field {
+        flex-basis: 100%;
+        width: 100%;
+
+        input {
+          padding: 6px;
+        }
+      }
     }
   }
 }

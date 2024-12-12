@@ -15,6 +15,13 @@ export const register = [
     },
     {
       type: "text",
+      name: "university",
+      placeholder: "Education",
+      component: "p",
+      className: "error",
+    },
+    {
+      type: "text",
       name: "address",
       placeholder: "Address",
       component: "p",

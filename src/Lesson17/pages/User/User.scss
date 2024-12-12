@@ -19,6 +19,7 @@ main {
   .user-left {
     flex-basis: 40%;
     flex-grow: 1;
+    z-index: 1000;
 
     img {
       background: $image-bg;
@@ -65,17 +66,20 @@ main {
     flex-basis: calc(60% - 40px);
     flex-grow: 1;
     min-height: 100%;
+    z-index: 1000;
 
     div {
       flex-grow: 1;
       width: 100%;
       flex-basis: calc(50% - 24px);
-      background: $main-transp;
+      background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1EKQQPLIjJ9HtNhbBkAYFn62S8MgA7wLuEsworo5iriHWUbSk3jYkYXnor8UwsPqySLk&usqp=CAU");
       padding: 10px 30px 30px;
       border-radius: 8px;
+      background-size: cover;
+      opacity: 0.9;
 
       h2 {
-        @include header(center, 400, 24px);
+        @include header(center, 400, 24px, $main-color);
       }
 
       ul {
@@ -85,6 +89,7 @@ main {
           @include flex(space-between, _, _, _, _);
           margin-top: 4px;
           font-size: 14px;
+          color: $main-color;
         }
       }
     }

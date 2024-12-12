@@ -1,0 +1,32 @@
+@import "../../styles/variables.scss";
+
+.success {
+  @include flex(_, center, column);
+  text-align: center;
+
+  h1 {
+    @include header();
+  }
+
+  p {
+    @include text(center, 400, 20px);
+  }
+
+  button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: $purple;
+
+    &:hover {
+      color: $cyan;
+    }
+  }
+
+  a {
+    @include button();
+    width: 200px;
+  }
+}

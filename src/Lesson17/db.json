@@ -2099,6 +2099,51 @@
         "network": "Ethereum (ERC20)"
       },
       "role": "user"
+    },
+    {
+      "address": {
+        "address": "Starhembergstraße 15, 4020 Linz",
+        "postalCode": "4020",
+        "city": "Linz",
+        "country": "Österreich"
+      },
+      "firstName": "Matevos",
+      "lastName": "Grigoryan",
+      "university": "ASUE",
+      "phone": "06766877568",
+      "email": "mat.grigoryan@gmail.com",
+      "username": "Matos-93",
+      "password": "Matos-93",
+      "gender": "Male",
+      "birthDate": "08.12.1993",
+      "height": "185",
+      "weight": "110",
+      "eyeColor": "Black",
+      "hair": {
+        "color": "Braun",
+        "type": "Glatt"
+      },
+      "bloodGroup": "A RhD positive (A+)",
+      "image": "https://drip-log.com/wp-content/uploads/2021/08/Group-22365.png.webp",
+      "company": {
+        "department": "jbrv",
+        "name": "Generali",
+        "title": "drthdrth",
+        "address": {
+          "address": "Jivanu 54",
+          "city": "Yerevan Armenia",
+          "postalCode": "0032",
+          "country": "Österreich"
+        }
+      },
+      "bank": {
+        "cardExpire": "12/25",
+        "cardNumber": "4444444444444444444",
+        "cardType": "visa",
+        "iban": "AT491912050055264310"
+      },
+      "id": "ca8a"
     }
-  ]
+  ],
+  "feedback": []
 }

@@ -5,7 +5,7 @@ const Nav = ({ user }) => {
   const navigate = useNavigate();
 
   const redirect = () => {
-    localStorage.removeItem("user");  
+    localStorage.removeItem("user");
     navigate("/", { replace: true });
   };
 

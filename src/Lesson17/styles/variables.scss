@@ -21,7 +21,7 @@
   right: $right;
 }
 
-@mixin header($align: center, $weight: 400, $size: 36px, $color: $purple) {
+@mixin header($align: center, $weight: 400, $size: 36px, $color: $main-color) {
   text-align: $align;
   font-weight: $weight;
   font-size: $size;
@@ -78,12 +78,13 @@
 $main-color: #fff;
 $main-transp: #ffffffe5;
 $form-transp-bg: rgba(255, 255, 255, 0.2);
+$modal: rgba(255, 255, 255, 0.5);
 $icon: rgb(133, 133, 133);
 $image-bg: rgba(240, 240, 240, 0.5);
 $nav-bg: rgba(90, 222, 255, 0.7);
 $cyan: rgb(90, 222, 255);
 $darkcyan: rgb(2, 155, 194);
-$error-msg: rgb(170, 1, 1);
+$error-msg: rgb(255, 255, 255);
 $nav-shadow: 0 0 8px rgb(255, 0, 221);
 $purple: rgb(102, 2, 122);
 $main-background: linear-gradient(235deg, rgb(235, 0, 215), rgb(90, 222, 255));

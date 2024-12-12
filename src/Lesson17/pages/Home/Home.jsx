@@ -1,16 +1,42 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./Home.scss";
 import axios from "axios";
+import "./Home.scss";
 
 export const Home = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [type, setType] = useState("password");
   const [user, setUser] = useState(null);
+  const [feedback, setFeedback] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios({
+          baseURL: "http://localhost:3000/feedback",
+        });
+
+        setFeedback(
+          res.data.length > 0
+            ? [res.data[Math.floor(Math.random() * res.data.length)]]
+            : []
+        );
+      } catch (error) {
+        setFeedback([]);
+        setErrorMessage(
+          error.message || "An error occurred while fetching feedback."
+        );
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  console.log(feedback);
 
   const logIn = async (e) => {
     e.preventDefault();
@@ -59,6 +85,12 @@ export const Home = () => {
       <div className="div4"></div>
       <form onSubmit={logIn}>
         <h1>Login</h1>
+        {feedback.length > 0 && (
+          <div className="feedback">
+            <h3>{feedback[0]?.name}</h3>
+            <p>{feedback[0]?.feedback}</p>
+          </div>
+        )}
         <div className="form-footer">
           <div>
             <input

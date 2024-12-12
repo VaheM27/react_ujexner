@@ -1,0 +1,6 @@
+@import "../../styles/variables.scss";
+
+.completed {
+  @include flex(center, center, _, _, _);
+  height: 100vh;
+}

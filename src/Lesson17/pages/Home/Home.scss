@@ -8,8 +8,40 @@
   overflow: hidden;
 
   form {
-    @include flex(space-between, unset, column, unset, 30px);
-    @include form(70vh, 400px, 20px 40px, $main-transp);
+    @include flex(space-between, stretch, column, unset, 30px);
+    @include form(
+      _,
+      400px,
+      20px 40px,
+      url("https://img.freepik.com/free-vector/gradient-connection-background_52683-116380.jpg?semt=ais_hybrid")
+    );
+    min-height: 70vh;
+    background-size: cover;
+    opacity: 0.8;
+
+    .feedback {
+      position: relative;
+      border: 2px solid $cyan;
+      padding: 8px;
+      border-radius: 8px;
+
+      h3 {
+        @include text(center, 200, 16px);
+        @include absolute(-24px, _, _, 8px);
+      }
+
+      p {
+        @include text(left, 200, 12px);
+        font-style: italic;
+      }
+
+      &::after {
+        content: "Our feedbacks";
+        @include absolute(-24px, _, _, _);
+        color: $main-color;
+        font-weight: 200;
+      }
+    }
 
     .form-footer {
       @include flex(space-between, unset, column, unset, 20px);
@@ -41,24 +73,30 @@
       }
 
       p {
-        @include text(center, 400, 16px, $purple);
+        @include text(center, 400, 16px, $main-color);
         margin: 20px 0;
       }
 
       a {
-        color: $purple;
+        color: $main-color;
         transition: 0.2s;
 
         &:hover {
-          color: $darkcyan;
+          color: $cyan;
         }
       }
     }
 
     h1 {
-      @include header();
+      @include header(center, 400, 36px, $main-color);
       width: 100%;
       margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 860px) {
+    form {
+      height: 80vh !important;
+      width: 80vw !important;
     }
   }
 }

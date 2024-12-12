@@ -20,6 +20,7 @@ export const Registration = () => {
       switch (field.name) {
         case "firstName":
         case "lastName":
+        case "university":
           acc[field.name] = string()
             .min(2, `${field.placeholder} must be at least 2 characters`)
             .max(50, `${field.placeholder} cannot exceed 50 characters`)
@@ -192,7 +193,7 @@ export const Registration = () => {
             createUser(values, formikEvent);
           }}>
           <Form>
-            <h1>Registration Form</h1>
+            <h1>Registration</h1>
             {success && <p className="success">{success}</p>}
             {register.map((input, index) => (
               <div key={index} className="field">

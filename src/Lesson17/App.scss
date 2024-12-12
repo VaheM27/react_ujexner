@@ -33,25 +33,25 @@ img {
 }
 
 .div1 {
-  @include absolute(60%, _, -20vw, _);
+  @include absolute(60%, _, -20%, _);
   transform: rotate(60deg) translate(-60%, -30%);
   background: $div1-l-g;
 }
 
 .div2 {
-  @include absolute(-40%, _, 50vw, _);
+  @include absolute(-40%, _, 50%, _);
   transform: rotate(60deg) translate(-40%, 40%);
   background: $div2-l-g;
 }
 
 .div3 {
-  @include absolute(80%, _, _, -20vw);
+  @include absolute(80%, _, _, -20%);
   transform: rotate(60deg) translate(-60%, -50%);
   background: $div3-l-g;
 }
 
 .div4 {
-  @include absolute(_, -60%, 50vw, _);
+  @include absolute(_, -60%, 50%, _);
   transform: rotate(60deg) translate(-40%, 40%);
   background: $div4-l-g;
 }
@@ -60,7 +60,7 @@ img {
 .div2,
 .div3,
 .div4 {
-  width: 30vw;
+  width: 30%;
   aspect-ratio: 1;
   z-index: 999;
   border-radius: 4px;

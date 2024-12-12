@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+
+.modal {
+  @include absolute(0, _, 0, _);
+  @include flex(center, center, _, _, _);
+  background: $modal;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  transition: 0.3s;
+  transform: translate(0, -100%);
+
+  form {
+    @include flex(center, _, column, _, 40px);
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvJwjJWXZyL2PU-C7HllN_JlhkudGcqkUsUg&s");
+    background-size: cover;
+    width: 400px;
+    height: 300px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: $nav-shadow;
+
+    textarea {
+      height: 200px;
+      padding: 10px;
+      opacity: 0.9;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    button {
+      @include button();
+    }
+  }
+
+  .thankYou {
+    @include text(center, 400, 20px);
+    @include absolute(40px, _, 50%, _);
+    transform: translate(-50%);
+  }
+}
+
+.activated {
+  transform: translate(0, 0);
+}
