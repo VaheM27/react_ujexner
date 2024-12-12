@@ -32,19 +32,39 @@ const LoginForm = () => {
     instance({
       url: "users",
       data: loginData,
-    }).then((res) => setUserData(res.data));
-
-    const correctUser = userData.find((item) => {
-      return item.name === data.userName && item.password === data.password;
-    });
-
-    if (correctUser) {
-      const profilePath = ROUTES.PROFILE.replace(":username", correctUser.name);
-      navigate(`/${profilePath}`);
-    } else {
-      alert("Invalid username or password");
-      return;
-    }
+    }).then(
+      (res) => {
+        if (res.data) {
+          let user = false;
+          res.data.find((item) => {
+            if (
+              item.name === data.userName &&
+              item.password === data.password
+            ) {
+              user = true;
+              const profilePath = ROUTES.PROFILE.replace(
+                ":username",
+                item.name
+              );
+              navigate(`/${profilePath}`);
+            }
+          });
+          if (!user) {
+            alert("Chka");
+          }
+        } else {
+          alert("Error");
+        }
+      }
+      // res.data.find((item) => {
+      //   if (item.name === data.userName && item.password === data.password) {
+      //     const profilePath = ROUTES.PROFILE.replace(":username", item.name);
+      //     navigate(`/${profilePath}`);
+      //   } else {
+      //     alert("Invalid username or password");
+      //   }
+      // })
+    );
   };
 
   return (

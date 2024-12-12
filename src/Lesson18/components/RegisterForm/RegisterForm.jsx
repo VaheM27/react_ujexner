@@ -28,9 +28,9 @@ const RegisterForm = () => {
         data: signUpData,
       });
 
+      navigate(ROUTES.LOGIN);
       formik.resetForm();
     }
-    navigate(ROUTES.LOGIN);
   };
 
   const initialValues = {
