@@ -12,35 +12,80 @@ ul,
 ol {
   list-style: none;
 }
-.mainBox {
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
+h1{
+  text-align: center;
+  font-size: 42px;
+  background: #000;
+  letter-spacing: 5px;
+  color: rgb(255, 255, 255) !important;
+  height: 60px;
+  margin: 0;
 }
-
-.user {
+.main{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* height: 500px; */
+  background: #d7d7d7;
+}
+form {
+  padding: 100px 0 20px 0;
+  margin: 0 0 0 20px;
+  background: #d7d7d7;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 900px;
   flex-direction: column;
   row-gap: 20px;
-  font-size: 32px;
-  margin: auto;
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
-  color: #fff;
-  padding: 20px 40px;
-  border-radius: 40px;
+  border-radius: 10px;
+}
+
+input {
+  width: 300px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: 2px solid rgb(64, 64, 214);
+  outline: none;
+  color: gray;
+  font-weight: 900;
 }
 
 button {
   padding: 15px 30px;
+  border-radius: 30px;
   border: none;
-  border-radius: 23px;
-  background-image: linear-gradient(
-    to right,
-    rgb(242, 112, 156),
-    rgb(255, 148, 114)
-  );
+  transition: all 0.9s;
   cursor: pointer;
+  &:hover {
+    background-color: rgb(64, 64, 214);
+  }
+}
+select {
+  padding: 15px 30px;
+  border-radius: 30px;
+}
+
+option {
+  appearance: none;
+  background-color: red;
+}
+
+.errorMessage {
+  color: red;
+  padding: 15px;
+  border: 1px solid red;
+  border-radius: 30px;
+}
+
+.table{
+  margin: 100px 30px 0 0;  
+  width: 50%;
+}
+.table thead tr th{
+  background: #000;
+  color: white;
+}
+.table{
+  border-collapse: unset !important;
 }

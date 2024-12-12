@@ -129,9 +129,9 @@ const App = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
             {data?.map((item) => {
               return (
+          <tr>
                 <Fragment key={item.userID}>
                   <td>{item.userName}</td>
                   <td>{item.userEmail}</td>
@@ -139,9 +139,9 @@ const App = () => {
                   <td>{item.userPass}</td>
                   <td>{item.selectRole}</td>
                 </Fragment>
+          </tr>
               );
             })}
-          </tr>
         </tbody>
       </table>
     </div>
