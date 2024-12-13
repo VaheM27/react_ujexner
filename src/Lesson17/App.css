@@ -34,7 +34,7 @@ form {
   background: #d7d7d7;
   width: 50%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   flex-direction: column;
   row-gap: 20px;
@@ -60,15 +60,6 @@ button {
   &:hover {
     background-color: rgb(64, 64, 214);
   }
-}
-select {
-  padding: 15px 30px;
-  border-radius: 30px;
-}
-
-option {
-  appearance: none;
-  background-color: red;
 }
 
 .errorMessage {
