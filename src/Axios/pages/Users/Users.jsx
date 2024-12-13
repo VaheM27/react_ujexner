@@ -1,7 +1,9 @@
+import UserData from "../../components/UserData/UserData";
+
 export const Users = () => {
   return (
     <div>
-      <p></p>
+      <UserData />
     </div>
   );
 };
