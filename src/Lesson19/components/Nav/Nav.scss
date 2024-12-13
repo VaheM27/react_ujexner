@@ -1,0 +1,14 @@
+@import "../../styles/global.scss";
+
+.nav {
+  ul {
+    @include makeFlex(flex, center, center, unset, unset, unset, 20px);
+    list-style: none;
+    .link {
+      text-decoration: none;
+      .navLi {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

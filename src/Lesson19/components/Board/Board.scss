@@ -1,0 +1,29 @@
+@import "../../styles/global.scss";
+
+.details {
+  @include makeFlex(flex, center, center, column, unset, 30px, unset);
+  .card {
+    @include makeFlex(flex, center, center, row, unset, unset, 10px);
+    width: 100%;
+    .id {
+      max-width: 50px;
+      width: 100%;
+    }
+    h1 {
+      max-width: 500px;
+      width: 100%;
+    }
+    h2 {
+      max-width: 300px;
+      width: 100%;
+    }
+    .email {
+      max-width: 300px;
+      width: 100%;
+    }
+    .closeIcon {
+      max-width: 50px;
+      width: 100%;
+    }
+  }
+}
