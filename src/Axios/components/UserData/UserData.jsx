@@ -3,12 +3,14 @@ import { useEffect, useState } from "react";
 
 const UserData = () => {
   const [data, setData] = useState([]);
+
   useEffect(() => {
-    axios("https://dummyjson.com/carts").then((res) => setData(res.data));
+    axios("https://dummyjson.com/carts").then((res) => setData(res.data.carts));
   }, []);
+
   return (
     <div>
-      {data.map((item) => {
+      {data?.map((item) => {
         return (
           <div key={item.id}>
             <h1>{item.id}</h1>
