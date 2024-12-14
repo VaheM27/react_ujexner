@@ -27,10 +27,15 @@ const App = () => {
     //     _start: 30,
     //   },
     // }).then((res) => setPosts(res.data));
-    // instance({
-    //   method: "DELETE",
-    //   url: url + "/1",
-    // });
+    instance({
+      method: "DELETE",
+      url: url + "/1",
+      params: {
+        _limit: 10,
+        _start: 30,
+      },
+      data: {},
+    });
   }, [url]);
 
   const buttons = ["posts", "comments"];
