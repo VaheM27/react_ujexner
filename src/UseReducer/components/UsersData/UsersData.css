@@ -1,0 +1,35 @@
+.users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(12, 69, 60);
+  padding: 20px;
+  column-gap: 20px;
+  p {
+    background-color: wheat;
+    width: 300px;
+    display: inline-block;
+    color: #fff;
+    background-color: rgb(128, 161, 116);
+    padding: 15px 30px;
+    border: 1px solid rgb(45, 17, 77);
+    border-radius: 30px;
+    cursor: pointer;
+    &:hover {
+      transform: translate(0, -10px);
+      transition: all 0.8s;
+    }
+  }
+  &:hover {
+    transition: all 0.8s;
+  }
+  .p {
+    transition: all 0.8s;
+  }
+}
+.img:hover {
+  transform: translate(0, -10px);
+}
+.img {
+  transition: all 0.8s;
+}

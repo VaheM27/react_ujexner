@@ -1,0 +1,33 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(22, 96, 83);
+  font-size: 30px;
+  padding: 15px 30px;
+}
+.active {
+  color: rgb(22, 20, 20);
+}
+a {
+  color: wheat;
+}
+li {
+  color: wheat;
+  display: inline-flex;
+  position: relative;
+  &::after {
+    content: "";
+    width: 0%;
+    transition: all 0.8s;
+    height: 2px;
+    background-color: #1d2736;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
