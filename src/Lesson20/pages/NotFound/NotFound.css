@@ -1,0 +1,13 @@
+.notFound {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(46, 46, 142);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h2 {
+    color: #fff;
+    font-size: 60px;
+  }

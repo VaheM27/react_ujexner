@@ -1,0 +1,36 @@
+
+.register_div {
+    width: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    input {
+        padding: 5px;
+        border: 2px solid #6667AB;
+        border-radius: 10px;
+    }
+
+    button {
+        border: 2px solid #6667AB;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #6667AB;
+    }
+
+    p {
+        color: red;
+        padding: 0;
+    }
+
+}

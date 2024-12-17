@@ -1,0 +1,29 @@
+.nav {
+  width: 100%;
+  background-color: #6667AB;
+  height: 50px;
+  padding: 15px;
+}
+
+ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 90%;
+    gap: 50px;
+  }
+  
+  li {
+    font-size: 26px;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  .links {
+    color: black;
+  }
+  
+  .active {
+    color: white;
+    font-style: italic;
+  }
