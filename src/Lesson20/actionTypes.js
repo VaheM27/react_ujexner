@@ -5,4 +5,5 @@ export const ACTION = {
   REMOVE_SINGLE_DIGITS: "removeSingleDigits",
   CHANGE_USER: "changeUser",
   ADD_AGE: "addAge",
+  INPUT: "input"
 };

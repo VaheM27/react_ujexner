@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 import { reducer, initialState } from "./reducer";
 import { ACTION } from "./actionTypes";
 
@@ -6,28 +6,19 @@ import "./App.scss";
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const [value, setValue] = useState("");
 
-  const handleChange = (e) => setValue(e.target.value);
-
-  const handleSubmit = (e) => {
-    e.pventDefault();
-    if (value.trim()) {
-      dispatch({ type: ACTION.ADD_DEVELOPER, payload: value });
-      setValue("");
-    }
+  const handleChange = (e) => {
+    dispatch({ type: ACTION.INPUT, payload: e.target.value });
   };
 
   const handleActionClick = (actionType, payload) => {
     dispatch({ type: actionType, payload });
-    setValue("");
   };
 
   const handleAddNumber = (actionType) => {
-    const parsedValue = parseInt(value);
+    const parsedValue = parseInt(state.inputValue);
     if (Number.isNaN(parsedValue)) {
       alert("Please write a valid number");
-      setValue("");
     } else {
       handleActionClick(actionType, parsedValue);
     }
@@ -35,39 +26,48 @@ const App = () => {
 
   return (
     <div className="container">
-      <form onSubmit={handleSubmit}>
+      <form>
         <div className="input">
           <input
             type="text"
             name="input"
-            value={value}
+            value={state.inputValue}
             onChange={handleChange}
           />
           <label htmlFor="input">Enter Username, Number or Developer</label>
         </div>
         <button
           type="button"
-          onClick={() => handleActionClick(ACTION.ADD_DEVELOPER, value)}>
+          onClick={() =>
+            handleActionClick(ACTION.ADD_DEVELOPER, state.inputValue)
+          }
+        >
           Add Developer
         </button>
         <button
           type="button"
-          onClick={() => dispatch({ type: ACTION.SHUFFLE_ARRAY })}>
+          onClick={() => dispatch({ type: ACTION.SHUFFLE_ARRAY })}
+        >
           Shuffle Array
         </button>
         <button
           type="button"
-          onClick={() => handleAddNumber(ACTION.ADD_NUMBER)}>
+          onClick={() => handleAddNumber(ACTION.ADD_NUMBER)}
+        >
           Add Number
         </button>
         <button
           type="button"
-          onClick={() => dispatch({ type: ACTION.REMOVE_SINGLE_DIGITS })}>
+          onClick={() => dispatch({ type: ACTION.REMOVE_SINGLE_DIGITS })}
+        >
           Remove Single Digits
         </button>
         <button
           type="button"
-          onClick={() => handleActionClick(ACTION.CHANGE_USER, value)}>
+          onClick={() =>
+            handleActionClick(ACTION.CHANGE_USER, state.inputValue)
+          }
+        >
           Change User
         </button>
         <button type="button" onClick={() => handleAddNumber(ACTION.ADD_AGE)}>
@@ -76,14 +76,14 @@ const App = () => {
       </form>
       <div className="output">
         <h1>Output</h1>
-        <p>
+        <div>
           {Object.entries(state).map(([key, value]) => (
             <div key={key}>
-              <span>{key}: </span> 
+              <span>{key}: </span>
               <span>{JSON.stringify(value)}</span>
             </div>
           ))}
-        </p>
+        </div>
       </div>
     </div>
   );
