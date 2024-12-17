@@ -1,6 +1,6 @@
 import React from "react";
 
-import './output.css';
+import "./output.css";
 
 function Output({ state }) {
   return (
