@@ -1,0 +1,104 @@
+.Forms {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(93, 173, 226), rgb(127, 127, 228));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial", sans-serif;
+}
+
+.FormsBox {
+    width: 50%;
+    max-width: 800px;
+    height: auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FormsBox h1 {
+    font-size: 32px;
+    color: rgb(93, 126, 196);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.FormsBox button {
+    width: 180px;
+    height: 50px;
+    background: rgb(127, 127, 228);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.FormsBox button:hover {
+    background: white;
+    color: rgb(127, 127, 228);
+    box-shadow: 0 0 10px rgba(127, 127, 228, 0.5);
+}
+
+.FormsBox p {
+    margin: 15px 0;
+    color: rgb(93, 93, 93);
+    font-size: 18px;
+}
+
+.FormsBox .regBtn {
+    width: 220px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    background: rgb(255, 99, 132);
+    color: white;
+}
+
+.FormsBox .regBtn:hover {
+    background: rgb(255, 132, 160);
+    box-shadow: 0 0 10px rgba(255, 99, 132, 0.5);
+}
+
+Form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+Form .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+Form input {
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 0 15px;
+    font-size: 16px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+Form input:focus {
+    border: 1px solid rgb(127, 127, 228);
+    box-shadow: 0 0 5px rgba(127, 127, 228, 0.5);
+    outline: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}

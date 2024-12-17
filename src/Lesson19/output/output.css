@@ -1,0 +1,53 @@
+.Output {
+    padding: 30px;
+    background: linear-gradient(145deg, #e6f3ff, #ffffff);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    color: #002b80;
+    font-family: sans-serif;
+    text-align: left;
+    height: auto;
+    overflow-y: auto;
+}
+
+.Output h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #003d99;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.Output p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border: 1px solid #cce0ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: center;
+    ul{
+    list-style: none;
+    }
+}
+
+.Output strong {
+    font-weight: bold;
+    color: #0047cc;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.Output p:last-child {
+    margin-bottom: 0;
+}

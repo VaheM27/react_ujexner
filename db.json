@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Emily",
+      "email": "emily.johnson@x.dummyjson.com",
+      "phone": "+81 965-431-3024",
+      "address": "626 Main Street",
+      "age": 15,
+      "password": "emilyspass"
+    },
+    {
+      "id": "2",
+      "username": "Michael",
+      "email": "michael.smith@x.dummyjson.com",
+      "phone": "+1 202-555-0147",
+      "address": "482 Oak Avenue",
+      "age": 22,
+      "password": "michaelsmith22"
+    },
+    {
+      "id": "3",
+      "username": "Sophia",
+      "email": "sophia.davis@x.dummyjson.com",
+      "phone": "+44 771-234-5678",
+      "address": "789 Pine Lane",
+      "age": 18,
+      "password": "sophiadpass"
+    },
+    {
+      "id": "4",
+      "username": "Daniel",
+      "email": "daniel.wilson@x.dummyjson.com",
+      "phone": "+33 6-789-123-456",
+      "address": "154 Elm Street",
+      "age": 25,
+      "password": "danielw25"
+    },
+    {
+      "id": "5",
+      "username": "Emma",
+      "email": "emma.thompson@x.dummyjson.com",
+      "phone": "+61 4-123-456-789",
+      "address": "328 Willow Road",
+      "age": 20,
+      "password": "emma2020"
+    },
+    {
+      "id": "6",
+      "username": "Liam",
+      "email": "liam.moore@x.dummyjson.com",
+      "phone": "+49 151-234-5678",
+      "address": "614 Maple Drive",
+      "age": 30,
+      "password": "liammoore30"
+    },
+    {
+      "id": "7",
+      "username": "Isabella",
+      "email": "isabella.taylor@x.dummyjson.com",
+      "phone": "+1 305-555-0123",
+      "address": "921 Birch Court",
+      "age": 17,
+      "password": "isabellapass"
+    },
+    {
+      "id": "8",
+      "username": "James",
+      "email": "james.anderson@x.dummyjson.com",
+      "phone": "+61 7-654-321-098",
+      "address": "45 Cedar Circle",
+      "age": 28,
+      "password": "jamespass28"
+    },
+    {
+      "id": "9",
+      "username": "Olivia",
+      "email": "olivia.white@x.dummyjson.com",
+      "phone": "+81 90-1234-5678",
+      "address": "763 Spruce Way",
+      "age": 19,
+      "password": "oliviaw19"
+    },
+    {
+      "id": "mWIFu",
+      "username": "Melo Yeghyan",
+      "email": "jsfiddleyeghyan@gmail.com",
+      "phone": "012930182189",
+      "address": "Yerevan Jrvej 22",
+      "age": 213,
+      "password": "Melo200?"
+    }
+  ]
+}
