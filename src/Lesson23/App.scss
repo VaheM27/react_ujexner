@@ -1,1 +1,22 @@
 @import "./styles/global.scss";
+
+body {
+  background-color: #00ff7f;
+}
+
+.app {
+  background-color: #b4eeb4;
+  padding: 50px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include makeFlex(flex, center, center, column, unset, 20px, unset);
+  .btns {
+    background-color: #fff;
+    padding: 10px;
+    @include makeFlex(inline-flex, center, center, row, unset, unset, 10px);
+    border-radius: 10px;
+  }
+}

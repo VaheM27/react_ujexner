@@ -1,1 +1,8 @@
 @import "../../styles/global.scss";
+
+.timer {
+  @include makeFlex(flex, center, center, column, unset, 20px, unset);
+  .timerNumbers {
+    @include textParams(40px, 900, monospace, #fff);
+  }
+}

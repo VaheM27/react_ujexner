@@ -23,7 +23,6 @@ const Timer = ({
 
   return (
     <div className="timer">
-      <p className="elements">Hours:Minutes:Seconds</p>
       <p className="timerNumbers">
         {hours < 10 ? `0${hours}` : hours}:
         {minutes < 10 ? `0${minutes}` : minutes}:

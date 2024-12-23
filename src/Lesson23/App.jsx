@@ -12,7 +12,7 @@ const App = () => {
   const btnTypes = ["play", "pause", "stop"];
 
   return (
-    <div className="App">
+    <div className="app">
       <Timer
         hours={hour}
         minutes={minute}
