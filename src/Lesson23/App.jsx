@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./App.scss";
 import {
   Zero,
@@ -14,40 +14,8 @@ import {
 } from "./components/number/Number";
 
 const App = () => {
+  const timerRef = useRef(null);
   const [seconds, setSeconds] = useState(0);
-  const [isRunning, setIsRunning] = useState(false); 
-
-  useEffect(() => {
-    let timer = null;
-    if (isRunning) {
-      timer = setInterval(() => {
-        setSeconds((prevSeconds) => prevSeconds + 1);
-      }, 1000);
-    }
-    return () => clearInterval(timer);
-  }, [isRunning]);
-
-  const handleStart = () => {
-    setIsRunning(true);
-  };
-
-  const handlePause = () => {
-    setIsRunning(false);
-  };
-
-  const handleStop = () => {
-    setIsRunning(false);
-    setSeconds(0);
-  };
-
-  const formatTime = (totalSeconds) => {
-    const hours = Math.floor(totalSeconds / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const secs = totalSeconds % 60;
-    return `${hours.toString().padStart(2, "0")}${minutes
-      .toString()
-      .padStart(2, "0")}${secs.toString().padStart(2, "0")}`;
-  };
 
   const renderDigit = (digit) => {
     switch (digit) {
@@ -76,9 +44,45 @@ const App = () => {
     }
   };
 
+  const handleStart = () => {
+    if (!timerRef.current) {
+      timerRef.current = setInterval(() => {
+        setSeconds((prev) => prev + 1);
+      }, 1000);
+    }
+  };
+
+  const handlePause = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+  };
+
+  const handleStop = () => {
+    clearInterval(timerRef.current);
+    timerRef.current = null;
+    setSeconds(0);
+  };
+
+  const formatTime = (seconds) => {
+    const hours = Math.floor(seconds / 3600)
+      .toString()
+      .padStart(2, "0");
+    const minutes = Math.floor((seconds % 3600) / 60)
+      .toString()
+      .padStart(2, "0");
+    const secs = (seconds % 60).toString().padStart(2, "0");
+    return `${hours}${minutes}${secs}`;
+  };
+
   const timeDigits = formatTime(seconds)
     .split("")
     .map((char) => parseInt(char, 10));
+
+  useEffect(() => {
+    return () => clearInterval(timerRef.current);
+  }, []);
 
   return (
     <div className="container">
