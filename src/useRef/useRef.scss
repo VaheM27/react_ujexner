@@ -1,0 +1,70 @@
+/* Ընդհանուր զրոյացումններ */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /*պլավնի scroll*/
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1340px;
+  margin: auto;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+/* float-ի զրոյացում */
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*after, befor-ի զրոյացում */
+::after,
+::before {
+  box-sizing: border-box;
+}
+/* ************************************** */
+
+.main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100wh;
+  height: 90vh;
+  text-align: center;
+  gap: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  user-select: none;
+  .h1 {
+    font-size: 70px;
+  }
+  .h2 {
+    font-size: 50px;
+  }
+  .buttons-div {
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+    button {
+      padding: 20px;
+      border-radius: 1000px;
+      cursor: pointer;
+      background-color: black;
+      color: aliceblue;
+      font-size: 30px;
+      &:hover {
+        background-color: aliceblue;
+        color: black;
+        transition: 0.5s;
+      }
+    }
+  }
+}

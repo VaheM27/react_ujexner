@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 
+import "./useRef.scss";
+
 const UseRef = () => {
   const timerRef = useRef(null);
   const [seconds, setSeconds] = useState(0);
@@ -8,7 +10,7 @@ const UseRef = () => {
     if (!timerRef.current) {
       timerRef.current = setInterval(() => {
         setSeconds((seconds) => seconds + 1);
-      }, 1000);
+      }, 1);
     }
   }
 
@@ -37,15 +39,25 @@ const UseRef = () => {
   }
 
   return (
-    <div>
+    <div className="main-div">
       <div>
-        <h1>Timer</h1>
-        <h2>{Timer(seconds)}</h2>
+        <div>
+          <h1 className="h1">Timer</h1>
+        </div>
+        <div>
+          <h2 className="h2">{Timer(seconds)}</h2>
+        </div>
       </div>
-      <div>
-        <button onClick={TimerPlay}>Play</button>
-        <button onClick={TimerPause}>Pause</button>
-        <button onClick={TimerStop}>Stop</button>
+      <div className="buttons-div">
+        <button onClick={TimerPlay} className="PLay">
+          <i class="bi bi-play-fill"></i>
+        </button>
+        <button onClick={TimerPause} className="Pause">
+          <i class="bi bi-pause"></i>
+        </button>
+        <button onClick={TimerStop} className="Stop">
+          <i class="bi bi-stop-circle"></i>
+        </button>
       </div>
     </div>
   );
