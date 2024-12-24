@@ -6,20 +6,8 @@ const Timer = ({
   hours,
   minutes,
   seconds,
-  hoursSetter,
-  minutesSetter,
-  secondsSetter,
 }) => {
-  if (seconds === 60) {
-    minutesSetter((prevState) => prevState + 1);
-    secondsSetter(0);
-  }
 
-  if (minutes === 60) {
-    hoursSetter((prevState) => prevState + 1);
-    minutesSetter(0);
-    secondsSetter(0);
-  }
 
   return (
     <div className="timer">

@@ -9,7 +9,6 @@ const App = () => {
   let [minute, setMinute] = useState(0);
   let [second, setSecond] = useState(0);
 
-  const btnTypes = ["play", "pause", "stop"];
 
   return (
     <div className="app">
@@ -22,20 +21,11 @@ const App = () => {
         secondsSetter={setSecond}
       />
       <div className="btns">
-        {btnTypes.map((elm, i) => {
-          return (
-            <Button
-            key={i}
-              btnType={elm}
-              hours={hour}
-              minutes={minute}
-              seconds={second}
-              hoursSetter={setHour}
-              minutesSetter={setMinute}
-              secondsSetter={setSecond}
-            />
-          );
-        })}
+        <Button
+          hoursSetter={setHour}
+          minutesSetter={setMinute}
+          secondsSetter={setSecond}
+        />
       </div>
     </div>
   );
