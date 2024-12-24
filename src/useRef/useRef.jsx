@@ -42,7 +42,8 @@ const UseRef = () => {
     <div className="main-div">
       <div>
         <div>
-          <h1 className="h1">Timer</h1>
+          <h1 className="h1">React-ի Բեսամբ Timer</h1>
+          <img src="logo192.png" alt="" />
         </div>
         <div>
           <h2 className="h2">{Timer(seconds)}</h2>
