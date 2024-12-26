@@ -66,6 +66,21 @@ const App = () => {
       <form onSubmit={sendEmail} ref={formRef}>
         <input type="text" placeholder="Username" name="userName" />
         <input type="password" name="userPass" placeholder="Password" />
+        <div className="roles">
+          <label htmlFor="admin">Admin</label>
+          <input type="radio" id="admin" name="user_role" value="Admin" />
+          <label htmlFor="moderator">Moderator</label>
+          <input
+            type="radio"
+            id="moderator"
+            name="user_role"
+            value="Moderator"
+          />
+          <label htmlFor="support">Support</label>
+          <input type="radio" id="support" name="user_role" value="Support" />
+          <label htmlFor="user">User</label>
+          <input type="radio" id="user" name="user_role" value="User" />
+        </div>
         <input type="submit" />
       </form>
       {/* <MovingText

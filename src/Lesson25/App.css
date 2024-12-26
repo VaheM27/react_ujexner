@@ -1,4 +1,12 @@
-.container{
-    max-width: 1440px;
-    margin: auto;
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 20px;
+  flex-direction: column;
 }
