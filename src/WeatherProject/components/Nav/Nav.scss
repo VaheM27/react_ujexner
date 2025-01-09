@@ -1,0 +1,20 @@
+.nav-div {
+  width: 100vw;
+  height: 10vh;
+  background-color: #000000;
+  color: #ffffff;
+}
+.section-for-c-f {
+  display: flex;
+  .radio-c {
+    display: flex;
+  }
+  .radio-f {
+    display: flex;
+  }
+}
+.nav-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
