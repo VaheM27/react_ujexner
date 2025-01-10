@@ -1,0 +1,56 @@
+nav {
+  background: rgb(152, 88, 255);
+
+  .nav-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+
+    .cel-far {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: 0 0 12px black;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      div {
+        display: flex;
+        align-items: center;
+
+        input {
+          cursor: pointer;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      gap: 20px;
+
+      input {
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        color: #000;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: rgb(152, 88, 255);
+        border: none;
+        box-shadow: 0 0 8px #fff;
+        color: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
