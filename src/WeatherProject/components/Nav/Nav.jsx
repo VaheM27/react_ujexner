@@ -4,7 +4,7 @@ const Nav = () => {
     <div className="nav-div">
       <div></div>
       <input type="text" placeholder="Search City" />
-      <button type="submit">Search City</button>
+      <button>Search City</button>
       <section className="section-for-c-f">
         <div className="radio-c">
           <input type="radio" />
