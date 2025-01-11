@@ -23,23 +23,25 @@ const App = () => {
     e.target.reset();
   };
 
-  const getWeather = async () => {
-    try {
-      const [weather, weekWeather] = await Promise.all([
-        axios.get(buildUrl("weather")),
-        axios.get(buildUrl("forecast")),
-      ]);
-      setDailyWeather(weather.data);
-      setWeeklyWeather(weekWeather.data);
-      setError(null);
-    } catch (error) {
-      error.status === 404
-        ? setError("City not found")
-        : setError("Please check your internet connection");
-    }
-  };
-
   useEffect(() => {
+    const getWeather = async () => {
+      try {
+        const [weather, weekWeather] = await Promise.all([
+          axios.get(buildUrl("weather")),
+          axios.get(buildUrl("forecast")),
+        ]);
+        setDailyWeather(weather.data);
+        setWeeklyWeather(weekWeather.data);
+        setError(null);
+      } catch (error) {
+        console.log(error);
+
+        error.status === 404
+          ? setError("City not found")
+          : setError("Please write city/district name");
+      }
+    };
+
     getWeather();
   }, [path]);
 
