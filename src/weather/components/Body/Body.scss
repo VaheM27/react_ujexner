@@ -1,0 +1,26 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  row-gap: 100px;
+  padding: 0 20px;
+  .weekly {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 30px;
+    .box {
+      display: flex;
+      column-gap: 10px;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 4px;
+      box-shadow: 1px 1px 5px #000;
+      cursor: pointer;
+      transition: all 1s;
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+  }
+}
