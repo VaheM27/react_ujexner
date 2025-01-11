@@ -22,20 +22,20 @@ const App = () => {
     e.target.reset();
   };
 
-  const getWeather = async () => {
-    try {
-      const [weather, weekWeather] = await Promise.all([
-        axios.get(buildUrl("weather")),
-        axios.get(buildUrl("forecast")),
-      ]);
-      setDailyWeather(weather.data);
-      setWeeklyWeather(weekWeather.data);
-    } catch (error) {
-      alert(error);
-    }
-  };
-
   useEffect(() => {
+    const getWeather = async () => {
+      try {
+        const [weather, weekWeather] = await Promise.all([
+          // Она ждет, пока оба запроса завершатся, и возвращает результаты.
+          axios.get(buildUrl("weather")),
+          axios.get(buildUrl("forecast")),
+        ]);
+        setDailyWeather(weather.data);
+        setWeeklyWeather(weekWeather.data);
+      } catch (error) {
+        alert(error);
+      }
+    };
     getWeather();
   }, [path]);
 
