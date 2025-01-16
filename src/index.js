@@ -1,11 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./Weather/App";
+import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
+import { store } from "./Lesson_27_Tasklist/store/store";
+import App from "./Lesson_27_Tasklist/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
 );

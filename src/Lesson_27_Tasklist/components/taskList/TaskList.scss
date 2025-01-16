@@ -1,0 +1,12 @@
+ul {
+  width: 100%;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 4px;
+  border-bottom: 1px solid grey;
+}
+
+.checked {
+  background: #aaa;
+}
