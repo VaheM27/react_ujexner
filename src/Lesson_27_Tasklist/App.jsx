@@ -36,9 +36,9 @@ export default function App() {
   return (
     <div className="container">
       <TaskCreator addTask={addTask} />
-      <div className="table">
-        {taskList.length > 0 &&
-          taskList.map((task, i) => (
+      {taskList.length > 0 && (
+        <div className="table">
+          {taskList.map((task, i) => (
             <TaskList
               task={task}
               key={i}
@@ -46,7 +46,8 @@ export default function App() {
               deleteTask={deleteTask}
             />
           ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
