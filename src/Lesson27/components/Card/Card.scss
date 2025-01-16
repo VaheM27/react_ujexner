@@ -1,0 +1,32 @@
+@import "../../styles/global.scss";
+
+.list {
+  margin: 0 30px;
+  @include makeFlex(flex, center, flex-start, column, unset, 15px, 15px);
+  .card {
+    box-shadow: 0px 0px 5px #000;
+    max-width: 400px;
+    width: 100%;
+    overflow: scroll;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #dbf227;
+    cursor: pointer;
+    transition: all 0.8s;
+    @include textParams(16px, 600, "Franklin Gothic Medium", #042940);
+    @include makeFlex(flex, space-between, center, unset, unset, unset, 20px);
+    &:hover {
+      background-color: #042940;
+      color: #fff;
+    }
+    .deleteIcon {
+      transition: all 1s;
+      filter: drop-shadow(1px 1px 5px #000);
+      color: white;
+      z-index: 99;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}

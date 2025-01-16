@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@mixin makeFlex($display, $justify, $align, $dir, $wrap, $rgap, $cgap) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  row-gap: $rgap;
+  column-gap: $cgap;
+}
+
+@mixin textParams($size, $weight, $family, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family;
+  color: $color;
+}
+
+body {
+  background-color: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(17, 152, 110, 1) 47%
+  );
+}
