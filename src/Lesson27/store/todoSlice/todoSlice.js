@@ -32,12 +32,12 @@ export const todoReducer = (state = initialState, action) => {
   }
 };
 
-export const getText = (value) => ({
+export const getText = (payload) => ({
   type: ADD_TEXT,
-  payload: value,
+  payload,
 });
 
-export const removeTheTask = (item) => ({
+export const removeTheTask = (payload) => ({
   type: REMOVE_TASK,
-  payload: item,
+  payload,
 });
