@@ -1,0 +1,50 @@
+.TimerBox {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+}
+
+.Timer {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+.Timer h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    background: #ff7e5f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    flex: 1;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #feb47b;
+}
+
+button:active {
+    transform: scale(0.98);
+}
