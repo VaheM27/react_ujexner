@@ -7,6 +7,7 @@ const App = () => {
         <div className="calculator">
             <One/>
             <Tow/>
+            
         </div>
     )
 }
