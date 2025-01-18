@@ -1,0 +1,74 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  font-size: 30px;
+  user-select: none;
+  .link {
+    text-decoration: none;
+    button {
+      font-size: 20px;
+      border-radius: 5px;
+      background-color: red;
+      color: white;
+      font-weight: 900;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: all 0.8s;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+      &:hover {
+        opacity: 40%;
+      }
+    }
+  }
+  .table {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    .card {
+      border: 1px solid black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-radius: 5px;
+      column-gap: 50px;
+      overflow: hidden;
+      img {
+        width: 100px;
+        height: 100px;
+        transition: all 1s;
+        &:hover {
+          transform: scale(1.4);
+        }
+      }
+      p {
+        max-width: 200px;
+        width: 100%;
+        overflow: scroll;
+      }
+      .imagePar {
+        max-width: 100px;
+      }
+    }
+    .topCard {
+      background-color: red;
+      border: none;
+      color: white;
+    }
+  }
+}
