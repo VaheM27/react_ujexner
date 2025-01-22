@@ -2,11 +2,13 @@ import { Route, Routes } from "react-router-dom";
 import { ROUTES } from "./routes";
 import { Home, Product } from "./pages";
 
+import styles from "./App.module.scss";
+
 const App = () => {
   return (
     <Routes>
-      <Route element={<Home />} path={ROUTES.HOME} />
-      <Route element={<Product />} path={ROUTES.PRODUCT} />
+      <Route path={ROUTES.HOME} element={<Home />} />
+      <Route path={ROUTES.PRODUCT} element={<Product />} />
     </Routes>
   );
 };

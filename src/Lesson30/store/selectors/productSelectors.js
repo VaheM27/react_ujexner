@@ -1,1 +1,1 @@
-export const useProducts = (state) => state.products;
+export const useProducts = (state) => state.products || [];

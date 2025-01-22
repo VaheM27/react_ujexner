@@ -14,6 +14,7 @@ export const editData = (payload) => ({
   payload,
 });
 
-export const deleteData = () => ({
+export const deleteData = (id) => ({
   type: DELETE_PRODUCT,
+  payload: { id },
 });
