@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./Lesson30/App";
+import App from "./Lesson32/App";
 // import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import store from "./Lesson29/store/store";
+import store from "./Lesson32/store/store";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
