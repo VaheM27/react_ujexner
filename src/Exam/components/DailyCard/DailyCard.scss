@@ -1,0 +1,46 @@
+.link {
+  text-decoration: none;
+  .todaysWeather {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .data {
+      box-shadow: 1px 1px 5px #000;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      border-radius: 10px;
+      padding: 40px;
+      transition: all 0.7s;
+      background-color: #f0eafd;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 10px 10px 10px #000;
+      }
+      h1 {
+        font-weight: 900;
+        color: #000;
+      }
+      p {
+        align-self: flex-start;
+        background-color: #b598f6;
+        padding: 10px;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: 900;
+        box-shadow: 1px 1px 5px #000;
+      }
+      .weatherType {
+        .info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
