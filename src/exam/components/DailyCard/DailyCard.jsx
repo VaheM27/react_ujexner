@@ -18,7 +18,7 @@ const DailyCard = ({ tempType }) => {
 
   return (
     <div>
-      <Link className="link" to={ROUTES.FORECAST}>
+      <Link className="link" to={ROUTES.FORCAST}>
         <div className="todaysWeather">
           {loading ? (
             <p>Loading...</p>
