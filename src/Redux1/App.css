@@ -1,0 +1,48 @@
+.auth-container, .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+    background: #f3f3f3;
+    padding: 20px;
+  }
+  
+  .auth-box, .profile-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .auth-box h1, .profile-container h1 {
+    margin-bottom: 20px;
+  }
+  
+  .auth-box form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .auth-box input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .auth-box button, .profile-container button {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #4682b4;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .auth-box button:hover, .profile-container button:hover {
+    background: #5a9;
+  }
+  
