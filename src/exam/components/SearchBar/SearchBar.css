@@ -1,0 +1,57 @@
+
+
+form {
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .inputs {
+        padding-top: 20px;
+    }
+    
+
+    input[type="text"] {
+        outline: none;
+        border: 2px solid #008CBA;
+        border-radius: 10px;
+        margin-right: 10px;
+        padding: 5px;
+        margin-bottom: 20px;
+        
+    }
+    
+    button {
+        transition-duration: 0.4s;
+        background-color: white;
+        color: black;
+        border: 1px solid #008CBA;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #008CBA;
+        color: white;
+    }
+}
+
+
+.radioBtns {
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    label {
+        font-size: 20px;
+        margin-left: 5px;
+        color: #282828
+    }
+
+    input[type="radio"] {
+        margin-left: 20px;
+        cursor: pointer;
+    }
+}
